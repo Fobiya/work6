@@ -811,6 +811,10 @@ h1, h2, b, h3, h4, h5, button, label{
   }
 }
 
+img:not([src]),video:not([src]) {
+  visibility: hidden;
+}
+
 
 
 html,.body,#well{
@@ -2689,3 +2693,36 @@ html,.body,#well{
 // ===========================================================
 
 
+section, #topbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#topbtn {
+  cursor: pointer;
+  z-index: 100;
+  bottom: 20px;
+  position: fixed;
+  left: 50%;
+  margin-left: -25px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: gainsboro;
+  animation: jump 1s linear infinite;
+  opacity: 0;
+  transition: all .3s linear;
+}
+
+span {
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+
+@keyframes jump {
+  25% { transform: translateY(10px); }
+  50%, 100% { transform: translateY(0); }
+  75% { transform: translateY(-10px); }
+}

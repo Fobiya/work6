@@ -15,5 +15,6 @@ import './common.js';
 
 import './slick.min.js';
 //import './jquery.maskedinput.min.js';
+//import './lazyload.min.js'; 
 //import './lazysizes.min.js'; 
 //import './jquery.fancybox.min.js';

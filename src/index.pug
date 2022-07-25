@@ -40,10 +40,10 @@ html(lang='en')
                 a(href='javascript:;') About us
               li
                 a(href='javascript:;') Services
-                
+
             .logo__cont
               a(href='javascript:;')
-                img.logo__img(src='img/logo.svg', alt='logo')
+                img.logo__img(data-src='img/logo.svg', alt='logo')
 
             ul
               li
@@ -52,41 +52,42 @@ html(lang='en')
                 a(href='javascript:;') Resources
               li
                 a(href='javascript:;') Contact
-                
 
- 
+
+
     section#home0.home__0
-      video#video_0( preload='' autoplay='' muted='')
-        source(src='video/star.mp4' type='video/mp4')
-        source(src='video/background.webp' type='video/webp') 
-      
+      video#video_0( preload='none' src='video/star.mp4' autoplay='' muted='')
+        //source( type='video/mp4'  data-src="video/star.mp4")
+        //source(data-src='video/background.webp' type='video/webp') 
+
       .container
         .row
           .col.m12.s12.l12.xl12
             ul
               li
-                img(src='img/W.svg', alt='W')
+                img(data-src='img/W.svg', alt='W')
               li
-                img(src='img/E.svg', alt='E')
+                img(data-src='img/E.svg', alt='E')
               li
-                img(src='img/B.svg', alt='B')
+                img(data-src='img/B.svg', alt='B')
               li
-                img(src='img/S.svg', alt='S')
+                img(data-src='img/S.svg', alt='S')
               li
-                img(src='img/H.svg', alt='H')
+                img(data-src='img/H.svg', alt='H')
               li
-                img(src='img/A.svg', alt='A')
+                img(data-src='img/A.svg', alt='A')
               li
-                img(src='img/R.svg', alt='R')
+                img(data-src='img/R.svg', alt='R')
               li
-                img(src='img/K.svg', alt='K')
+                img(data-src='img/K.svg', alt='K')
 
-    #well.pointer
+    #well
+
       section#home1.home__1
+        #title1
 
-        video#video_1( preload='' autoplay='' muted='' loop='')
-          source(src='video/home.mp4' type='video/mp4')
-          source(src='video/background.webp' type='video/webp') 
+        video#video_1( preload='none' src='video/home.mp4' autoplay='' muted='' loop='')
+
 
         .container
           .row
@@ -101,28 +102,28 @@ html(lang='en')
 
               .brand__cont
                 a(href='javascript:;')
-                  img(src='img/brand_1.svg', alt='brand')
+                  img(data-src='img/brand_1.svg', alt='brand')
 
                 a(href='javascript:;')
-                  img(src='img/brand_2.svg', alt='brand')
+                  img(data-src='img/brand_2.svg', alt='brand')
 
                 a(href='javascript:;')
-                  img(src='img/brand_3.svg', alt='brand')
+                  img(data-src='img/brand_3.svg', alt='brand')
 
                 a(href='javascript:;')
-                  img(src='img/brand_4.svg', alt='brand')
+                  img(data-src='img/brand_4.svg', alt='brand')
               .arrow__cont
                 a.next__arrow(href='javascript:;')
                   span
 
 
 
-      section#home2.home__2
-      
-        video#video_2( preload='' autoplay='' muted='' loop='')
-          source(src='video/services.mp4' type='video/mp4')
-          source(src='video/background.webp' type='video/webp') 
-      
+      section#home2.home__2.none
+        #title2
+        video#video_2.none( preload='' autoplay='' muted='' loop='')
+          source(data-src='video/services.mp4' type='video/mp4')
+          source(data-src='video/background.webp' type='video/webp') 
+
         .container
           .row
             .col.m12.s12.l12.xl12
@@ -132,27 +133,43 @@ html(lang='en')
                 li
                   a(href='javascript:;')  Paid Social
                   .preview
-                    img(src='img/home__2_preview_1.png', alt='home__2_preview_1')
-                    
+                    img(data-src='img/home__2_preview_1.png', alt='home__2_preview_1')
+
                 li
                   a(href='javascript:;')  Paid Search
                   .preview
-                    img(src='img/home__2_preview_2.png', alt='home__2_preview_1')
-                  
-                  
+                    img(data-src='img/home__2_preview_2.png', alt='home__2_preview_1')
+
+
                 li
                   a(href='javascript:;')  Organic Search
                 li
                   a(href='javascript:;')  Data Analytics
                 li
                   a(href='javascript:;')  Digital Strategy
-               
+
               .arrow__cont
                 a.next__arrow(href='javascript:;')
                   span
+        #topbtn(onclick='goTop()') &uarr;
+
+                        
+                        
+        //#well
+          //section.one
+          //  #title1 One
+          //section.two
+          //  #title2 Two
+          //section.three
+          //  #title3 Three
+          //section.four
+          //  #title4 Four
+          //section.five
+          //  #title5 Five
+          //#topbtn(onclick='goTop()') &uarr;
 
                   
-    a.bot_modal.none(data-fancybox='', data-src='#modal-1', href='javascript:;') Open Modal 1
+    a.bot_modal.none(data-fancybox='', data-data-src='#modal-1', href='javascript:;') Open Modal 1
     // //// MODAL ////
     #modal-1.modal__style.modal(style='display: none;')
       .content_modal
@@ -173,7 +190,7 @@ html(lang='en')
           
           
           
-    a.bot_modal.none(data-fancybox='', data-src='#modal-2', href='javascript:;') Open Modal 2
+    a.bot_modal.none(data-fancybox='', data-data-src='#modal-2', href='javascript:;') Open Modal 2
     // //// MODAL ////
     #modal-2.modal__style.modal(style='display: none;')
       .content_modal
@@ -198,10 +215,13 @@ html(lang='en')
 
 
 
-    script(src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+    script( src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
+    script( src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+      // script( async data-src='https://www.andreaverlicchi.eu/vanilla-lazyload/dist/lazyload.min.js')
     script.
       // console.log('index.pug');
+
+  
 
       $(function(){
         $('[data-fancybox]').fancybox({
@@ -214,3 +234,5 @@ html(lang='en')
         });
 
       });
+
+
