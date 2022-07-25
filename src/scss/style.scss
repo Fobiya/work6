@@ -912,6 +912,7 @@ html,.body,#well{
   
 }
 
+
  section.home__0{
         background: #171717 url(../img/home__0_back.png) no-repeat top/cover; 
    
@@ -1628,10 +1629,10 @@ html,.body,#well{
      height: 100%;
      min-height: 100vh;
    
-      overflow: hidden;
-      position: relative;
-   
-   padding: 0;
+    overflow: hidden;
+    position: relative;
+
+       padding: 0;
 
 //      @include wid(992)      { padding: 120px 0  45px 0; }
 //      @include wid(601-991)  { padding: 187px 0  160px 0; }
@@ -1640,6 +1641,8 @@ html,.body,#well{
       z-index: 2;
    
    top:0;
+   
+   
    &>.container:nth-child(2)>.row:nth-child(1){
        display: flex;
        justify-content: space-between;
@@ -1657,6 +1660,10 @@ html,.body,#well{
        flex-direction: column;
        
      }
+   
+   
+   
+   
    
    
     video#video_1 {
@@ -1680,6 +1687,9 @@ html,.body,#well{
        }
 
     }
+   
+   
+   
    
    &.not_{
      
@@ -1717,8 +1727,10 @@ html,.body,#well{
      }
      
    }
+   
+   
 
-     .title{
+   .title{
         color: #f60400;
         letter-spacing: .025em;
         text-align: center;
@@ -1844,7 +1856,7 @@ html,.body,#well{
       overflow: hidden;
       position: relative;
    
-   padding: 0;
+       padding: 0;
 
 //      @include wid(992)      { padding: 120px 0  45px 0; }
 //      @include wid(601-991)  { padding: 187px 0  160px 0; }
@@ -1862,7 +1874,8 @@ html,.body,#well{
        flex-direction: column;
       @include wid(992){ padding: 120px 0  45px 0; }
    }
-     &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
+   
+   &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
        
        display: flex;
        justify-content: center;
@@ -1897,7 +1910,7 @@ html,.body,#well{
    
    
 
-     .title{
+   .title{
         color: #f60400;
         letter-spacing: .025em;
         text-align: center;
@@ -1921,7 +1934,7 @@ html,.body,#well{
 
      }
    
-     p{
+   p{
           color: #F9F5EE;
           letter-spacing: .02em;
 
@@ -1949,23 +1962,20 @@ html,.body,#well{
        }
    
    .list{
-     position: relative;
-     display: flex;
-     
-     justify-content: space-between;
-     
-     margin-top: 83px;
-     margin-bottom: 45px;
-     
-      width: 100%;
-     
-      transition: all 1.2s ease;
-     
-     gap: 0 1px;
-     
+      position: relative;
+      display: flex;
 
-     
-     
+        justify-content: center;
+
+      margin-top: 83px;
+      margin-bottom: 45px;
+
+      width: 100%;
+
+      transition: all 1.2s ease;
+
+      gap: 0 1px;
+
      
      li{
 
@@ -1987,11 +1997,11 @@ html,.body,#well{
        
        
         .preview{
-              display: flex;
-       justify-content: center;
-       align-items: center;
-          
-          pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            pointer-events: none;
           
           img{
             z-index: 6;
@@ -2270,8 +2280,7 @@ html,.body,#well{
             
             
        }
-       
-              
+     
        
         &:nth-child(2){
             
