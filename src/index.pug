@@ -55,7 +55,7 @@ html(lang='en')
 
 
 
-    section#home0.home__0 
+    section#home0.home__0
       video.lazy#video_0( preload='none' src='video/home__0.mp4',  autoplay='' muted='')
         //source( type='video/mp4'  data-src="video/star.mp4")
         //source(data-src='video/background.webp' type='video/webp') 
@@ -65,7 +65,7 @@ html(lang='en')
       div
         section#home1.home__1
         
-          video#video_1.lazy( preload='none' src='video/home.mp4', autoplay='' muted='' loop='')
+          video.lazy#video_1( preload='none' src='video/home.mp4', autoplay='' muted='' loop='')
 
 
 
@@ -284,29 +284,66 @@ html(lang='en')
             .row
               .col.m12.s12.l12.xl12
                 h2.title Du kan se våra fall här
+
                 
                 ul.list
                   li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_1.svg', alt='home__3_brand_1')
+                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
+                    a(href='javascript:;' data-slide='1') Röd baron
                   li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_2.svg', alt='home__3_brand_1')
+                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
+                    a(href='javascript:;' data-slide='2') Budapest 3.0
                   li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_3.svg', alt='home__3_brand_1')
+                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
+                    a(href='javascript:;' data-slide='3') Park Avenue
                   li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_4.svg', alt='home__3_brand_1')
+                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
+                    a(href='javascript:;' data-slide='4') Microsoft
                   li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_5.svg', alt='home__3_brand_1')
-                  li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_6.svg', alt='home__3_brand_1')
-                  li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_7.svg', alt='home__3_brand_1')
+                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
+                    a(href='javascript:;' data-slide='5') Apple
+                    
+                    
+                #slider__home__5
+                  div
+                    .content__
+                      .slider__content
+                        h3.title__h4  marknadsföring
+                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
+                      .block__
+                        a.white(href='javascript:;') Beställ från
+                  div
+                    .content__
+                      .slider__content
+                        h3.title__h4 1 marknadsföring
+                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
+                      .block__
+                        a.white(href='javascript:;') Beställ från
+                  div
+                    .content__
+                      .slider__content
+                        h3.title__h4 2 marknadsföring
+                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
+                      .block__
+                        a.white(href='javascript:;') Beställ från
+                  div
+                    .content__
+                      .slider__content
+                        h3.title__h4 3 marknadsföring
+                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
+                      .block__
+                        a.white(href='javascript:;') Beställ från
+                  div
+                    .content__
+                      .slider__content
+                        h3.title__h4 4 marknadsföring
+                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
+                      .block__
+                        a.white(href='javascript:;') Beställ från
+                    
+                    
+                    
+                    
 
 
                 .arrow__cont
@@ -369,6 +406,7 @@ html(lang='en')
 
 
     script( async src='https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js')
+    script(  src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js')
     //script( async src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
       // script( async data-src='https://www.andreaverlicchi.eu/vanilla-lazyload/dist/lazyload.min.js')
     script.

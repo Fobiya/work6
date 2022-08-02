@@ -5,6 +5,90 @@ define(["jquery"], function($) {
 //  $('header').addClass('open');
 
   
+  
+//      window.onload = function () {
+//      document.body.classList.add('loaded_hiding');
+//      window.setTimeout(function () {
+//        document.body.classList.add('loaded');
+//        document.body.classList.remove('loaded_hiding');
+//      }, 500);
+//    }
+//      
+      
+
+            window.onload = function () {
+              
+              
+
+              
+            }
+            
+            
+            
+  $('.home__5 .list li a').click(function(e){
+    
+    e.preventDefault();
+    
+    $('.home__5 .list li ').removeClass('select');
+    
+    $(this).parent().addClass('select'); 
+     
+  });      
+            
+//            
+//let box = document.querySelector("#preloader"),
+//	btn = document.querySelector("#skip");
+//
+//function fadeOut() {
+//	box.classList.add("visuallyhidden");
+//	box.addEventListener(
+//		"transitionend",
+//		function (e) {
+//			box.classList.add("hidden");
+//		},
+//		{
+//			capture: false,
+//			once: true,
+//			passive: false,
+//          
+//          
+//              path: `https://assets4.lottiefiles.com/packages/lf20_vx8rauri.json`,
+//              renderer: "svg",
+//          
+////    renderer: "svg",
+////    loop: true,
+////    autoplay: true,
+////    path: `https://assets4.lottiefiles.com/packages/lf20_vx8rauri.json`
+//          
+//		}
+//	);
+//}
+//
+//btn.addEventListener("click", fadeOut, false);
+//setTimeout(fadeOut, 6000);
+
+  
+  
+      
+//const animatedEls = document.querySelectorAll(".animated");
+//
+//for (const animatedEl of animatedEls) {
+//  const id = animatedEl.id;
+//  lottie.loadAnimation({
+//    container: document.getElementById(id),
+//    renderer: "svg",
+//    loop: flse,
+//    autoplay: true,
+//    
+//    capture: false,
+//    once: true,
+//    passive: false,
+//    
+//    path: `https://assets4.lottiefiles.com/packages/lf20_vx8rauri.json`
+//  });
+//}
+//      
+      
         
 //
 ////show and hide topbtn
@@ -177,18 +261,18 @@ define(["jquery"], function($) {
 
             setTimeout(function() {
             $('header').addClass('anim__logo');
-            }, 500);
+            }, 450); 
 
             setTimeout(function() {
                 $('body').removeClass('oveflow-hidden');
                 $('.home__1').addClass('not_');
-            }, 1000);
+            }, 100);
           
 //               $('#well').removeClass('none');
-        }, 1000);
+        }, 550);
 
       //  timerId = setTimeout(tick, 2000); // (*)
-      }, 3650);
+      }, 4050);
     
     
 //   $('body').find("img").each(function() {   
@@ -1097,6 +1181,35 @@ $full__tuch.slick({
     });
   
   
+  
+  
+
+
+  $('#slider__home__5').slick({
+        fade: true,
+        cssEase: 'linear',
+      
+        arrows: false,
+        dots: false,
+      
+        autoplay: false,
+        speed: 1000,
+      
+        infinite: true,
+      
+        adaptiveHeight: true,
+      
+        slidesToShow: 1,
+        slidesToScroll: 1,
+  });
+  
+
+
+  $('a[data-slide]').click(function(e) {
+      e.preventDefault();
+      var slideno = $(this).data('slide');
+      $('#slider__home__5').slick('slickGoTo', slideno - 1);
+  });
   
     
 
