@@ -209,7 +209,11 @@ module.exports = {
     
     }),    
 
-    
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/home.pug`,
+      filename: './home.html'
+    }),  
     
 //    new HtmlWebpackPlugin({
 //      hash: false,

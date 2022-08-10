@@ -28,6 +28,24 @@ html(lang='en')
   body.oveflow-hidden.info(data-img='img/232110.png')
 
     .bar-long.none
+    
+    .right__menu
+      .bock__top
+        a.close(href='javascript:;')
+          img.logo__img(src='img/close.svg', alt='logo_black')
+      ul.menu__
+        li
+          a(href='javascript:;') Home
+        li
+          a(href='javascript:;') About us
+        li
+          a(href='javascript:;')  Services
+        li
+          a(href='javascript:;')  Our process
+        li
+          a(href='javascript:;') Resources
+        li
+          a(href='javascript:;') Contact
 
     header
       .container
@@ -52,313 +70,17 @@ html(lang='en')
                 a(href='javascript:;') Resources
               li
                 a(href='javascript:;') Contact
+                
+            a.mobile__(href='javascript:;')
+              img.menu__(data-src='img/menu.svg', alt='menu')
 
 
 
-    section#home0.home__0
-      video.lazy#video_0( preload='none' src='video/home__0.mp4',  autoplay='' muted='')
-        //source( type='video/mp4'  data-src="video/star.mp4")
-        //source(data-src='video/background.webp' type='video/webp') 
 
     #full__tuch
 
-      div
-        section#home1.home__1
-        
-          video.lazy#video_1( preload='none' src='video/home.mp4', autoplay='' muted='' loop='')
 
 
-
-          .container
-            .row
-              .col.m12.s12.l12.xl12
-                h1.title Digital marknadsföring som ger resultat
-
-                p.sub Vi hjälper bolag över hela Sverige att få nya kunder genom sökordsoptimering, Google annonsering och annonsering på sociala medier.
-
-                .bot__cont
-                  a.red(href='javascript:;') Kontakta oss
-                  a.white(href='javascript:;') Våra tjänster
-
-                .brand__cont
-                  a(href='javascript:;')
-                    img(data-src='img/brand_1.svg', alt='brand')
-
-                  a(href='javascript:;')
-                    img(data-src='img/brand_2.svg', alt='brand')
-
-                  a(href='javascript:;')
-                    img(data-src='img/brand_3.svg', alt='brand')
-
-                  a(href='javascript:;')
-                    img(data-src='img/brand_4.svg', alt='brand')
-                .arrow__cont
-                  a.next__arrow(href='javascript:;')
-                    span
-    
-    
-      div
-        section#home2.home__2 
-          video.lazy#video_2( reload='' src='video/services.mp4', autoplay='' muted='' loop='')
-          
-
-          .container
-            .row
-              .col.m12.s12.l12.xl12
-                h2.title Services we provide
-
-                ul.list
-                  li
-                    a(href='javascript:;')  Paid Social
-                    .preview
-                      img(data-src='img/home__2_preview_1.png', alt='home__2_preview_1')
-
-                  li
-                    a(href='javascript:;')  Paid Search
-                    .preview
-                      img(data-src='img/home__2_preview_2.png', alt='home__2_preview_1')
-
-
-                  li
-                    a(href='javascript:;')  Organic Search
-                  li
-                    a(href='javascript:;')  Data Analytics
-                  li
-                    a(href='javascript:;')  Digital Strategy
-
-                .arrow__cont
-                  a.next__arrow(href='javascript:;')
-                    span
-          #topbtn(onclick='goTop()') &uarr;
-          
-          
-          
-      div
-        section#home3.home__3
-          video.lazy#video_3( reload='' src='video/home__3.mp4', autoplay='' muted='' loop='')
-          
-
-          .container
-            .row
-              .col.m12.s12.l12.xl12
-                h2.title Vi har svart bälte i digital marknadsföring
-                
-                ul.list
-                  li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_1.svg', alt='home__3_brand_1')
-                  li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_2.svg', alt='home__3_brand_1')
-                  li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_3.svg', alt='home__3_brand_1')
-                  li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_4.svg', alt='home__3_brand_1')
-                  li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_5.svg', alt='home__3_brand_1')
-                  li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_6.svg', alt='home__3_brand_1')
-                  li
-                    a(href='javascript:;')
-                      img(data-src='img/home__3_brand_7.svg', alt='home__3_brand_1')
-
-
-                .arrow__cont
-                  a.next__arrow(href='javascript:;')
-                    span
-          #topbtn(onclick='goTop()') &uarr;
-          
-          
-          
-      div
-        section#home4.home__4
-          video.lazy#video_4( reload='' src='video/services.mp4', autoplay='' muted='' loop='')
-          
-
-          .container
-            .row
-              .col.m12.s12.l12.xl12
-                h2.title Yara recensioner
-
-                #home__4_slider
-                  div
-                    .box__content
-                      .arrow
-                        a.prev__(href='javascript:;')
-                          svg(width='42', height='42', viewbox='0 0 42 42', fill='none', xmlns='http://www.w3.org/2000/svg')
-                            path(fill-rule='evenodd', clip-rule='evenodd', d='M40.2428 5.41333L9.8196 35.8335L22.5823 35.8335C23.2674 35.8335 23.9244 36.1057 24.4089 36.5901C24.8933 37.0746 25.1655 37.7316 25.1655 38.4167C25.1655 39.1019 24.8933 39.7589 24.4089 40.2434C23.9244 40.7278 23.2674 41 22.5823 41L3.58326 41C2.89814 41 2.24108 40.7278 1.75662 40.2434C1.27217 39.7589 1.00001 39.1019 1.00001 38.4167L1 19.4178C1 18.7326 1.27216 18.0756 1.75662 17.5911C2.24107 17.1067 2.89813 16.8345 3.58325 16.8345C4.26837 16.8345 4.92544 17.1067 5.40989 17.5911C5.89434 18.0756 6.1665 18.7326 6.1665 19.4177L6.16651 32.1804L36.5867 1.7572C36.8268 1.51714 37.1118 1.32671 37.4254 1.19679C37.7391 1.06687 38.0752 1 38.4148 1C38.7543 1 39.0904 1.06687 39.4041 1.19679C39.7177 1.32671 40.0027 1.51714 40.2428 1.7572C40.4829 1.99727 40.6733 2.28226 40.8032 2.59592C40.9331 2.90957 41 3.24575 41 3.58525C41 3.92475 40.9331 4.26093 40.8032 4.57458C40.6733 4.88824 40.4828 5.17327 40.2428 5.41333Z', fill='white')
-
-                        a.next__(href='javascript:;')
-                          svg(width='42', height='42', viewbox='0 0 42 42', fill='none', xmlns='http://www.w3.org/2000/svg')
-                            path(fill-rule='evenodd', clip-rule='evenodd', d='M1.75724 36.5867L32.1804 6.16652L19.4178 6.16651C18.7326 6.16651 18.0756 5.89435 17.5911 5.4099C17.1067 4.92545 16.8345 4.26839 16.8345 3.58326C16.8345 2.89814 17.1067 2.24108 17.5911 1.75663C18.0756 1.27217 18.7326 1.00001 19.4178 1.00001L38.4168 1.00002C39.1019 1.00002 39.7589 1.27218 40.2434 1.75663C40.7278 2.24109 41 2.89815 41 3.58327L41 22.5823C41 23.2674 40.7278 23.9244 40.2434 24.4089C39.7589 24.8933 39.1019 25.1655 38.4168 25.1655C37.7316 25.1655 37.0746 24.8933 36.5901 24.4089C36.1057 23.9244 35.8335 23.2674 35.8335 22.5823L35.8335 9.81961L5.4133 40.2428C5.17323 40.4829 4.88824 40.6733 4.57458 40.8032C4.26092 40.9331 3.92475 41 3.58525 41C3.24575 41 2.90957 40.9331 2.59592 40.8032C2.28226 40.6733 1.99727 40.4829 1.7572 40.2428C1.51714 40.0027 1.32671 39.7177 1.19679 39.4041C1.06687 39.0904 1 38.7543 1 38.4147C1 38.0752 1.06687 37.7391 1.19679 37.4254C1.32671 37.1118 1.51717 36.8267 1.75724 36.5867Z', fill='white')
-
-                      .next__content
-                        p.dicription Organic Search
-                        h3.name 1 ERIHA LIMBMAN
-                        p  Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
-                        p.data 23.07.22
-      
-                      .box__img
-                        img(data-src='img/home__4_element_red.png', alt='home__3_brand_1')
-                        
-                        
-                        
-                  div
-                    .box__content
-                      .arrow
-                        a.prev__(href='javascript:;')
-                          svg(width='42', height='42', viewbox='0 0 42 42', fill='none', xmlns='http://www.w3.org/2000/svg')
-                            path(fill-rule='evenodd', clip-rule='evenodd', d='M40.2428 5.41333L9.8196 35.8335L22.5823 35.8335C23.2674 35.8335 23.9244 36.1057 24.4089 36.5901C24.8933 37.0746 25.1655 37.7316 25.1655 38.4167C25.1655 39.1019 24.8933 39.7589 24.4089 40.2434C23.9244 40.7278 23.2674 41 22.5823 41L3.58326 41C2.89814 41 2.24108 40.7278 1.75662 40.2434C1.27217 39.7589 1.00001 39.1019 1.00001 38.4167L1 19.4178C1 18.7326 1.27216 18.0756 1.75662 17.5911C2.24107 17.1067 2.89813 16.8345 3.58325 16.8345C4.26837 16.8345 4.92544 17.1067 5.40989 17.5911C5.89434 18.0756 6.1665 18.7326 6.1665 19.4177L6.16651 32.1804L36.5867 1.7572C36.8268 1.51714 37.1118 1.32671 37.4254 1.19679C37.7391 1.06687 38.0752 1 38.4148 1C38.7543 1 39.0904 1.06687 39.4041 1.19679C39.7177 1.32671 40.0027 1.51714 40.2428 1.7572C40.4829 1.99727 40.6733 2.28226 40.8032 2.59592C40.9331 2.90957 41 3.24575 41 3.58525C41 3.92475 40.9331 4.26093 40.8032 4.57458C40.6733 4.88824 40.4828 5.17327 40.2428 5.41333Z', fill='white')
-
-                        a.next__(href='javascript:;')
-                          svg(width='42', height='42', viewbox='0 0 42 42', fill='none', xmlns='http://www.w3.org/2000/svg')
-                            path(fill-rule='evenodd', clip-rule='evenodd', d='M1.75724 36.5867L32.1804 6.16652L19.4178 6.16651C18.7326 6.16651 18.0756 5.89435 17.5911 5.4099C17.1067 4.92545 16.8345 4.26839 16.8345 3.58326C16.8345 2.89814 17.1067 2.24108 17.5911 1.75663C18.0756 1.27217 18.7326 1.00001 19.4178 1.00001L38.4168 1.00002C39.1019 1.00002 39.7589 1.27218 40.2434 1.75663C40.7278 2.24109 41 2.89815 41 3.58327L41 22.5823C41 23.2674 40.7278 23.9244 40.2434 24.4089C39.7589 24.8933 39.1019 25.1655 38.4168 25.1655C37.7316 25.1655 37.0746 24.8933 36.5901 24.4089C36.1057 23.9244 35.8335 23.2674 35.8335 22.5823L35.8335 9.81961L5.4133 40.2428C5.17323 40.4829 4.88824 40.6733 4.57458 40.8032C4.26092 40.9331 3.92475 41 3.58525 41C3.24575 41 2.90957 40.9331 2.59592 40.8032C2.28226 40.6733 1.99727 40.4829 1.7572 40.2428C1.51714 40.0027 1.32671 39.7177 1.19679 39.4041C1.06687 39.0904 1 38.7543 1 38.4147C1 38.0752 1.06687 37.7391 1.19679 37.4254C1.32671 37.1118 1.51717 36.8267 1.75724 36.5867Z', fill='white')
-
-                      .next__content
-                        p.dicription Organic Search
-                        h3.name 2 ERIHA LIMBMAN
-                        p  Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
-                        p.data 23.07.22
-    
-                      .box__img
-                        img(data-src='img/home__4_element_width.png', alt='home__3_brand_1')
-                        
-                        
-                        
-                        
-                        
-                  div
-                    .box__content
-                      .arrow
-                        a.prev__(href='javascript:;')
-                          svg(width='42', height='42', viewbox='0 0 42 42', fill='none', xmlns='http://www.w3.org/2000/svg')
-                            path(fill-rule='evenodd', clip-rule='evenodd', d='M40.2428 5.41333L9.8196 35.8335L22.5823 35.8335C23.2674 35.8335 23.9244 36.1057 24.4089 36.5901C24.8933 37.0746 25.1655 37.7316 25.1655 38.4167C25.1655 39.1019 24.8933 39.7589 24.4089 40.2434C23.9244 40.7278 23.2674 41 22.5823 41L3.58326 41C2.89814 41 2.24108 40.7278 1.75662 40.2434C1.27217 39.7589 1.00001 39.1019 1.00001 38.4167L1 19.4178C1 18.7326 1.27216 18.0756 1.75662 17.5911C2.24107 17.1067 2.89813 16.8345 3.58325 16.8345C4.26837 16.8345 4.92544 17.1067 5.40989 17.5911C5.89434 18.0756 6.1665 18.7326 6.1665 19.4177L6.16651 32.1804L36.5867 1.7572C36.8268 1.51714 37.1118 1.32671 37.4254 1.19679C37.7391 1.06687 38.0752 1 38.4148 1C38.7543 1 39.0904 1.06687 39.4041 1.19679C39.7177 1.32671 40.0027 1.51714 40.2428 1.7572C40.4829 1.99727 40.6733 2.28226 40.8032 2.59592C40.9331 2.90957 41 3.24575 41 3.58525C41 3.92475 40.9331 4.26093 40.8032 4.57458C40.6733 4.88824 40.4828 5.17327 40.2428 5.41333Z', fill='white')
-
-                        a.next__(href='javascript:;')
-                          svg(width='42', height='42', viewbox='0 0 42 42', fill='none', xmlns='http://www.w3.org/2000/svg')
-                            path(fill-rule='evenodd', clip-rule='evenodd', d='M1.75724 36.5867L32.1804 6.16652L19.4178 6.16651C18.7326 6.16651 18.0756 5.89435 17.5911 5.4099C17.1067 4.92545 16.8345 4.26839 16.8345 3.58326C16.8345 2.89814 17.1067 2.24108 17.5911 1.75663C18.0756 1.27217 18.7326 1.00001 19.4178 1.00001L38.4168 1.00002C39.1019 1.00002 39.7589 1.27218 40.2434 1.75663C40.7278 2.24109 41 2.89815 41 3.58327L41 22.5823C41 23.2674 40.7278 23.9244 40.2434 24.4089C39.7589 24.8933 39.1019 25.1655 38.4168 25.1655C37.7316 25.1655 37.0746 24.8933 36.5901 24.4089C36.1057 23.9244 35.8335 23.2674 35.8335 22.5823L35.8335 9.81961L5.4133 40.2428C5.17323 40.4829 4.88824 40.6733 4.57458 40.8032C4.26092 40.9331 3.92475 41 3.58525 41C3.24575 41 2.90957 40.9331 2.59592 40.8032C2.28226 40.6733 1.99727 40.4829 1.7572 40.2428C1.51714 40.0027 1.32671 39.7177 1.19679 39.4041C1.06687 39.0904 1 38.7543 1 38.4147C1 38.0752 1.06687 37.7391 1.19679 37.4254C1.32671 37.1118 1.51717 36.8267 1.75724 36.5867Z', fill='white')
-
-                      .next__content
-                        p.dicription Organic Search
-                        h3.name 3 ERIHA LIMBMAN
-                        p  Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
-                        p.data 23.07.22
-       
-                      .box__img
-                        img(data-src='img/home__4_element_red.png', alt='home__3_brand_1')
-
-
-
-                #home__4_images_slider
-                  div
-                    .box__img_cont
-                      .box__img
-                        img(data-src='img/home__4_user_1.png', alt='home__3_brand_1')
-                  div
-                    .box__img_cont
-                      .box__img
-                        img(data-src='img/home__4_user_2.png', alt='home__3_brand_1')
-                  div
-                    .box__img_cont
-                      .box__img
-                        img(data-src='img/home__4_user_3.png', alt='home__3_brand_1')
-                  div
-                    .box__img_cont
-                      .box__img
-                        img(data-src='img/home__4_user_3.png', alt='home__3_brand_1')
-                  div
-                    .box__img_cont
-                      .box__img
-                        img(data-src='img/home__4_user_3.png', alt='home__3_brand_1')
-
-
-
-                .arrow__cont
-                  a.next__arrow(href='javascript:;')
-                    span
-          #topbtn(onclick='goTop()') &uarr;
-          
-   
-      div
-        section#home5.home__5
-          video.lazy#video_5( reload='' src='video/home__3.mp4', autoplay='' muted='' loop='')
-          
-
-          .container
-            .row
-              .col.m12.s12.l12.xl12
-                h2.title Du kan se våra fall här
-
-                
-                ul.list
-                  li
-                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-slide='1') Röd baron
-                  li
-                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-slide='2') Budapest 3.0
-                  li
-                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-slide='3') Park Avenue
-                  li
-                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-slide='4') Microsoft
-                  li
-                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-slide='5') Apple
-                    
-                    
-                #slider__home__5
-                  div
-                    .content__
-                      .slider__content
-                        h3.title__h4  marknadsföring
-                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
-                      .block__
-                        a.white(href='javascript:;') Beställ från
-                  div
-                    .content__
-                      .slider__content
-                        h3.title__h4 1 marknadsföring
-                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
-                      .block__
-                        a.white(href='javascript:;') Beställ från
-                  div
-                    .content__
-                      .slider__content
-                        h3.title__h4 2 marknadsföring
-                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
-                      .block__
-                        a.white(href='javascript:;') Beställ från
-                  div
-                    .content__
-                      .slider__content
-                        h3.title__h4 3 marknadsföring
-                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
-                      .block__
-                        a.white(href='javascript:;') Beställ från
-                  div
-                    .content__
-                      .slider__content
-                        h3.title__h4 4 marknadsföring
-                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
-                      .block__
-                        a.white(href='javascript:;') Beställ från
-                    
-                    
-                    
-                    
-
-
-                .arrow__cont
-                  a.next__arrow(href='javascript:;')
-                    span
-          #topbtn(onclick='goTop()') &uarr;
-          
           
       div
         section#home6.home__6
@@ -367,25 +89,51 @@ html(lang='en')
 
           .container
             .row
-              .col.m12.s12.l12.xl12
+              .col.m12.s12.l8.xl9
                 h2.title Tillräckligt små för att vara personliga, men stora nog att leverera
                 
                 p Många företag jobbar med digital marknadsföring, däremot anser vi att allt för många lösningar är ineffektiva och inte presterar. Därför startade vi Webshark!
                 p Vi är ett team bestående av unga och drivna talanger inom digital marknadsföring som drivs av att skapa digital framgång för våra kunder. Vi som jobbar på Webshark är datanördar, som idag erbjuder effektiva och kreativa lösningar för hur bolag ska driva resultat digitalt. Vi har hjälpt över många bolag, allt från miljardbolag till startups.
                 
+                img.partner(data-src='img/partner.svg', alt='partner')
+                
                 .bottum
                   a.white(href='javascript:;') Kontakta oss
                   img.partner(data-src='img/partner.svg', alt='partner')
+                  
+              .col.m12.s12.l4.xl3
+                .video
+                  p video
+
                 
+          .arrow__cont
+            a.next__arrow(href='javascript:;')
+              span
+
+      div
+        section#home7.home__7
+          video.lazy#video_7(autoplay='', src='video/home__7.mp4',  muted='', preload='auto')
+          video.opacyte.lazy#video_7_1(autoplay='', src='video/home__7_1.mp4', loop='', muted='', preload='auto')
+          
+
+          .container
+            .row
+              .col.m12.s12.l8.xl8
+                h2.title Vägen till lönsamma resultat – steg för steg
                 
-                .arrow__cont
-                  a.next__arrow(href='javascript:;')
-                    span
-          #topbtn(onclick='goTop()') &uarr;
+                p Dina kunders resa online – från att lära känna ditt företag, till köp och vidare till kundrelationen – kallar vi den digitala kundresan. Och ditt team hos Webshark arbetar för att göra den resan så effektiv som möjligt
+
+                a.white(href='javascript:;') Jag vill veta mer!
+
+                  
+
+
+                
+          .arrow__cont
+            a.next__arrow(href='javascript:;')
+              span
           
-          
-          
-          
+
           
           
           
