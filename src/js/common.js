@@ -55,24 +55,70 @@ define(["jquery"], function($) {
     $(this).parent().addClass('select'); 
     $(this).parent().parent().addClass('select'+ num_data); 
      
-  });      
-                     
+  });    
+  
+  
+//      $(document).mouseover(function(e) { // web document click event
+//        var div = $(".home__2 .list"); // here we specify the ID of the element
+//        if (!div.is(e.target)){
+//            
+//
+//          
+//          
+//    $('.home__2 .list li').removeClass('select');
+//    $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');    
+//          
+//          
+//            
+//            }else if( div.has(e.target).length === 0) { // and not by its children
+//
+//              $('.home__2 .list li a').hover(function(e){
+//
+//                e.preventDefault();
+//
+//                 var num_data = $(this).data('slide');
+//
+//                $('.home__2 .list li ').removeClass('select');
+//
+//
+//                $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');
+//
+//                $(this).parent().addClass('select'); 
+//                $(this).parent().parent().addClass('select'+ num_data); 
+//
+//              });  
+//          
+//        }
+//    });  
+
+  
+  
+  
+
             
-  $('.home__2 .list li a').hover(function(e){
+      $('.home__2 .list li a').hover(function(e){
+
+        e.preventDefault();
+
+         var num_data = $(this).data('slide');
+
+        $('.home__2 .list li ').removeClass('select');
+
+
+        $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');
+
+        $(this).parent().addClass('select'); 
+        $(this).parent().parent().addClass('select'+ num_data); 
+
+      });  
     
-    e.preventDefault();
-    
-     var num_data = $(this).data('slide');
-    
-    $('.home__2 .list li ').removeClass('select');
-    
-    
-    $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');
-    
-    $(this).parent().addClass('select'); 
-    $(this).parent().parent().addClass('select'+ num_data); 
-     
-  });      
+//  }else{
+//    
+//    $('.home__2 .list li').removeClass('select');
+//    $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');    
+//    
+//  }
+
     
   $('.home__2 .mobile li a').click(function(e){
     
@@ -1917,7 +1963,7 @@ $full__tuch.slick({
 //  
 //  });
 
-
+//
 //  document.addEventListener("DOMContentLoaded", function() {
 //  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 //
@@ -1944,4 +1990,4 @@ $full__tuch.slick({
 //    });
 //  }
 //});
-  
+//  
