@@ -56,6 +56,40 @@ define(["jquery"], function($) {
     $(this).parent().parent().addClass('select'+ num_data); 
      
   });      
+                     
+            
+  $('.home__2 .list li a').hover(function(e){
+    
+    e.preventDefault();
+    
+     var num_data = $(this).data('slide');
+    
+    $('.home__2 .list li ').removeClass('select');
+    
+    
+    $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');
+    
+    $(this).parent().addClass('select'); 
+    $(this).parent().parent().addClass('select'+ num_data); 
+     
+  });      
+                            
+            
+  $('.home__2 .mobile li a').click(function(e){
+    
+    e.preventDefault();
+    
+     var num_data = $(this).data('mob');
+    
+    $('.home__2 .mobile li ').removeClass('select');
+    
+    
+    $('.home__2 .mobile').removeClass('select1 select2 select3 select4 select5 select6');
+    
+    $(this).parent().addClass('select'); 
+    $(this).parent().parent().addClass('select'+ num_data); 
+     
+  });      
             
 //            
 //let box = document.querySelector("#preloader"),
