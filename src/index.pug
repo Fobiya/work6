@@ -57,6 +57,15 @@ html(lang='en')
               li
                 a(href='javascript:;') About us
               li
+
+                ul
+                  li
+                    a(href='javascript:;') num1
+                  li
+                    a(href='javascript:;') num2
+                  li
+                    a(href='javascript:;') num3
+                    
                 a(href='javascript:;') Services
 
             .logo__cont
@@ -79,58 +88,40 @@ html(lang='en')
 
     #full__tuch
 
-
-
       div
-        section#home2.home__2
-          video.lazy#video_2( reload='' src='video/services.mp4', autoplay='' muted='' loop='')
-          
+        section#home1.home__1.not_
+        
+          video.lazy#video_1( preload='none' src='video/home.mp4', autoplay='' muted='' loop='')
+
+
 
           .container
             .row
-              .col.m12.s12.l12.xl12
-                h2.title Services we provide
+              .col.m10.s12.l12.xl12
+                h1.title Digital marknadsföring som ger resultat
 
-                ul.list
-                  li
-                    a(href='javascript:;'  data-slide='1')  Paid Social
-                    .preview
-                      img(data-src='img/home__2_preview_1.png', alt='home__2_preview_1')
+                p.sub Vi hjälper bolag över hela Sverige att få nya kunder genom sökordsoptimering, Google annonsering och annonsering på sociala medier.
 
-                  li
-                    a(href='javascript:;'  data-slide='2')  Paid Search
-                    .preview
-                      img(data-src='img/home__2_preview_2.png', alt='home__2_preview_1')
+                .bot__cont
+                  a.red(href='javascript:;') Kontakta oss
+                  a.white(href='javascript:;') Våra tjänster
 
-                  li
-                    a(href='javascript:;'  data-slide='3')  Organic Search
-                  li
-                    a(href='javascript:;'  data-slide='4')  Data Analytics
-                  li
-                    a(href='javascript:;'  data-slide='5')  Digital Strategy
-                    
-                    
-                    
-                ul.mobile
-                  li
-                    a(href='javascript:;'  data-mob='0')  Paid Social
-                  li
-                    a(href='javascript:;'  data-mob='1')  Paid Search
-                  li
-                    a(href='javascript:;'  data-mob='2')  Organic Search
-                  li
-                    a(href='javascript:;'  data-mob='3')  Data Analytics
-                  li
-                    a(href='javascript:;'  data-mob='4')  Digital Strategy
-                    
-                    
-                    
+                .brand__cont
+                  a(href='javascript:;')
+                    img(data-src='img/brand_1.svg', alt='brand')
 
+                  a(href='javascript:;')
+                    img(data-src='img/brand_2.svg', alt='brand')
+
+                  a(href='javascript:;')
+                    img(data-src='img/brand_3.svg', alt='brand')
+
+                  a(href='javascript:;')
+                    img(data-src='img/brand_4.svg', alt='brand')
                 .arrow__cont
                   a.next__arrow(href='javascript:;')
                     span
-          #topbtn(onclick='goTop()') &uarr;
-    
+
                 
                 
                 

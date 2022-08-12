@@ -73,8 +73,7 @@ define(["jquery"], function($) {
     $(this).parent().parent().addClass('select'+ num_data); 
      
   });      
-                            
-            
+    
   $('.home__2 .mobile li a').click(function(e){
     
     e.preventDefault();
@@ -302,6 +301,9 @@ define(["jquery"], function($) {
 //  
 //  
   
+    
+  if($( "section" ).hasClass( "home__0" )){
+    
       $('.home__0').addClass('active');
   
         $('video').on('ended',function(){ 
@@ -313,7 +315,7 @@ define(["jquery"], function($) {
 
 
             setTimeout(function() {
-            $('header').addClass('anim__logo');
+                $('header').addClass('anim__logo');
             }, 450); 
 
             setTimeout(function() {
@@ -322,6 +324,18 @@ define(["jquery"], function($) {
             }, 100);
           
         });
+    
+  }else{
+    
+            setTimeout(function() {
+                $('header').addClass('anim__logo');
+            }, 450); 
+    
+    
+    
+  }
+  
+
 
 //  
 //  document.addEventListener('DOMContentLoaded', function() {
@@ -1142,6 +1156,81 @@ $full__tuch.slick({
 //    swipeToSlide: true,
     touchThreshold: 10,
   
+  
+  
+  
+        responsive: [{
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    dots: false,
+                    infinite: false,
+
+                    vertical: true,
+                    verticalSwiping: true,
+
+                    swipe: false,
+
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+
+                    speed: 500,
+
+                  //   fade: true,
+                  //  cssEase: 'linear',
+
+
+                  //    swipe: true,
+                  //    swipeToSlide: true,
+                      touchThreshold: 10,
+                }
+            },
+                     {
+                breakpoint: 601,
+                settings: {
+                  
+
+                    arrows: false,
+                    dots: false,
+                    infinite: false,
+
+                    vertical: true,
+                    verticalSwiping: true,
+
+                    swipe: true,
+
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+
+                    speed: 500,
+                  
+                  
+                }
+            },
+            {
+                breakpoint: 430,
+                settings: {
+                
+                    arrows: false,
+                    dots: false,
+                    infinite: false,
+
+                    vertical: true,
+                    verticalSwiping: true,
+
+                    swipe: true,
+
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+
+                    speed: 500,
+                  
+                }
+            }
+        ]
+  
+  
+  
 });
   
   
@@ -1253,9 +1342,9 @@ $full__tuch.slick({
         autoplay: false,
         speed: 1000,
       
-        infinite: true,
+//        infinite: true,
       
-        adaptiveHeight: true,
+//        adaptiveHeight: true,
       
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -1305,6 +1394,10 @@ $full__tuch.slick({
       
 	});
   
+  
+  
+  
+  
 //    $('.home__4 .next__').click(function() { 
 //    $slider__4.slick('slickNext');
 //  });
@@ -1312,66 +1405,70 @@ $full__tuch.slick({
 //  $('.home__4 .prev__').click(function() {
 //    $slider__4.slick('slickPrev');
 //  });
-//    
-//    
-//  var $slider__4 = $('.slider__4');
-//  
-//  
-//
-//    $slider__4.slick({
+    
+    
+  
+   
+
+  $('.slider__line').slick({
 //        fade: true,
 //        cssEase: 'linear',
 //      
-//        arrows: false,
-//        dots: false,
+        arrows: false,
+        dots: false,
 //      
-//        autoplay: false,
-//        speed: 1000,
+//        autoplay: true,
+//        speed: 20,
 //      
-//        infinite: true,
-//      
-//        adaptiveHeight: true,
-//      
-//        slidesToShow: 1,
-//        slidesToScroll: 1,
-////        responsive: [{
-////                breakpoint: 1500,
-////                settings: {
-////                    arrows: true,
-////                    slidesToShow: 4,
-////                    slidesToScroll: 1,
-////                    infinite: true,
-////                }
-////            },
-////                     {
-////                breakpoint: 1300,
-////                settings: {
-////                    arrows: true,
-////                    slidesToShow: 3,
-////                    slidesToScroll: 1,
-////                    infinite: true,
-////                }
-////            },
-////            {
-////                breakpoint: 1000,
-////                settings: {
-////                    arrows: true,
-////                    slidesToShow: 2,
-////                    slidesToScroll: 1,
-////                    infinite: true,
-////                }
-////            },
-////            {
-////                breakpoint: 430,
-////                settings: {
-////                    arrows: true,
-////                    slidesToShow: 1,
-////                    slidesToScroll: 1,
-////                    infinite: true,
-////                }
-////            }
-////        ]
-//    });
+        infinite: true,
+        centerMode: true,
+        variableWidth: true,
+      
+        slidesToShow: 4, // толкьо 1 слайд показывать одновременно
+        slidesToScroll: 1, // по 1-му слайду проскролливать
+        speed: 8000, // медленная смена слайдов - скорость бегущей строки
+        autoplay: true, // устанавливаем автозапуск слайдера
+        autoplaySpeed: 0, //делаем запуск мгновенный с загрузкой страницы
+        cssEase: 'linear', // делаем анимацию однотонной при смене слайда
+    
+//        responsive: [{
+//                breakpoint: 1500,
+//                settings: {
+//                    arrows: true,
+//                    slidesToShow: 4,
+//                    slidesToScroll: 1,
+//                    infinite: true,
+//                }
+//            },
+//                     {
+//                breakpoint: 1300,
+//                settings: {
+//                    arrows: true,
+//                    slidesToShow: 3,
+//                    slidesToScroll: 1,
+//                    infinite: true,
+//                }
+//            },
+//            {
+//                breakpoint: 1000,
+//                settings: {
+//                    arrows: true,
+//                    slidesToShow: 2,
+//                    slidesToScroll: 1,
+//                    infinite: true,
+//                }
+//            },
+//            {
+//                breakpoint: 430,
+//                settings: {
+//                    arrows: true,
+//                    slidesToShow: 1,
+//                    slidesToScroll: 1,
+//                    infinite: true,
+//                }
+//            }
+//        ]
+    });
 
 
   
@@ -1821,30 +1918,30 @@ $full__tuch.slick({
 //  });
 
 
-  document.addEventListener("DOMContentLoaded", function() {
-  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(video) {
-        if (video.isIntersecting) {
-          for (var source in video.target.children) {
-            var videoSource = video.target.children[source];
-            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-              videoSource.src = videoSource.dataset.src;
-            }
-          }
-
-          video.target.load();
-          video.target.classList.remove("lazy");
-          lazyVideoObserver.unobserve(video.target);
-        }
-      });
-    });
-
-    lazyVideos.forEach(function(lazyVideo) {
-      lazyVideoObserver.observe(lazyVideo);
-    });
-  }
-});
+//  document.addEventListener("DOMContentLoaded", function() {
+//  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+//
+//  if ("IntersectionObserver" in window) {
+//    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+//      entries.forEach(function(video) {
+//        if (video.isIntersecting) {
+//          for (var source in video.target.children) {
+//            var videoSource = video.target.children[source];
+//            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+//              videoSource.src = videoSource.dataset.src;
+//            }
+//          }
+//
+//          video.target.load();
+//          video.target.classList.remove("lazy");
+//          lazyVideoObserver.unobserve(video.target);
+//        }
+//      });
+//    });
+//
+//    lazyVideos.forEach(function(lazyVideo) {
+//      lazyVideoObserver.observe(lazyVideo);
+//    });
+//  }
+//});
   

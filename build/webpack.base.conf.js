@@ -214,6 +214,13 @@ module.exports = {
       template: `${PATHS.src}/home.pug`,
       filename: './home.html'
     }),  
+       
+
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/paid.pug`,
+      filename: './paid.html'
+    }),  
     
 //    new HtmlWebpackPlugin({
 //      hash: false,
