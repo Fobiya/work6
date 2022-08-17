@@ -24,93 +24,110 @@ define(["jquery"], function($) {
     }
             
             
-            
-  $('.home__5 .list li a').click(function(e){
-    
-    e.preventDefault();
-    
-     var num_data = $(this).data('slide');
-    
-    $('.home__5 .list li ').removeClass('select');
-    
-    
-    $('.home__5 .list').removeClass('select1 select2 select3 select4 select5 select6');
-    
-    $(this).parent().addClass('select'); 
-    $(this).parent().parent().addClass('select'+ num_data); 
-     
-  });               
-            
-  $('.home__5 .list li a').hover(function(e){
-    
-    e.preventDefault();
-    
-     var num_data = $(this).data('slide');
-    
-    $('.home__5 .list li ').removeClass('select');
-    
-    
-    $('.home__5 .list').removeClass('select1 select2 select3 select4 select5 select6');
-    
-    $(this).parent().addClass('select'); 
-    $(this).parent().parent().addClass('select'+ num_data); 
-     
-  });    
-  
-  
-//      $(document).mouseover(function(e) { // web document click event
+//            
+//  $('.home__5 .list li a').click(function(e){
+//    
+//    e.preventDefault();
+//    
+//     var num_data = $(this).data('slide');
+//    
+//    $('.home__5 .list li ').removeClass('select');
+//    
+//    
+//    $('.home__5 .list').removeClass('select1 select2 select3 select4 select5 select6');
+//    
+//    $(this).parent().addClass('select'); 
+//    $(this).parent().parent().addClass('select'+ num_data); 
+//     
+//  });               
+//            
+//  $('.home__5 .list li a').hover(function(e){
+//    
+//    e.preventDefault();
+//    
+//     var num_data = $(this).data('slide');
+//    
+//    $('.home__5 .list li ').removeClass('select');
+//    
+//    
+//    $('.home__5 .list').removeClass('select1 select2 select3 select4 select5 select6');
+//    
+//    $(this).parent().addClass('select'); 
+//    $(this).parent().parent().addClass('select'+ num_data); 
+//     
+//  });    
+//  
+//  
+//  $(document).mouseover(function(e) { // web document click event
 //        var div = $(".home__2 .list"); // here we specify the ID of the element
 //        if (!div.is(e.target)){
 //            
 //
 //          
 //          
-//    $('.home__2 .list li').removeClass('select');
-//    $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');    
+//        $('.home__2 .list li').removeClass('select');
+//        $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');    
 //          
 //          
 //            
-//            }else if( div.has(e.target).length === 0) { // and not by its children
+//        }else if( div.has(e.target).length === 0) { // and not by its children
 //
-//              $('.home__2 .list li a').hover(function(e){
+//          $('.home__2 .list li a').hover(function(e){
 //
-//                e.preventDefault();
+//               e.preventDefault();
 //
-//                 var num_data = $(this).data('slide');
+//               var num_data = $(this).data('slide');
 //
-//                $('.home__2 .list li ').removeClass('select');
+//              $('.home__2 .list li ').removeClass('select');
 //
 //
-//                $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');
+//              $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');
 //
-//                $(this).parent().addClass('select'); 
-//                $(this).parent().parent().addClass('select'+ num_data); 
+//              $(this).parent().addClass('select'); 
+//              $(this).parent().parent().addClass('select'+ num_data); 
 //
-//              });  
+//          });  
 //          
 //        }
 //    });  
+//
+//  
+//  
 
-  
-  
-  
-
-            
-      $('.home__2 .list li a').hover(function(e){
-
-        e.preventDefault();
-
-         var num_data = $(this).data('slide');
-
-        $('.home__2 .list li ').removeClass('select');
+    
 
 
-        $('.home__2 .list').removeClass('select1 select2 select3 select4 select5 select6');
+           $('.home__2 ul.mobile li a').click( function() {
+
+         var $mobile_data = $(this).data("mobile");
+        
+//       console.log($mobile_data);
+
+        $('.home__2 ul.mobile li ').removeClass('select');
+
+
+        $('.home__2 ul.mobile').removeClass('select1 select2 select3 select4 select5 select6');
 
         $(this).parent().addClass('select'); 
-        $(this).parent().parent().addClass('select'+ num_data); 
+        $(this).parent().parent().addClass('select'+ $mobile_data); 
+        
+        
+          $(this).addClass('select'); 
 
       });  
+   
+      
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     
 //  }else{
 //    
@@ -119,22 +136,28 @@ define(["jquery"], function($) {
 //    
 //  }
 
-    
-  $('.home__2 .mobile li a').click(function(e){
-    
-    e.preventDefault();
-    
-     var num_data = $(this).data('mob');
-    
-    $('.home__2 .mobile li ').removeClass('select');
-    
-    
-    $('.home__2 .mobile').removeClass('select1 select2 select3 select4 select5 select6');
-    
-    $(this).parent().addClass('select'); 
-    $(this).parent().parent().addClass('select'+ num_data); 
-     
-  });      
+  
+  
+  
+  
+//  $('.home__2 ul.mobile li a').click(function(e){
+//    
+//    e.preventDefault();
+//    
+//    var mobile = $(this).data('mobile');
+//    
+//    $('.home__2 ul.mobile li').removeClass('select');
+//    
+//    
+//    $('.home__2 ul.mobile').removeClass('select1 select2 select3 select4 select5 select6');
+//    
+//    $(this).parent().addClass('select'); 
+//    $(this).parent().parent().addClass('select'+ mobile); 
+//     
+//  });     
+  
+  
+  
             
 //            
 //let box = document.querySelector("#preloader"),
@@ -346,6 +369,29 @@ define(["jquery"], function($) {
 //document.addEventListener('mousewheel', wheel, false); //chrome, IE
 //  
 //  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
     
   if($( "section" ).hasClass( "home__0" )){
@@ -1202,7 +1248,7 @@ $full__tuch.slick({
 //    swipeToSlide: true,
     touchThreshold: 10,
   
-  
+     lazyLoad: 'progressive',
   
   
         responsive: [{
@@ -1215,7 +1261,7 @@ $full__tuch.slick({
                     vertical: true,
                     verticalSwiping: true,
 
-                    swipe: false,
+                    swipe: true,
 
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -1243,7 +1289,7 @@ $full__tuch.slick({
                     vertical: true,
                     verticalSwiping: true,
 
-                    swipe: true,
+                    swipe: false,
 
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -1264,7 +1310,7 @@ $full__tuch.slick({
                     vertical: true,
                     verticalSwiping: true,
 
-                    swipe: true,
+                    swipe: false,
 
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -1291,12 +1337,15 @@ $full__tuch.slick({
  }));
   
   
-  
-  
-  
-  
-  
+    $(window).on('resize', function() {
+        $('#full__tuch').slick('resize');
+    });
 
+  
+  
+  
+    
+    
   
   $('#home__4_slider .next__').click(function() { 
     $home__4_slider.slick('slickNext');
@@ -1322,7 +1371,7 @@ $full__tuch.slick({
 
 //      
 //      
-//       infinite: true,
+       infinite: true,
 //       variableWidth: true, 
 //
 //

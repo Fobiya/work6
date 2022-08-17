@@ -84,18 +84,22 @@ html(lang='en')
               img.menu__(data-src='img/menu.svg', alt='menu')
 
 
-
-
     #full__tuch
+
+
+
+
+
 
     
       div
         section#home2.home__2
-          video.lazy#video_2( reload='' src='video/services.mp4', autoplay='' muted='' loop='')
-          
+          video#video_2(poster='img/home__2_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home__2.webm', type='video/webm')
+            source(src='video/home__2.mp4', type='video/mp4')
 
           .container
-            .row
+            .row 
               .col.m12.s12.l12.xl12
                 h2.title Services we provide
 
@@ -116,7 +120,26 @@ html(lang='en')
                   li
                     a(href='javascript:;'  data-slide='4')  Data Analytics
                   li
-                    a(href='javascript:;'  data-slide='5')  Digital Strategy
+                    a(href='javascript:;'  data-slide='5')  Digital Strategy 
+                    
+                    
+
+                ul.mobile
+                  li 
+                    a cscsccccccccc
+                  li 
+                    a(href='javascript:;'  data-mobile='1')  Paid Social
+                  li
+                    a(href='javascript:;'  data-mobile='2')  Paid Search
+
+                  li
+                    a(href='javascript:;'  data-mobile='3')  Organic Search
+                  li
+                    a(href='javascript:;'  data-mobile='4')  Data Analytics
+                  li
+                    a(href='javascript:;'  data-mobile='5')  Digital Strategy
+
+
 
                 .arrow__cont
                   a.next__arrow(href='javascript:;')

@@ -47,7 +47,7 @@ html(lang='en')
         li
           a(href='javascript:;') Contact
 
-    header
+    header.anim__logo
       .container
         .row
           .col.m12.s12.l12.xl12
@@ -57,8 +57,15 @@ html(lang='en')
               li
                 a(href='javascript:;') About us
               li
-                a(href='javascript:;') Services
 
+                ul
+                  li
+                    a(href='javascript:;') Home
+                  li
+                    a(href='javascript:;') About us
+                  li
+                    a(href='javascript:;') Services
+                a(href='javascript:;') Services
 
             .logo__cont
               a(href='javascript:;')
@@ -77,24 +84,27 @@ html(lang='en')
 
 
 
-    section#home0.home__0
-      video.lazy#video_0( preload='none' src='video/home__0.mp4',  autoplay='' muted='')
-        //source( type='video/mp4'  data-src="video/star.mp4")
-        //source(data-src='video/background.webp' type='video/webp') 
+    section#home0.home__0.none
+      video#video_0.none(poster='img/home__0_back.png', playsinline='', autoplay='', muted='', preload='none')
+        source(src='video/home__0.mp4', type='video/webm')
+        source(src='video/home__0.mp4', type='video/mp4')
+
+        
 
     #full__tuch
 
       div
-        section#home1.home__1
-        
-          video.lazy#video_1( preload='none' src='video/home.mp4', autoplay='' muted='' loop='')
+        section#home1.home__1.not_
 
+          video#video_1(poster='img/home__1_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home.webm', type='video/webm')
+            source(src='video/home.mp4', type='video/mp4')
 
 
           .container
             .row
               .col.m10.s12.l12.xl12
-                h1.title Digital marknadsföring som ger resultat
+                h1.title  Digital marknadsföring som ger resultat
 
                 p.sub Vi hjälper bolag över hela Sverige att få nya kunder genom sökordsoptimering, Google annonsering och annonsering på sociala medier.
 
@@ -121,8 +131,9 @@ html(lang='en')
     
       div
         section#home2.home__2
-          video.lazy#video_2( reload='' src='video/services.mp4', autoplay='' muted='' loop='')
-          
+          video#video_2(poster='img/home__2_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home__2.webm', type='video/webm')
+            source(src='video/home__2.mp4', type='video/mp4')
 
           .container
             .row
@@ -147,6 +158,27 @@ html(lang='en')
                     a(href='javascript:;'  data-slide='4')  Data Analytics
                   li
                     a(href='javascript:;'  data-slide='5')  Digital Strategy
+                    
+                    
+                    
+                ul.mobile
+                  li
+                    a(href='javascript:;'  data-mobile='0')  Paid Social
+                    a.next__(href='#1') 
+                  li
+                    a(href='javascript:;'  data-mobile='1')  Paid Search
+                    a.next__(href='#2') 
+                  li
+                    a(href='javascript:;'  data-mobile='2')  Organic Search
+                    a.next__(href='#3') 
+                  li
+                    a(href='javascript:;'  data-mobile='3')  Data Analytics
+                    a.next__(href='#4') 
+                  li
+                    a(href='javascript:;'  data-mobile='4')  Digital Strategy
+                    a.next__(href='#5') 
+
+                    
 
                 .arrow__cont
                   a.next__arrow(href='javascript:;')
@@ -156,8 +188,9 @@ html(lang='en')
           
       div
         section#home3.home__3
-          video.lazy#video_3( reload='' src='video/home__3.mp4', autoplay='' muted='' loop='')
-          
+          video#video_3(poster='img/home__3_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home__3.webm', type='video/webm')
+            source(src='video/home__3.mp4', type='video/mp4')
 
           .container
             .row
@@ -191,14 +224,14 @@ html(lang='en')
                 .arrow__cont
                   a.next__arrow(href='javascript:;')
                     span
-          #topbtn(onclick='goTop()') &uarr;
           
           
           
       div
         section#home4.home__4
-          video.lazy#video_4( reload='' src='video/services.mp4', autoplay='' muted='' loop='')
-          
+          video#video_4(poster='img/home__4_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home__2.webm', type='video/webm')
+            source(src='video/home__2.mp4', type='video/mp4')
 
           .container
             .row
@@ -306,8 +339,9 @@ html(lang='en')
    
       div
         section#home5.home__5
-          video.lazy#video_5( reload='' src='video/home__3.mp4', autoplay='' muted='' loop='')
-          
+          video#video_5(poster='img/home__5_back1.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home__3.webm', type='video/webm')
+            source(src='video/home__3.mp4', type='video/mp4')
 
           .container
             .row
@@ -378,17 +412,17 @@ html(lang='en')
                 .arrow__cont
                   a.next__arrow(href='javascript:;')
                     span
-          #topbtn(onclick='goTop()') &uarr;
           
           
       div
         section#home6.home__6
-          video.lazy#video_6( reload='' src='video/services.mp4', autoplay='' muted='' loop='')
-          
+          video#video_6(poster='img/home__6_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home__2.webm', type='video/webm')
+            source(src='video/home__2.mp4', type='video/mp4')
 
           .container
             .row
-              .col.m12.s12.l8.xl9
+              .col.m12.s12.l10.xl9
                 h2.title Tillräckligt små för att vara personliga, men stora nog att leverera
                 
                 p Många företag jobbar med digital marknadsföring, däremot anser vi att allt för många lösningar är ineffektiva och inte presterar. Därför startade vi Webshark!
@@ -400,7 +434,7 @@ html(lang='en')
                   a.white(href='javascript:;') Kontakta oss
                   img.partner(data-src='img/partner.svg', alt='partner')
                   
-              .col.m12.s12.l4.xl3
+              .col.m12.s12.l2.xl3
                 .video__content
                   video.lazy#video_6(reload='' src='video/zk9da-23mue.webm' autoplay='' muted='' loop='')
 
@@ -413,13 +447,17 @@ html(lang='en')
           
       div
         section#home7.home__7
-          video.lazy#video_7(autoplay='', src='video/home__7.mp4',  muted='', preload='auto')
-          video.opacyte.lazy#video_7_1(autoplay='', src='video/home__7_1.mp4', loop='', muted='', preload='auto')
+          video#video_7( playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home__7.webm', type='video/webm')
+            source(src='video/home__7.mp4', type='video/mp4')
           
-
+          video.opacyte#video_7_1( playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home__7_1.webm', type='video/webm')
+            source(src='video/home__7_1.mp4', type='video/mp4')
+            
           .container
             .row
-              .col.m12.s12.l8.xl8
+              .col.m12.s12.l12.xl8
                 h2.title Vägen till lönsamma resultat – steg för steg
                 
                 p Dina kunders resa online – från att lära känna ditt företag, till köp och vidare till kundrelationen – kallar vi den digitala kundresan. Och ditt team hos Webshark arbetar för att göra den resan så effektiv som möjligt
@@ -439,7 +477,9 @@ html(lang='en')
           
       div
         section#home8.home__8
-          video.lazy#video_8(autoplay='', src='video/home__8.mp4',  muted='', preload='auto')
+          video#video_8( playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home__8.webm', type='video/webm')
+            source(src='video/home__8.mp4', type='video/mp4')
 
           .container
             .row
@@ -493,7 +533,9 @@ html(lang='en')
           
       div
         section#home9.home__9
-          video.lazy#video_9(autoplay='', src='video/home__8.mp4',  muted='', preload='auto', loop='')
+          video#video_9( playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='video/home__8.webm', type='video/webm')
+            source(src='video/home__8.mp4', type='video/mp4')
 
           .container
             .row

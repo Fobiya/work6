@@ -15,7 +15,7 @@
     <meta property="og:type" conten="Keywords var keywords">
     <meta name="description" conten="Description var description">
     <meta name="keywords" conten="Keywords var keywords">
-  <link href="css/min.css?v=f46002fb8b92e02f3f77" rel="stylesheet"></head>
+  <link href="css/min.css?v=cb2b5b6dbbe4a458d132" rel="stylesheet"></head>
   <body class="oveflow-hidden info" data-img="img/232110.png">
     <div class="bar-long none"></div>
     <div class="right__menu">
@@ -29,14 +29,20 @@
         <li><a href="javascript:;">Contact</a></li>
       </ul>
     </div>
-    <header>
+    <header class="anim__logo">
       <div class="container">
         <div class="row">
           <div class="col m12 s12 l12 xl12">
             <ul>
               <li><a href="javascript:;">Home</a></li>
               <li><a href="javascript:;">About us</a></li>
-              <li><a href="javascript:;">Services</a></li>
+              <li>
+                <ul>
+                  <li><a href="javascript:;">Home</a></li>
+                  <li><a href="javascript:;">About us</a></li>
+                  <li><a href="javascript:;">Services</a></li>
+                </ul><a href="javascript:;">Services</a>
+              </li>
             </ul>
             <div class="logo__cont"><a href="javascript:;"><img class="logo__img" data-src="img/logo.svg" alt="logo"></a></div>
             <ul>
@@ -48,20 +54,23 @@
         </div>
       </div>
     </header>
-    <section class="home__0" id="home0">
-      <video class="lazy" id="video_0" preload="none" src="video/home__0.mp4" autoplay="" muted="">
-        <!--source( type='video/mp4'  data-src="video/star.mp4")-->
-        <!--source(data-src='video/background.webp' type='video/webp') -->
+    <section class="home__0 none" id="home0">
+      <video class="none" id="video_0" poster="img/home__0_back.png" playsinline="" autoplay="" muted="" preload="none">
+        <source src="video/home__0.mp4" type="video/webm">
+        <source src="video/home__0.mp4" type="video/mp4">
       </video>
     </section>
     <div id="full__tuch">
       <div>
-        <section class="home__1" id="home1">
-          <video class="lazy" id="video_1" preload="none" src="video/home.mp4" autoplay="" muted="" loop=""></video>
+        <section class="home__1 not_" id="home1">
+          <video id="video_1" poster="img/home__1_back.png" playsinline="" autoplay="" muted="" loop="" preload="none">
+            <source src="video/home.webm" type="video/webm">
+            <source src="video/home.mp4" type="video/mp4">
+          </video>
           <div class="container">
             <div class="row">
               <div class="col m10 s12 l12 xl12">
-                <h1 class="title">Digital marknadsföring som ger resultat</h1>
+                <h1 class="title"> Digital marknadsföring som ger resultat</h1>
                 <p class="sub">Vi hjälper bolag över hela Sverige att få nya kunder genom sökordsoptimering, Google annonsering och annonsering på sociala medier.</p>
                 <div class="bot__cont"><a class="red" href="javascript:;">Kontakta oss</a><a class="white" href="javascript:;">Våra tjänster</a></div>
                 <div class="brand__cont"><a href="javascript:;"><img data-src="img/brand_1.svg" alt="brand"></a><a href="javascript:;"><img data-src="img/brand_2.svg" alt="brand"></a><a href="javascript:;"><img data-src="img/brand_3.svg" alt="brand"></a><a href="javascript:;"><img data-src="img/brand_4.svg" alt="brand"></a></div>
@@ -73,7 +82,10 @@
       </div>
       <div>
         <section class="home__2" id="home2">
-          <video class="lazy" id="video_2" reload="" src="video/services.mp4" autoplay="" muted="" loop=""></video>
+          <video id="video_2" poster="img/home__2_back.png" playsinline="" autoplay="" muted="" loop="" preload="none">
+            <source src="video/home__2.webm" type="video/webm">
+            <source src="video/home__2.mp4" type="video/mp4">
+          </video>
           <div class="container">
             <div class="row">
               <div class="col m12 s12 l12 xl12">
@@ -89,6 +101,13 @@
                   <li><a href="javascript:;" data-slide="4"> Data Analytics</a></li>
                   <li><a href="javascript:;" data-slide="5"> Digital Strategy</a></li>
                 </ul>
+                <ul class="mobile">
+                  <li><a href="javascript:;" data-mobile="0"> Paid Social</a><a class="next__" href="#1"> </a></li>
+                  <li><a href="javascript:;" data-mobile="1"> Paid Search</a><a class="next__" href="#2"> </a></li>
+                  <li><a href="javascript:;" data-mobile="2"> Organic Search</a><a class="next__" href="#3"> </a></li>
+                  <li><a href="javascript:;" data-mobile="3"> Data Analytics</a><a class="next__" href="#4"> </a></li>
+                  <li><a href="javascript:;" data-mobile="4"> Digital Strategy</a><a class="next__" href="#5"> </a></li>
+                </ul>
                 <div class="arrow__cont"><a class="next__arrow" href="javascript:;"><span></span></a></div>
               </div>
             </div>
@@ -97,7 +116,10 @@
       </div>
       <div>
         <section class="home__3" id="home3">
-          <video class="lazy" id="video_3" reload="" src="video/home__3.mp4" autoplay="" muted="" loop=""></video>
+          <video id="video_3" poster="img/home__3_back.png" playsinline="" autoplay="" muted="" loop="" preload="none">
+            <source src="video/home__3.webm" type="video/webm">
+            <source src="video/home__3.mp4" type="video/mp4">
+          </video>
           <div class="container">
             <div class="row">
               <div class="col m12 s12 l12 xl12">
@@ -115,12 +137,14 @@
               </div>
             </div>
           </div>
-          <div id="topbtn" onclick="goTop()">&uarr;</div>
         </section>
       </div>
       <div>
         <section class="home__4" id="home4">
-          <video class="lazy" id="video_4" reload="" src="video/services.mp4" autoplay="" muted="" loop=""></video>
+          <video id="video_4" poster="img/home__4_back.png" playsinline="" autoplay="" muted="" loop="" preload="none">
+            <source src="video/home__2.webm" type="video/webm">
+            <source src="video/home__2.mp4" type="video/mp4">
+          </video>
           <div class="container">
             <div class="row">
               <div class="col m12 s12 l12 xl12">
@@ -217,7 +241,10 @@
       </div>
       <div>
         <section class="home__5" id="home5">
-          <video class="lazy" id="video_5" reload="" src="video/home__3.mp4" autoplay="" muted="" loop=""></video>
+          <video id="video_5" poster="img/home__5_back1.png" playsinline="" autoplay="" muted="" loop="" preload="none">
+            <source src="video/home__3.webm" type="video/webm">
+            <source src="video/home__3.mp4" type="video/mp4">
+          </video>
           <div class="container">
             <div class="row">
               <div class="col m12 s12 l12 xl12">
@@ -280,21 +307,23 @@
               </div>
             </div>
           </div>
-          <div id="topbtn" onclick="goTop()">&uarr;</div>
         </section>
       </div>
       <div>
         <section class="home__6" id="home6">
-          <video class="lazy" id="video_6" reload="" src="video/services.mp4" autoplay="" muted="" loop=""></video>
+          <video id="video_6" poster="img/home__6_back.png" playsinline="" autoplay="" muted="" loop="" preload="none">
+            <source src="video/home__2.webm" type="video/webm">
+            <source src="video/home__2.mp4" type="video/mp4">
+          </video>
           <div class="container">
             <div class="row">
-              <div class="col m12 s12 l8 xl9">
+              <div class="col m12 s12 l10 xl9">
                 <h2 class="title">Tillräckligt små för att vara personliga, men stora nog att leverera</h2>
                 <p>Många företag jobbar med digital marknadsföring, däremot anser vi att allt för många lösningar är ineffektiva och inte presterar. Därför startade vi Webshark!</p>
                 <p>Vi är ett team bestående av unga och drivna talanger inom digital marknadsföring som drivs av att skapa digital framgång för våra kunder. Vi som jobbar på Webshark är datanördar, som idag erbjuder effektiva och kreativa lösningar för hur bolag ska driva resultat digitalt. Vi har hjälpt över många bolag, allt från miljardbolag till startups.</p><img class="partner" data-src="img/partner.svg" alt="partner">
                 <div class="bottum"><a class="white" href="javascript:;">Kontakta oss</a><img class="partner" data-src="img/partner.svg" alt="partner"></div>
               </div>
-              <div class="col m12 s12 l4 xl3">
+              <div class="col m12 s12 l2 xl3">
                 <div class="video__content">
                   <video class="lazy" id="video_6" reload="" src="video/zk9da-23mue.webm" autoplay="" muted="" loop=""></video>
                 </div>
@@ -306,11 +335,17 @@
       </div>
       <div>
         <section class="home__7" id="home7">
-          <video class="lazy" id="video_7" autoplay="" src="video/home__7.mp4" muted="" preload="auto"></video>
-          <video class="opacyte lazy" id="video_7_1" autoplay="" src="video/home__7_1.mp4" loop="" muted="" preload="auto"></video>
+          <video id="video_7" playsinline="" autoplay="" muted="" loop="" preload="none">
+            <source src="video/home__7.webm" type="video/webm">
+            <source src="video/home__7.mp4" type="video/mp4">
+          </video>
+          <video class="opacyte" id="video_7_1" playsinline="" autoplay="" muted="" loop="" preload="none">
+            <source src="video/home__7_1.webm" type="video/webm">
+            <source src="video/home__7_1.mp4" type="video/mp4">
+          </video>
           <div class="container">
             <div class="row">
-              <div class="col m12 s12 l8 xl8">
+              <div class="col m12 s12 l12 xl8">
                 <h2 class="title">Vägen till lönsamma resultat – steg för steg</h2>
                 <p>Dina kunders resa online – från att lära känna ditt företag, till köp och vidare till kundrelationen – kallar vi den digitala kundresan. Och ditt team hos Webshark arbetar för att göra den resan så effektiv som möjligt</p><a class="white" href="javascript:;">Jag vill veta mer!</a>
               </div>
@@ -321,7 +356,10 @@
       </div>
       <div>
         <section class="home__8" id="home8">
-          <video class="lazy" id="video_8" autoplay="" src="video/home__8.mp4" muted="" preload="auto"></video>
+          <video id="video_8" playsinline="" autoplay="" muted="" loop="" preload="none">
+            <source src="video/home__8.webm" type="video/webm">
+            <source src="video/home__8.mp4" type="video/mp4">
+          </video>
           <div class="container">
             <div class="row">
               <div class="col m12 s12 l12 xl5">
@@ -361,7 +399,10 @@
       </div>
       <div>
         <section class="home__9" id="home9">
-          <video class="lazy" id="video_9" autoplay="" src="video/home__8.mp4" muted="" preload="auto" loop=""></video>
+          <video id="video_9" playsinline="" autoplay="" muted="" loop="" preload="none">
+            <source src="video/home__8.webm" type="video/webm">
+            <source src="video/home__8.mp4" type="video/mp4">
+          </video>
           <div class="container">
             <div class="row">
               <div class="col m12 s12 l4 xl4">
@@ -449,7 +490,7 @@
       
       
     </script>
-  <script type="text/javascript" src="js/main.min.js?v=f46002fb8b92e02f3f77"></script></body>
+  <script type="text/javascript" src="js/main.min.js?v=cb2b5b6dbbe4a458d132"></script></body>
 </html>
 <!--      $(function(){-->
 <!--        $('[data-fancybox]').fancybox({-->

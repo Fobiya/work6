@@ -709,7 +709,7 @@ img,.home__4{
               align-items: center;
              
               
-@include wid(992)      {  font: 100 16px/1.2em var(--nl); }
+@include wid(992)      {  font: 100 20px/1.2em var(--nl); }
 @include wid(601-991)  {  font: 100 12px/1.2em var(--nl); }
 @include wid(600)      {  font: 100 12px/1.2em var(--nl); }
 
@@ -722,10 +722,6 @@ img,.home__4{
           }
         }
         
-     }
-     
-     .logo__img{
-        max-width: 212px;
      }
       
  
@@ -1820,13 +1816,12 @@ html,.body,#well{
 
         max-width: 1100px;
         margin: auto;
-     margin-bottom: 20px;
 
-        @include wid(1500)      {  font: 100 96px/.9em var(--f); }
-        @include wid(1200-1499) {  font: 100 96px/.9em var(--f); }
-        @include wid(992-1199)  {  font: 100 96px/.9em var(--f); }
-        @include wid(601-991)   {  font: 100 64px/.9em var(--f); }
-        @include wid(600)       {  font: 100 44px/.9em var(--f); }
+        @include wid(1500)      {  font: 100 156px/.9em var(--f); }
+        @include wid(1200-1499)      {  font: 100 110px/.9em var(--f); }
+        @include wid(992-1199)  {  font: 100 84px/.9em var(--f); }
+        @include wid(601-991)  {  font: 100 64px/.9em var(--f); }
+        @include wid(600)      {  font: 100 44px/.9em var(--f); }
        
        opacity: 0;
        
@@ -2001,32 +1996,17 @@ html,.body,#well{
       z-index: 2;
    
 @include wid(601-991)  {  
-//  padding: 100px 0 0;
-//  min-height: 100vh;
+  padding: 100px 0 0;
+  min-height: 100vh;
 }
 @include wid(600)      {    
-//  padding: 70px 0 0;
-//  min-height: 100vh;
+  padding: 70px 0 0;
+  min-height: 100vh;
 }
    
    
    
-   &>.container{
-     
-      @include wid(991)  {
-        
-        max-width: 100%;
-        width: 100%;
-        
-        &>.row:nth-child(1)>div:nth-child(1){
-          
 
-          
-        }
-        
-        
-     }
-   }
    
    
    &>.container:nth-child(2)>.row:nth-child(1){
@@ -2052,8 +2032,8 @@ html,.body,#well{
     &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
         
 //      @include wid(992)      {  }
-      @include wid(601-991)  { padding: 100px 0rem 50px; min-height: 100vh }
-      @include wid(600)      { padding: 100px 0rem 50px; min-height: 100vh  }
+      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(600)      {  }
    }
 
    
@@ -2092,15 +2072,14 @@ html,.body,#well{
 //        margin: auto auto 100px;
        
        
-     margin-top: auto;
-
-          width: 100%;
+          margin-top: 190px;
+          width: 120%;
 //          margin-left: -140px;
           letter-spacing: -.002em;
        
 
-        @include wid(992)      {  font: 100 96px/.9em var(--f); }
-        @include wid(601-991)  {  font: 100 74px/.9em var(--f);  max-width: 400px; margin: 0 auto auto; }
+        @include wid(992)      {  font: 100 200px/.9em var(--f); }
+        @include wid(601-991)  {  font: 100 64px/.9em var(--f);  max-width: 400px; margin: 0 auto auto; }
         @include wid(600)      {  font: 100 64px/.9em var(--f); max-width: 400px; margin: 0 auto auto; }
 
 
@@ -2147,9 +2126,7 @@ html,.body,#well{
 
       transition: all 1.2s ease;
 
-      gap: 20px 1px;
-     flex-wrap: wrap;
-     
+      gap: 0 1px;
      
      
      
@@ -2480,8 +2457,6 @@ html,.body,#well{
             display: flex;
             justify-content: center;
             align-items: center;
-          
-          display: none !important;
 
             pointer-events: none;
           
@@ -2673,7 +2648,7 @@ html,.body,#well{
             color: rgba(255, 255, 255, 1);
          
           
-          @include wid(1200)      { font: 400 36px/1.2em var(--f);  } 
+          @include wid(1200)      { font: 400 40px/1.2em var(--f);  } 
           @include wid(992-1199)  { font: 400 36px/1.2em var(--f);  } 
           @include wid(992-1199)  { font: 400 30px/1.2em var(--f);  } 
           @include wid(601-991)   { font: 400 20px/1.2em var(--f);  } 
@@ -2683,7 +2658,7 @@ html,.body,#well{
             white-space: nowrap;
 
             height: 54px;
-            padding: 7px 35px 0;
+            padding: 7px 75px 0;
 
             padding-top: 7px;
             margin: 0 auto;
@@ -2711,10 +2686,6 @@ html,.body,#well{
    
    ul.mobile{
      
-     overflow: hidden;
-     
-     z-index: 2222;
-     
 
      @for $i from 1 through 20 {
        
@@ -2731,30 +2702,11 @@ html,.body,#well{
                 position: absolute;
                 z-index: 2;
              
-               transition: all .5s ease-in;  
+               transition: all 1s ease-in;  
                transform:translateY($i * 51px);
 
 
               }
-         
-         
-//                   &:after{
-//            @extend %bef-aft;
-//
-//            background: url(../img/home__2__next.svg) no-repeat;
-//            
-//                position: absolute;
-//
-//            width: 76px;
-//            height: 42px;
-//            
-//                position: absolute;
-//                z-index: 2;
-//             
-//               transition: all 1s ease-in;  
-//               transform:translateY($i * 51px);
-//          }
-     
          
 
   
@@ -2769,12 +2721,13 @@ html,.body,#well{
     }
      
      
-
-      position: relative;
-      width: 100%;
-      z-index: 1;
      
-//     @include wid(992)      {  display:  none; }
+        position: relative;
+        width: 100%;
+
+     
+     z-index: 1;
+     @include wid(992)      {  display:  none; }
      
   &:before{
     @extend %bef-aft;
@@ -2787,9 +2740,8 @@ html,.body,#well{
     position: absolute;
     z-index: 2;
     
-                   transition: all .5s ease-in;  
+                   transition: all 1s ease-in;  
   }
-
      
      
      
@@ -2803,7 +2755,7 @@ html,.body,#well{
        padding-left: 1.2rem;
        
        display: flex;
-       justify-content:space-between;
+       justify-content: space-between;
        align-items: center;
        
        a{
@@ -2817,6 +2769,12 @@ html,.body,#well{
          
             justify-content: flex-start;
             color: rgba(255, 255, 255, 1);
+         
+             &:hover{
+               color: #000;
+             }
+
+          
          
 
 
@@ -2832,69 +2790,6 @@ html,.body,#well{
            width: 100%;
          
 
-
-       }
-       
-       
-       &.select{
-             .next__{
-                     transition: all 1.7s ease;
-               opacity: 1;
-                      pointer-events:auto;
-               
-         
-         &:after{
-            @extend %bef-aft;
-
-            background: url(../img/home__2__next.svg) no-repeat;
-            
-                position: absolute;
-
-            width: 76px;
-            height: 42px;
-            
-                position: absolute;
-                z-index: 2;
-             
-               transition: all .5s  ease-in;  
-                     
-                transform: translateX(0px);
-   
-          }
-               
-         }
-       }
-       
-       .next__{
-         
-         transition: all 1.7s ease;
-         
-         display: flex;
-         justify-content: flex-end;
-         
-//         opacity: 0;
-         pointer-events: none;
-         
-                   &:after{
-            @extend %bef-aft;
-
-            background: url(../img/home__2__next.svg) no-repeat;
-            
-                position: absolute;
-
-            width: 76px;
-            height: 42px;
-            
-                position: absolute;
-                z-index: 2;
-             
-               transition: all .5s ease-in;  
-                     
-                transform: translateX(75px);
-   
-          }
-         
-         
 
        }
        
@@ -2989,12 +2884,12 @@ html,.body,#well{
         letter-spacing: .025em;
         text-align: center;
 
-//          margin-top: 190px;
+          margin-top: 190px;
 //          margin-left: -140px;
-        letter-spacing: -.002em;
-        margin-top: auto;
-        max-width: 885px;
-        width: 100%;
+          letter-spacing: -.002em;
+     
+     max-width: 885px;
+     width: 100%;
        
 
         @include wid(992)      {  font: 100 96px/.9em var(--f); }
@@ -3040,11 +2935,9 @@ html,.body,#well{
      
      flex-wrap: wrap;
      
- 
-  @include wid(992-1199)  {      max-width: 710px; } 
-     
+     max-width: 1100px;
      width: 100%;
-     margin: 40px auto 0;
+     margin: 100px auto 0;
      
      gap: 30px 60px;
      
@@ -3052,13 +2945,6 @@ html,.body,#well{
             position: relative;
        
        img{
-             width: 180px;
-         
-  @include wid(1200-1499) {   } 
-  @include wid(992-1199)  {  width: 120px;  } 
-         
-          @include wid(601-991)  {  width: 100px; }
-          @include wid(600)      {  width: 80px; }
          
        }
        
@@ -3094,12 +2980,12 @@ html,.body,#well{
    
    
    &>.container:nth-child(2)>.row:nth-child(1){
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//       min-height: calc(100vh - 165px);
-//       flex-direction: column;
-//       @include wid(992){ padding: 120px 0  45px 0; }
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       min-height: calc(100vh - 165px);
+       flex-direction: column;
+       @include wid(992){ padding: 120px 0  45px 0; }
      
      .col{
        padding: 0;
@@ -3117,19 +3003,6 @@ html,.body,#well{
       flex-direction: column;
        
    }
-   
-   
-    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
-        
-//      @include wid(992)      {  }
-      
-  @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
-  @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-  @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(600)      {  }
-   }
-
    
     video#video_4 {
         position: absolute;
@@ -3173,7 +3046,7 @@ html,.body,#well{
    
        
 
-        @include wid(992)      {  font: 100 96px/.9em var(--f);   margin-bottom:15px; }
+        @include wid(992)      {  font: 100 160px/.9em var(--f);   margin-bottom:15px; }
         @include wid(601-991)  {  font: 100 86px/.9em var(--f);  margin-bottom: 30px;  }
         @include wid(600)      {  font: 100 44px/.9em var(--f); margin-bottom: 40px; }
 
@@ -3187,9 +3060,9 @@ html,.body,#well{
      
      margin-bottom: 15px;
 
-          @include wid(992)      {  font: 100 18px/1.3em var(--nl); }
-          @include wid(601-991)  {  font: 100 16px/1.3em var(--nl); }
-          @include wid(600)      {  font: 100 16px/1.3em var(--nl); }
+          @include wid(992)      {  font: 100 20px/1.3em var(--nl); }
+          @include wid(601-991)  {  font: 100 20px/1.3em var(--nl); }
+          @include wid(600)      {  font: 100 18px/1.3em var(--nl); }
 
      }
    
@@ -3267,8 +3140,6 @@ html,.body,#well{
 //       }
 //     }
      
-
-     
      
      
      .slick-slide.slick-current{
@@ -3279,23 +3150,11 @@ html,.body,#well{
 
        
        display: flex;
-       
-       
-     
-       
-  @include wid(1500)      {    padding: 50px 50px 0;  } 
-  @include wid(1200-1499) {    padding: 0px 50px 0;  } 
-  @include wid(992-1199)  {    padding: 0px 50px 0;  } 
-  @include wid(601-991)   {   } 
-  @include wid(600)       {   } 
+       padding: 100px 100px 0 100px;
        
        
        .box__img{
-         
-         max-width: 359px;
-         margin: 20px 0 20px auto;
-         height: 100%;
-         
+         margin-left: auto;
        }
      }
    }
@@ -3307,7 +3166,39 @@ html,.body,#well{
     z-index: 1;
      
      width: 100%;
-
+//     max-width: 100%;
+     
+//       min-width: calc(100vw - 280px);
+//     
+//     .slick-track>.slick-slide{
+////       width: inherit !important;
+//     }
+//     
+//     .box__content{
+//
+//     }
+//     //.is-selected
+//       .slick-current{
+//
+//          .box__content{
+//            display: flex;
+//
+//
+//            width: 1000px;
+//  //          max-width: calc(100vw - 280px);
+//            min-width: 1000px;
+//
+//
+//            .next__content{
+//  //            max-width: 356px;
+//  //            width: 100%;
+//             }
+//
+//           }
+//
+//       }
+//     
+     
 
      
      
@@ -3317,27 +3208,12 @@ html,.body,#well{
 //            max-width: 100%;
 //          width: 100vw;
        
-//      
-       
-
-    
-
-       
-  @include wid(1500)      {   padding: 0 100px;  margin: 0 auto;  max-width: 1200px;  } 
-  @include wid(1200-1499) {   padding: 0 100px;   margin: 0 auto;  max-width: 1200px;  } 
-  @include wid(992-1199)  {    } 
-       
+       padding: 0 100px;
 
 
        .next__content{
          
-  @include wid(1500)      { margin-top: 90px  } 
-  @include wid(1200-1499) { margin-top: 40px  } 
-  @include wid(992-1199)  { margin-top: 20px  } 
-  @include wid(601-991)   {   } 
-  @include wid(600)       {   } 
-    
-         
+         margin-top: 135px;
          
          max-width: 400px;
          width: 100%;
@@ -3368,8 +3244,8 @@ html,.body,#well{
 
 
 
-          @include wid(992)      {  font: 100 50px/.9em var(--f); }
-          @include wid(601-991)  {  font: 100 46px/.9em var(--f); }
+          @include wid(992)      {  font: 100 64px/.9em var(--f); }
+          @include wid(601-991)  {  font: 100 54px/.9em var(--f); }
           @include wid(600)      {  font: 100 44px/.9em var(--f); }
          }
 
@@ -3381,20 +3257,6 @@ html,.body,#well{
 
 
        }
-       
-       .box__img{
-         
-
-         
-         
-         img{
-           
-             @include wid(1200-1499) {  max-width: 385px;  } 
-  @include wid(992-1199)  { max-width: 385px;  } 
-           
-         }
-       }
-       
      }
      
 
@@ -3402,36 +3264,32 @@ html,.body,#well{
    
     
    }
-
    
-   .slick-track{
-     
-     
-     .slick-current{
-       .box__img{
-       
-         
-         max-width: 409px !important;
-         margin: 0 100px 0 auto !important;
-         height: 100%;
-       }
-     }
-     
-     .slick-center{
-         .box__img{
-               margin-left: auto;
-         
-           
-       }
-     }
-    div.slick-current ~ div.slick-active{
-      .box__img{
-        margin-left: 0 !important;
-      }
-     }
-   }
-   
-
+//   .list{
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     
+//     align-items: center;
+//     
+//     flex-wrap: wrap;
+//     
+//     max-width: 1100px;
+//     width: 100%;
+//     margin: 100px auto 0;
+//     
+//     gap: 30px 60px;
+//     
+//     li{
+//            position: relative;
+//       
+//       img{
+//         
+//       }
+//       
+//     }
+//   }
+//   
 
    
    .arrow__cont{
@@ -3457,44 +3315,28 @@ html,.body,#well{
    
       z-index: 2;
 
-   @include wid(992)  { 
    
-       &>.container:nth-child(2)>.row:nth-child(1){
-           display: flex;
-           justify-content: space-between;
-
-         align-content: space-between;
-           align-items: center;
-           min-height: calc(100vh - 165px);
-           flex-direction: column;
-      
-       }
-
-       &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
-
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-       min-height: calc(100vh - 165px);
-           flex-direction: column;
-
-       }
+   
+   &>.container:nth-child(2)>.row:nth-child(1){
+       display: flex;
+       justify-content: space-between;
      
+     align-content: space-between;
+       align-items: center;
+       min-height: calc(100vh - 165px);
+       flex-direction: column;
+      @include wid(992){ padding: 120px 0  45px 0; }
    }
    
-   
-   
-    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
-        
-//      @include wid(992)      {  }
-      
-  @include wid(1500)      {   } 
-  @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-  @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(600)      {  }
+   &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
+       
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   min-height: calc(100vh - 165px);
+       flex-direction: column;
+       
    }
-
    
    
     video#video_5 {
@@ -3535,9 +3377,9 @@ html,.body,#well{
      margin-bottom: auto !important;
 
 
-        @include wid(1200)      {  font: 100 60px/.9em var(--f);  margin-bottom: 50px;        margin-top: 50px;}
-      @include wid(992-1199)   {  font: 100 60px/.9em var(--f); margin-bottom: 90px;         margin-top: 50px;}
-        @include wid(601-991)  {  font: 100 60px/.9em var(--f); margin-bottom: 90px;          margin-top: 50px;}
+        @include wid(1200)      {  font: 100 150px/.9em var(--f);  margin-bottom: 50px;        margin-top: 50px;}
+      @include wid(992-1199)   {  font: 100 86px/.9em var(--f); margin-bottom: 90px;         margin-top: 50px;}
+        @include wid(601-991)  {  font: 100 86px/.9em var(--f); margin-bottom: 90px;          margin-top: 50px;}
         @include wid(600)      {  font: 100 44px/.9em var(--f);  margin-bottom: 35px;   }
 
 
@@ -3788,21 +3630,7 @@ html,.body,#well{
             white-space: nowrap;
 
             height: 54px;
-       
-
-         
-
-      
-  @include wid(1500)      {  padding: 7px 70px 0;  } 
-  @include wid(1200-1499) {  padding: 7px 30px 0; }
-  @include wid(992-1199)  {   padding: 7px 30px 0;  }
-  @include wid(601-991)  {  }
-  @include wid(600)      {  }
-
-
-         
-         
-         
+            padding: 7px 75px 0;
 
             padding-top: 7px;
             margin: 0 auto;
@@ -3952,28 +3780,24 @@ html,.body,#well{
    
        padding: 0;
    
+   
+  &:before{
+    @extend %bef-aft;
+    
+    
+width: 1933px;
+height: 1080px;
 
-        
-          &:before{
-            @extend %bef-aft;
-            
-            @media screen and (min-width: 1351px){
+background: linear-gradient(155.02deg, rgba(15, 15, 15, 0) 52.71%, #0F0F0F 80.63%);
 
-            width: 1933px;
-            height: 1080px;
+    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 22;
+    opacity: .95;
 
-            background: linear-gradient(155.02deg, rgba(15, 15, 15, 0) 52.71%, #0F0F0F 80.63%);
-
-
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                z-index: 22;
-                opacity: .95;
-
-          }
-
-     }
+  }
 
    
 
@@ -4021,17 +3845,7 @@ html,.body,#well{
 //   }
 //   
    
-   
-   
-    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
-        
-//      @include wid(992)      {  }
-      
-  @include wid(1500)      {  } 
-  @include wid(1200-1499) {     width: 100%; }
-  @include wid(992-1199)  {     width: 100%; }
-      @include wid(601-991)  {  }
-      @include wid(600)      {  }
+    &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
       
       &>.partner{
         @include wid(992)      { display: none; }
@@ -4040,8 +3854,6 @@ html,.body,#well{
       }
       
    }
-
-
    
    @include wid(600){ 
      
@@ -4094,11 +3906,8 @@ html,.body,#well{
       max-width:100%;
       width: 100%;
       margin-bottom: 35px;
-     
 
-
-      @include wid(1200)      {  font: 100 96px/.9em var(--f); }
-      @include wid(992-1199)      {  font: 100 86px/.9em var(--f); }
+      @include wid(992)      {  font: 100 96px/.9em var(--f); }
       @include wid(601-991)  {  font: 100 48px/.9em var(--f); }
       @include wid(600)      {  font: 100 40px/.9em var(--f); }
 
@@ -4108,22 +3917,11 @@ html,.body,#well{
      
       color: #F9F5EE;
       letter-spacing: .02em;
-   
-     
-     
-        @media screen and (min-width: 1351px)  {
-          
-               font: 100 18px/1.3em var(--nl);   max-width: 850px;     margin-bottom: 40px;
-     }
-               @media screen and (min-width: 992px) and (max-width: 1350px){
-            font: 100 16px/1.3em var(--nl);   max-width: 850px;     margin-bottom: 20px;
-            
-     }
+      margin-bottom: 40px;
 
-  
-      @include wid(992-1199)  {  font: 100 16px/1.3em var(--nl);   max-width: 850px;  margin-bottom: 20px; }
-      @include wid(601-991)  {  font: 100 16px/1.3em var(--nl);  margin-bottom: 20px; }
-      @include wid(600)      {  font: 100 16px/1.3em var(--nl);  margin-bottom: 20px; }
+      @include wid(992)      {  font: 100 20px/1.3em var(--nl);   max-width: 850px; }
+      @include wid(601-991)  {  font: 100 18px/1.3em var(--nl); }
+      @include wid(600)      {  font: 100 16px/1.3em var(--nl); }
 
          &.sub{
            
@@ -4146,20 +3944,7 @@ html,.body,#well{
    
    .bottum{
      width: 100%;
-
-     
-     @media screen and (min-width: 1351px)  {
-          
-             margin-top: 60px;
-     }
-     @media screen and (min-width: 992px) and (max-width: 1350px){
-             margin-top: 35px;
-            
-     }
-     
-      @include wid(992-1199)  {     margin-top: 30px; }
-      @include wid(991)  {     margin-top: 30px; }
-     
+     margin-top: 60px;
      margin-bottom: auto;
      
      display: flex;
@@ -4228,8 +4013,6 @@ html,.body,#well{
    
    .arrow__cont{
      margin-top: auto;
-     
-     z-index: 33;
      
           @include wid(600)  {  display: none; } 
    }
