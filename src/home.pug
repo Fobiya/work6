@@ -1,6 +1,6 @@
 doctype
 
-html(lang='en')
+html(lang='sv')
   head
     
     - var title = "WebShark"
@@ -30,12 +30,16 @@ html(lang='en')
     .bar-long.none
     
     .right__menu
+    
+      video#right__menu(poster='img/mob__menu.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+        source(src='video/540x960.webm', type='video/webm')
+        source(src='video/540x960.mp4', type='video/mp4')
       .bock__top
         a.close(href='javascript:;')
-          img.logo__img(src='img/close.svg', alt='logo_black')
+          img.logo__img(data-src='img/close.svg', alt='logo_black')
       ul.menu__
         li
-          a(href='javascript:;') Home
+          a.active(href='javascript:;') Home
         li
           a(href='javascript:;') About us
         li
@@ -160,7 +164,24 @@ html(lang='en')
                     a(href='javascript:;'  data-slide='5')  Digital Strategy
                     
                     
+                ul.images__slider
+                  li.open
+                    img(data-src='img/home__2_images_slider_1.png', alt='home__2_images_slider_1')
+                  li
+                    img(data-src='img/home__2_images_slider_2.png', alt='home__2_images_slider_1')
+                  li
+                    img(data-src='img/home__2_images_slider_3.png', alt='home__2_images_slider_1')
+                  li
+                    img(data-src='img/home__2_images_slider_4.png', alt='home__2_images_slider_1')
+                  li
+                    img(data-src='img/home__2_images_slider_5.png', alt='home__2_images_slider_1')
+
                     
+                    
+                    
+                    
+                    
+                
                 ul.mobile
                   li
                     a(href='javascript:;'  data-mobile='0')  Paid Social
@@ -464,14 +485,11 @@ html(lang='en')
 
                 a.white(href='javascript:;') Jag vill veta mer!
 
-                  
 
+                .arrow__cont
+                  a.next__arrow(href='javascript:;')
+                    span
 
-                
-          .arrow__cont
-            a.next__arrow(href='javascript:;')
-              span
-          
           
           
           
@@ -521,13 +539,12 @@ html(lang='en')
                           input.ferstname(type='text', name='subject', required='', value='', placeholder='Meddelande (valfritt)')
                     .five
                       button.red(type='submit', name='send') Läs mer!
+                      
+              .col.m12.s12.l12.xl12
+                .arrow__cont
+                  a.next__arrow(href='javascript:;')
+                    span
 
-
-                
-          .arrow__cont
-            a.next__arrow(href='javascript:;')
-              span
-        
         
         
           

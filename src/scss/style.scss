@@ -752,6 +752,24 @@ img,.home__4{
 
       will-change: transform;
       overflow-y: auto;
+  
+  
+  video#right__menu{
+    z-index: 2;
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+  }
 
         &.open {
           display: block;
@@ -769,17 +787,38 @@ img,.home__4{
         }
   
       .bock__top{
+        
+        .close{
+          position: absolute;
+          
+          right: 20px;
+          top:20px;
+          z-index: 35;
+
+        }
 
       }
   
   .menu__{
+    position: relative;
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+    z-index: 20;
     
     li{
+      position: relative;
+      margin-bottom: 20px;
       a{
-        color: fff;
-        font: 300 32px/1.2em var(--nr);
+        text-align: center;
+        color: #fff;
+        font: 100 32px/1.2em var(--nr);
         
-        &:hover{
+        &:hover,&.active{
           color: #f60400;
         }
       }
@@ -1723,7 +1762,7 @@ html,.body,#well{
        align-items: center;
        min-height: calc(100vh - 165px);
        flex-direction: column;
-      @include wid(992){ padding: 120px 0  45px 0; }
+      @include wid(992){ padding: 100px 0  45px 0; }
      
      
      
@@ -1896,7 +1935,9 @@ html,.body,#well{
          
          width: clamp(188px,100vw,188px);
          
-         @include wid(600) {  width: calc(100vw - 1.5rem) !important;      clip-path: polygon(0 0,95% 0,100% 100%,5% 100%); }
+         @include wid(600) {  width: calc(100vw - 1.5rem) !important;  max-width: 350px;     clip-path: polygon(0 0,95% 0,100% 100%,5% 100%); }
+         
+         @include wid(450) {  width: calc(100vw - 1.5rem) !important;  max-width: 280px;     clip-path: polygon(0 0,95% 0,100% 100%,5% 100%); }
          
        }
      }
@@ -2035,7 +2076,7 @@ html,.body,#well{
        align-items: center;
        min-height: calc(100vh - 165px);
        flex-direction: column;
-      @include wid(992){ padding: 120px 0  45px 0; }
+      @include wid(992){ padding: 100px 0  45px 0; }
    }
    
    &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
@@ -2774,7 +2815,7 @@ html,.body,#well{
       width: 100%;
       z-index: 1;
      
-//     @include wid(992)      {  display:  none; }
+     @include wid(992)      {  display:  none; }
      
   &:before{
     @extend %bef-aft;
@@ -2875,7 +2916,7 @@ html,.body,#well{
 //         opacity: 0;
          pointer-events: none;
          
-                   &:after{
+        &:after{
             @extend %bef-aft;
 
             background: url(../img/home__2__next.svg) no-repeat;
@@ -2887,6 +2928,7 @@ html,.body,#well{
             
                 position: absolute;
                 z-index: 2;
+              top: 0;
              
                transition: all .5s ease-in;  
                      
@@ -2903,6 +2945,81 @@ html,.body,#well{
      
    }
    
+   .images__slider{
+        position: absolute;
+        display: flex;
+
+        justify-content: flex-end;
+        align-items: center;
+        bottom: 0;
+
+        height: 80vh;
+        width: 100vw;
+
+        pointer-events: none;
+
+        z-index: 1;
+     
+     
+        &:before{
+          @extend %bef-aft;
+          z-index: 3;
+
+          background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 89%);
+
+          height: 80vh;
+          width: 100vw;
+        }
+
+     li{
+       
+       display: flex;
+       justify-content: center;
+       align-items: flex-start;
+       
+       top:0;
+       
+           width: 100%;
+       
+         opacity: 0;
+       
+          position: absolute;
+       
+       img{
+//         position: absolute; 
+         
+         width: 868px;
+         min-width: 868px;
+         max-width: 868px;
+         height: auto;
+         
+         
+           transition: all .3s ease ;
+         
+            transform: scale(1) rotate(0deg) translateY(-30px) translateX(-30px);
+         
+       }
+       &.open{
+         
+         
+         opacity: 1;
+         
+         
+            img{
+         
+ 
+            transition: all .3s ease;
+         
+            transform: scale(1) rotate(0deg) translateY(0px) translateX(0px);
+              
+         }
+         
+         
+       }
+     }
+     
+   }
+   
    
 
    
@@ -2910,6 +3027,8 @@ html,.body,#well{
    
    
    .arrow__cont{
+     
+     z-index: 999;
     
      
 @include wid(992)      {  margin-top: auto; }
@@ -2940,24 +3059,41 @@ html,.body,#well{
 
    
    
-   &>.container:nth-child(2)>.row:nth-child(1){
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       min-height: calc(100vh - 165px);
-       flex-direction: column;
-      @include wid(992){ padding: 120px 0  45px 0; }
+   &>.container:nth-child(2)>div.row:nth-child(1){
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       min-height: calc(100vh - 165px);
+//       flex-direction: column;
+//      @include wid(992){ padding: 100px 0  45px 0; }
    }
    
-   &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
-       
-       display: flex;
-       justify-content: center;
-       align-items: center;
-   min-height: calc(100vh - 165px);
-       flex-direction: column;
+
+   
+   &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+//      min-height: calc(100vh - 165px);
+      flex-direction: column;
        
    }
+    
+   
+   &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
+        
+//      @include wid(992)      {  }
+      
+      @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(600)      { padding: 100px .8rem 50px; min-height: 100vh }
+      
+   }
+   
+   
    
    
     video#video_3 {
@@ -2999,7 +3135,14 @@ html,.body,#well{
 
         @include wid(992)      {  font: 100 96px/.9em var(--f); }
         @include wid(601-991)  {  font: 100 64px/.9em var(--f); }
-        @include wid(600)      {  font: 100 44px/.9em var(--f); }
+        @include wid(600)      {  font: 100 44px/.9em var(--f);
+     
+          width: 100%;
+          max-width: 300px;
+
+          text-align: left;
+          margin-right: auto;
+     }
 
 
      }
@@ -3048,8 +3191,12 @@ html,.body,#well{
      
      gap: 30px 60px;
      
+     @include wid(600)      {    gap: 30px 30px; }
+     
      li{
             position: relative;
+       
+       @include wid(600)      {     width: calc(50% - 15px);  }
        
        img{
              width: 180px;
@@ -3057,8 +3204,8 @@ html,.body,#well{
   @include wid(1200-1499) {   } 
   @include wid(992-1199)  {  width: 120px;  } 
          
-          @include wid(601-991)  {  width: 100px; }
-          @include wid(600)      {  width: 80px; }
+          @include wid(601-991)  {  }
+          @include wid(600)      {  width: inherit; }
          
        }
        
@@ -3535,8 +3682,8 @@ html,.body,#well{
      margin-bottom: auto !important;
 
 
-        @include wid(1200)      {  font: 100 60px/.9em var(--f);  margin-bottom: 50px;        margin-top: 50px;}
-      @include wid(992-1199)   {  font: 100 60px/.9em var(--f); margin-bottom: 90px;         margin-top: 50px;}
+        @include wid(1200)      {  font: 100 96px/.9em var(--f);  margin-bottom: 50px;        margin-top: 50px;}
+      @include wid(992-1199)   {  font: 100 96px/.9em var(--f); margin-bottom: 90px;         margin-top: 50px;}
         @include wid(601-991)  {  font: 100 60px/.9em var(--f); margin-bottom: 90px;          margin-top: 50px;}
         @include wid(600)      {  font: 100 44px/.9em var(--f);  margin-bottom: 35px;   }
 
@@ -3885,8 +4032,9 @@ html,.body,#well{
 
          p{
            color: #fff;
-           
-           @include wid(992)      { font: 100 20px/1.2em var(--nl); }
+               @include wid(1200)      { font: 100 20px/1.2em var(--nl); }
+                     @include wid(992-1199) {  font: 100 18px/1.2em var(--nl); }
+       
           @include wid(601-991)  {      font: 100 16px/1.2em var(--nl); }
           @include wid(600)      {   text-align: center;  font: 100 16px/1.2em var(--nl); }
 
@@ -3977,7 +4125,20 @@ html,.body,#well{
 
    
 
-   
+       @media screen and (min-width: 992px) and (max-height: 800px){
+        
+  
+            
+            .title{
+                  font: 100 80px/.9em var(--f);
+              margin-bottom: 20px;
+            }
+            p{
+             font: 100 14px/1.3em var(--nl) !important;
+         }
+         
+         
+      }
    
    
 
@@ -4004,24 +4165,7 @@ html,.body,#well{
      padding-top: 100px;
      margin: auto;
    }
-   
-   
-//   &>.container:nth-child(2)>.row:nth-child(1){
-//     
-//        display: flex;
-//        justify-content: space-between;
-//        align-content: space-between;
-//        align-items: center;
-//        min-height: calc(100vh - 165px);
-//        flex-direction: column;
-//        @include wid(992){  padding: 120px 0  45px 0;  }
-//     
-//       flex-wrap: wrap;
-//     
-//   }
-//   
-   
-   
+
    
     &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
         
@@ -4267,8 +4411,8 @@ html,.body,#well{
    
    &>.container:nth-child(3){
      
-     padding-top: 100px;
-     margin: auto;
+//     padding-top: 100px;
+//     margin: auto;
    }
    
    
@@ -4293,6 +4437,32 @@ html,.body,#well{
 
       
    }
+   
+   
+    &>.container:nth-child(3)>div.row:nth-child(1)>div:nth-child(1){
+      
+      @media screen and (min-width: 992px) and (max-height: 800px){
+        
+        .col.xl8{
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      
+
+      
+  @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
+  @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
+  @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(600)      {  }
+   }
+
+   
    
    @include wid(600){ 
      
@@ -4368,9 +4538,15 @@ html,.body,#well{
       width: 100%;
       margin-bottom: 35px;
 
-      @include wid(992)      {  font: 100 96px/.9em var(--f); }
+     margin-top: auto;
+     
+  @include wid(1500)      { font: 100 96px/.9em var(--f);  } 
+  @include wid(1200-1499) { font: 100 96px/.9em var(--f); }
+  @include wid(992-1199)  { font: 100 96px/.9em var(--f); }
       @include wid(601-991)  {  font: 100 48px/.9em var(--f); }
       @include wid(600)      {  font: 100 40px/.9em var(--f); }
+     
+     
 
      }
    
@@ -4415,6 +4591,9 @@ html,.body,#well{
    
    .arrow__cont{
      margin-top: auto;
+     margin-bottom: 0;
+     
+     z-index: 33;
      
           @include wid(600)  {  display: none; } 
    }
@@ -4446,15 +4625,27 @@ html,.body,#well{
    
       z-index: 2;
    
-   .arrow__cont{
-     margin-bottom: 40px;
-   }
+
    
    
-   &>.container:nth-child(2){
+    &>.container:nth-child(2){
      
-     padding-top: 100px;
-     margin: auto;
+
+     
+             
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      
+
+      
+  @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
+  @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
+  @include wid(992-1199)  { padding: 120px .8rem 50px; min-height: 100vh }
+      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(600)      { padding: 100px .8rem 50px; min-height: 100vh }   
+     
    }
 
 
@@ -4463,23 +4654,23 @@ html,.body,#well{
 
       
    }
-//   
-//   @include wid(600){ 
-//     
-//         &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
-//
-//            min-height:  calc(100vh - 100px); 
-//
-//            display: flex;
-//            justify-content: space-between;
-//            align-items: flex-start;
-//      //   min-height: calc(100vh - 165px);
-//            flex-direction: column;
-//
-//
-//         }
-//
-//   }
+
+   
+   
+    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
+        
+//      @include wid(992)      {  }
+      
+      @include wid(1500)      {  } 
+      @include wid(1200-1499) {     width: 100%; }
+      @include wid(992-1199)  {     width: 100%; }
+          @include wid(601-991)  {  }
+          @include wid(600)      {  }
+
+      
+   }
+
+
 
     video#video_8{
         position: absolute;
@@ -4517,7 +4708,10 @@ html,.body,#well{
       width: 100%;
       margin-bottom: 35px;
 
-      @include wid(992)      {  font: 100 96px/.9em var(--f); }
+      @include wid(1500)      {  font: 100 96px/.9em var(--f); } 
+      @include wid(1200-1499) {  font: 100 96px/.9em var(--f); }
+      @include wid(992-1199)  {  font: 100 90px/.9em var(--f); }
+
       @include wid(601-991)  {  font: 100 48px/.9em var(--f); }
       @include wid(600)      {  font: 100 60px/.9em var(--f); }
 
@@ -4556,7 +4750,7 @@ html,.body,#well{
      
      
      
- @include wid(992)      { 
+@include wid(1200)     { 
      
      .grid{
        
@@ -4596,73 +4790,120 @@ html,.body,#well{
        
      }
      
+}     
+     
+@include wid(992-1199)  { 
+     
+     .grid{
+       
+       max-width: 75%;
+       
+        display: grid;
+        grid-template-areas:
+          "one two"
+          "three four"
+          "five .";
+       
+       gap: 35px 55px;
+        grid-template-columns: repeat(2, 1fr);
+       
+
+         
+   
+ 
+
+          .one {
+            grid-area: one;
+          }
+
+          .two {
+            grid-area: two;
+          }
+
+          .three {
+            grid-area: three;
+          }
+
+          .four {
+            grid-area: four;
+          }
+          .five {
+            grid-area: five;
+          }
+
+       
      }
+     
+}
+
 @include wid(601-991)  { 
      
-       .grid{
+     .grid{
+       
+        display: grid;
+        grid-template-areas:
+          "one two"
+          "three four"
+          "five .";
+       
+       gap: 35px 50px;
+        grid-template-columns: repeat(2, 1fr);
+       
 
-          display: grid;
-          grid-template-areas:
-            "one two"
-            "three four"
-            ". five";
+         
+   
+ 
 
-         gap: 45px 40px;
-          grid-template-columns: repeat(2, 1fr);
+          .one {
+            grid-area: one;
+          }
+
+          .two {
+            grid-area: two;
+          }
+
+          .three {
+            grid-area: three;
+          }
+
+          .four {
+            grid-area: four;
+          }
+          .five {
+            grid-area: five;
+          }
+
+       
+     }
+     
+}
+     
+ 
+     
+@include wid(600)      { 
 
 
+   .grid{
 
+      display: grid;
+      gap: 25px 0;
 
-
-
-            .one {
-              grid-area: one;
-            }
-
-            .two {
-              grid-area: two;
-            }
-
-            .three {
-              grid-area: three;
-            }
-
-            .four {
-              grid-area: four;
-            }
-            .five {
-              grid-area: five;
-            }
-
-
-       }
-  
-      .red{
-        margin-top: 20px;
-      }
 
    }
-     
-     
-        @include wid(600)      { 
 
-
-             .grid{
-
-                display: grid;
-                gap: 25px 0;
-
-
-             }
-
-      }
+}
      
      
 
 
      
      .red{
-       margin-left: auto;
+       
+       @include wid(1200)  { 
+           margin-left: auto;
+       }
+       
+       
            width: clamp(200px,100vw,200px);
        
         @include wid(600)      { 
@@ -4684,6 +4925,9 @@ html,.body,#well{
    
    .arrow__cont{
      margin-top: auto;
+     margin-bottom: 0;
+     
+     z-index: 33;
      
           @include wid(600)  {  display: none; } 
    }
@@ -5393,9 +5637,6 @@ clip-path: polygon(0 0, 30% 0, 100% 100%, 0% 100%);
 
    
 }
-   
-
-  
 
  section.paid__2{
     
@@ -5446,8 +5687,7 @@ clip-path: polygon(0 0, 30% 0, 100% 100%, 0% 100%);
      margin: auto;
    }
 
-
-    &>.container:nth-child(2)>.row:nth-child(1){
+   &>.container:nth-child(2)>.row:nth-child(1){
       
       
        @include wid(992){ 

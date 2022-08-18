@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <title>WebShark</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +15,17 @@
     <meta property="og:type" conten="Keywords var keywords">
     <meta name="description" conten="Description var description">
     <meta name="keywords" conten="Keywords var keywords">
-  <link href="css/min.css?v=cb2b5b6dbbe4a458d132" rel="stylesheet"></head>
+  <link href="css/min.css?v=5650d3c057706beb1bbd" rel="stylesheet"></head>
   <body class="oveflow-hidden info" data-img="img/232110.png">
     <div class="bar-long none"></div>
     <div class="right__menu">
-      <div class="bock__top"><a class="close" href="javascript:;"><img class="logo__img" src="img/close.svg" alt="logo_black"></a></div>
+      <video id="right__menu" poster="img/mob__menu.png" playsinline="" autoplay="" muted="" loop="" preload="none">
+        <source src="video/540x960.webm" type="video/webm">
+        <source src="video/540x960.mp4" type="video/mp4">
+      </video>
+      <div class="bock__top"><a class="close" href="javascript:;"><img class="logo__img" data-src="img/close.svg" alt="logo_black"></a></div>
       <ul class="menu__">
-        <li><a href="javascript:;">Home</a></li>
+        <li><a class="active" href="javascript:;">Home</a></li>
         <li><a href="javascript:;">About us</a></li>
         <li><a href="javascript:;"> Services</a></li>
         <li><a href="javascript:;"> Our process</a></li>
@@ -100,6 +104,13 @@
                   <li><a href="javascript:;" data-slide="3"> Organic Search</a></li>
                   <li><a href="javascript:;" data-slide="4"> Data Analytics</a></li>
                   <li><a href="javascript:;" data-slide="5"> Digital Strategy</a></li>
+                </ul>
+                <ul class="images__slider">
+                  <li class="open"><img data-src="img/home__2_images_slider_1.png" alt="home__2_images_slider_1"></li>
+                  <li><img data-src="img/home__2_images_slider_2.png" alt="home__2_images_slider_1"></li>
+                  <li><img data-src="img/home__2_images_slider_3.png" alt="home__2_images_slider_1"></li>
+                  <li><img data-src="img/home__2_images_slider_4.png" alt="home__2_images_slider_1"></li>
+                  <li><img data-src="img/home__2_images_slider_5.png" alt="home__2_images_slider_1"></li>
                 </ul>
                 <ul class="mobile">
                   <li><a href="javascript:;" data-mobile="0"> Paid Social</a><a class="next__" href="#1"> </a></li>
@@ -348,10 +359,10 @@
               <div class="col m12 s12 l12 xl8">
                 <h2 class="title">Vägen till lönsamma resultat – steg för steg</h2>
                 <p>Dina kunders resa online – från att lära känna ditt företag, till köp och vidare till kundrelationen – kallar vi den digitala kundresan. Och ditt team hos Webshark arbetar för att göra den resan så effektiv som möjligt</p><a class="white" href="javascript:;">Jag vill veta mer!</a>
+                <div class="arrow__cont"><a class="next__arrow" href="javascript:;"><span></span></a></div>
               </div>
             </div>
           </div>
-          <div class="arrow__cont"><a class="next__arrow" href="javascript:;"><span></span></a></div>
         </section>
       </div>
       <div>
@@ -392,9 +403,11 @@
                   </div>
                 </form>
               </div>
+              <div class="col m12 s12 l12 xl12">
+                <div class="arrow__cont"><a class="next__arrow" href="javascript:;"><span></span></a></div>
+              </div>
             </div>
           </div>
-          <div class="arrow__cont"><a class="next__arrow" href="javascript:;"><span></span></a></div>
         </section>
       </div>
       <div>
@@ -490,7 +503,7 @@
       
       
     </script>
-  <script type="text/javascript" src="js/main.min.js?v=cb2b5b6dbbe4a458d132"></script></body>
+  <script type="text/javascript" src="js/main.min.js?v=5650d3c057706beb1bbd"></script></body>
 </html>
 <!--      $(function(){-->
 <!--        $('[data-fancybox]').fancybox({-->

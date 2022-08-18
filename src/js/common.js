@@ -97,25 +97,7 @@ define(["jquery"], function($) {
     
 
 
-           $('.home__2 ul.mobile li a').click( function() {
 
-         var $mobile_data = $(this).data("mobile");
-        
-//       console.log($mobile_data);
-
-        $('.home__2 ul.mobile li ').removeClass('select');
-
-
-        $('.home__2 ul.mobile').removeClass('select1 select2 select3 select4 select5 select6');
-
-        $(this).parent().addClass('select'); 
-        $(this).parent().parent().addClass('select'+ $mobile_data); 
-        
-        
-          $(this).addClass('select'); 
-
-      });  
-   
       
 
   
@@ -1233,10 +1215,13 @@ $full__tuch.slick({
   vertical: true,
   verticalSwiping: true,
   
-  swipe: false,
+
 
   slidesToShow: 1,
   slidesToScroll: 1,
+  
+  focusOnSelect: true,
+  аccessibility: true,
   
   speed: 500,
   
@@ -1251,6 +1236,8 @@ $full__tuch.slick({
      lazyLoad: 'progressive',
   
   
+  
+  
         responsive: [{
                 breakpoint: 992,
                 settings: {
@@ -1261,7 +1248,7 @@ $full__tuch.slick({
                     vertical: true,
                     verticalSwiping: true,
 
-                    swipe: true,
+                    swipe: false,
 
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -1275,6 +1262,8 @@ $full__tuch.slick({
                   //    swipe: true,
                   //    swipeToSlide: true,
                       touchThreshold: 10,
+                    focusOnSelect: true,
+                    аccessibility: true,
                 }
             },
                      {
@@ -1289,12 +1278,14 @@ $full__tuch.slick({
                     vertical: true,
                     verticalSwiping: true,
 
-                    swipe: false,
+                    swipe: true,
 
                     slidesToShow: 1,
                     slidesToScroll: 1,
 
                     speed: 500,
+                               focusOnSelect: true,
+                    аccessibility: true,
                   
                   
                 }
@@ -1310,12 +1301,14 @@ $full__tuch.slick({
                     vertical: true,
                     verticalSwiping: true,
 
-                    swipe: false,
+                    swipe: true,
 
                     slidesToShow: 1,
                     slidesToScroll: 1,
 
                     speed: 500,
+                                focusOnSelect: true,
+                    аccessibility: true,
                   
                 }
             }
@@ -1336,11 +1329,54 @@ $full__tuch.slick({
     }
  }));
   
-  
-    $(window).on('resize', function() {
-        $('#full__tuch').slick('resize');
-    });
 
+    
+  $('#full__tuch').on('beforeChange',  function(event, slick) {
+    
+     $('.home__2 ul.mobile li a').on('click', function() {
+    
+   
+
+         var $mobile_data = $(this).data("mobile");
+       
+       var $gor =  $mobile_data + 1;
+        
+//       console.log($mobile_data);
+
+        $('.home__2 ul.mobile li ').removeClass('select');
+
+
+        $('.home__2 ul.mobile').removeClass('select1 select2 select3 select4 select5 select6');
+
+        $(this).parent().addClass('select'); 
+        $(this).parent().parent().addClass('select'+ $mobile_data); 
+        
+        
+          $(this).addClass('select'); 
+       
+       
+       
+       $('.images__slider li').removeClass('open');
+       
+           $('.images__slider li:nth-child(' + $gor +')').addClass('open'); 
+
+
+      });  
+   
+    
+//    $('.my-gallery-image').on('click', function() {
+//        $(this).addClass('active');
+//    });
+});  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
