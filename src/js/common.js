@@ -23,6 +23,39 @@ define(["jquery"], function($) {
 
     }
             
+    
+    
+    
+    $(document).ready(function () {
+
+
+	$('.next__section').on('click', function () {
+		if ($('section.stai__').index() == -1) {
+			$('body>section:first-child').addClass('stai__');
+		} else {
+
+			$('body>section.stai__').next('section').addClass('stai__');
+			$('body>section.stai__').prev('section').removeClass('stai__');
+		}
+
+	});
+
+
+	$('.prev__section').on('click', function () {
+		if ($('body>section.stai__').index() == -1) {
+			/* без действий */
+		} else {
+
+			$('body>section.stai__').prev('section').addClass('stai__');
+			$('body>section.stai__').next('section').removeClass('stai__');
+		}
+
+	});
+
+
+});
+    
+    
             
 //            
 //  $('.home__5 .list li a').click(function(e){
@@ -1194,6 +1227,15 @@ for(let div of document.querySelectorAll('footer')){
 // ===========================================================    
   
   
+  
+  
+  function slickify(){
+
+
+  
+  
+  
+  
 $('.next__arrow').click(function() { 
   $full__tuch.slick('slickNext');
 });
@@ -1223,7 +1265,7 @@ $full__tuch.slick({
   focusOnSelect: true,
   аccessibility: true,
   
-  speed: 500,
+                    speed: 1300,
   
 //   fade: true,
 //  cssEase: 'linear',
@@ -1253,13 +1295,13 @@ $full__tuch.slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
 
-                    speed: 500,
+                    speed: 1300,
 
                   //   fade: true,
                   //  cssEase: 'linear',
 
 
-                  //    swipe: true,
+                      swipe: false,
                   //    swipeToSlide: true,
                       touchThreshold: 10,
                     focusOnSelect: true,
@@ -1283,8 +1325,9 @@ $full__tuch.slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
 
-                    speed: 500,
-                               focusOnSelect: true,
+                    speed: 1300,
+                  
+                    focusOnSelect: true,
                     аccessibility: true,
                   
                   
@@ -1306,8 +1349,9 @@ $full__tuch.slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
 
-                    speed: 500,
-                                focusOnSelect: true,
+                    speed: 1300,
+                                
+                    focusOnSelect: true,
                     аccessibility: true,
                   
                 }
@@ -1322,16 +1366,53 @@ $full__tuch.slick({
   
   $full__tuch.on('wheel', (function(e) {
     e.preventDefault();
-    if (e.originalEvent.deltaY < 0) {
-        $(this).slick('slickNext');
-    } else {
-        $(this).slick('slickPrev');
-    }
+//    if (e.originalEvent.deltaY < 0) {
+//        $(this).slick('slickNext');
+//    } else {
+//        $(this).slick('slickPrev');
+//    }
+
+    
+//    
+//        const slider = $("#full__tuch");
+//        var slideCount = $(slider)[0].slick["slideCount"];
+//        var currentIndex = $(slider).slick("slickCurrentSlide");
+//        var totalSildeToShow = $(slider)[0].slick.options["slidesToShow"];
+//
+//        if (e.originalEvent.deltaY >= 0) {
+//            if ((slideCount - 1) !== currentIndex) {
+//                e.preventDefault();
+//                var delta = e.wheelDelta || e.detail;
+//                this.scrollTop += (delta < 0 ? 1 : -1);
+//                $("#full__tuch").slick('slickNext')
+//            }
+//        } else {
+//            if (currentIndex != 0) {
+//                e.preventDefault();
+//                var delta = e.wheelDelta || e.detail;
+//                this.scrollTop += (delta < 0 ? 1 : -1);
+//                $("#full__tuch").slick('slickPrev')
+//            }
+//        }
+//    
+    
+    
  }));
+  
+  
+  
+  
+  
   
 
     
-  $('#full__tuch').on('beforeChange',  function(event, slick) {
+  $('#full__tuch').on('beforeChange',  function(event, slick){
+    
+//    if(nextSlide > currentSlide){
+//        turnEllipse(90);
+//    }else{
+//        turnEllipse(-90);
+//    }
     
      $('.home__2 ul.mobile li a').on('click', function() {
     
@@ -1602,7 +1683,12 @@ $full__tuch.slick({
     });
 
 
-  
+  }
+
+slickify();
+$(window).resize(function(){
+    slickify();
+});
   
   
 //$('.flat.section__9 .left__').click(function() { 

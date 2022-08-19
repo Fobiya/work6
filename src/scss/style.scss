@@ -198,6 +198,8 @@ img,.home__4{
   
     clip-path: polygon(0 0%,90% 0%,100% 100%,10% 100%);
   
+   @include wid(400)      {   height: 40px;  font:  400 18px/1.2em var(--nr); } 
+  
 //  
 //
     &:hover{
@@ -230,6 +232,8 @@ img,.home__4{
 
   
     clip-path: polygon(0 0%,90% 0%,100% 100%,10% 100%);
+  
+     @include wid(400)      {   height: 40px;  font:  400 18px/1.2em var(--nr); } 
   
 //  
 //
@@ -579,6 +583,58 @@ img,.home__4{
 // END Scroll Style
 // ===========================================================
 
+// ===========================================================
+// STAI style
+// ===========================================================
+
+  
+
+body.stai{
+  
+  .bar-long,.right__menu{
+    display: none;
+  }
+  
+  section{
+    display: none;
+    
+    &.stai__{
+      display: block;
+      
+      
+      video{
+        display: block !important;
+      }
+      
+    }
+  }
+  
+  .div__stai{
+    position: absolute;
+    display: flex;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+    
+    gap: 20px;
+    
+    
+    a{
+      color: #fff;
+      
+      background: #f60400;
+      
+      padding: 5px 10px;
+    }
+  }
+  
+  
+}
+
+
+// ===========================================================
+// SEND TAI style
+// ===========================================================
 
 // ===========================================================
 // HEADER style
@@ -666,6 +722,7 @@ img,.home__4{
         @include wid(992)      {  height: 100px; }
         @include wid(601-991)  {  padding: 27px 20px; }
         @include wid(600)      {  padding: 27px 20px; }
+        @include wid(400)      {  padding: 15px 20px; }
         
         ul{
           
@@ -928,6 +985,11 @@ img:not([src]),video:not([src]) {
 //  visibility: hidden;
 }
 
+
+
+ .home__6,.home__7,.home__8,.home__9{
+  display: none;
+}
 
 
 html,.body,#well{
@@ -1866,6 +1928,10 @@ html,.body,#well{
         @include wid(992-1199)  {  font: 100 96px/.9em var(--f); }
         @include wid(601-991)   {  font: 100 64px/.9em var(--f); }
         @include wid(600)       {  font: 100 44px/.9em var(--f); }
+     
+        @include wid(400)      {  font: 100 35px/.9em var(--f); margin-bottom: 15px; }
+        @include wid(350)      {  font: 100 30px/.9em var(--f); margin-bottom: 12px; } 
+     
        
        opacity: 0;
        
@@ -1883,6 +1949,8 @@ html,.body,#well{
           @include wid(992)      {  font: 100 20px/1.3em var(--nl); }
           @include wid(601-991)  {  font: 100 18px/1.3em var(--nl); }
           @include wid(600)      {  font: 100 16px/1.3em var(--nl); } 
+          @include wid(400)      {  font: 100 14px/1.3em var(--nl); } 
+          @include wid(350)      {  font: 100 12px/1.3em var(--nl); } 
 
          &.sub{
        opacity: 0;
@@ -1904,6 +1972,9 @@ html,.body,#well{
             @include wid(992)      {  font: 100 20px/1.5em var(--nl); }
             @include wid(601-991)  {  font: 100 20px/1.5em var(--nl); }
             @include wid(600)      {  font: 100 18px/1.5em var(--nl); }
+          @include wid(400)      {  font: 100 14px/1.3em var(--nl); } 
+                     @include wid(350)      {  font: 100 12px/1.3em var(--nl); } 
+           
 
          }
        }
@@ -1972,11 +2043,16 @@ html,.body,#well{
      
 }
      
+     @include wid(400)      {   gap:  20px 25px;  }
+     @include wid(350)      {   gap: 20px 25px;  }
+     
   
     
    }
    
    .arrow__cont{
+     
+     @include wid(400)      { display:  none; }
        
        margin-top: auto;
        
@@ -2126,6 +2202,7 @@ html,.body,#well{
         color: #f60400;
         letter-spacing: .025em;
         text-align: center;
+     z-index: 10;
        
        
        
@@ -2133,16 +2210,30 @@ html,.body,#well{
 //        margin: auto auto 100px;
        
        
-     margin-top: auto;
+     margin-top: 40px;
+
 
           width: 100%;
 //          margin-left: -140px;
           letter-spacing: -.002em;
        
 
-        @include wid(992)      {  font: 100 96px/.9em var(--f); }
-        @include wid(601-991)  {  font: 100 74px/.9em var(--f);  max-width: 400px; margin: 0 auto auto; }
-        @include wid(600)      {  font: 100 64px/.9em var(--f); max-width: 400px; margin: 0 auto auto; }
+//        @include wid(992)      {  font: 100 96px/.9em var(--f); }
+//        @include wid(601-991)  {  font: 100 74px/.9em var(--f);  max-width: 400px; margin: 0 auto auto; }
+//        @include wid(600)      {  font: 100 64px/.9em var(--f); max-width: 400px; margin: 0 auto auto; }
+     
+     
+     
+        @include wid(1500)      {  font: 100 96px/.9em var(--f); }
+        @include wid(1200-1499) {  font: 100 96px/.9em var(--f); }
+        @include wid(992-1199)  {  font: 100 96px/.9em var(--f); }
+        @include wid(601-991)   {  font: 100 64px/.9em var(--f); margin-bottom: auto;}
+        @include wid(600)       {  font: 100 44px/.9em var(--f); margin-bottom: auto; }
+     
+        @include wid(400)      {  font: 100 44px/.9em var(--f); margin-bottom: auto; }
+        @include wid(350)      {  font: 100 40px/.9em var(--f); margin-bottom: auto; } 
+     
+     
 
 
      }
@@ -2859,7 +2950,7 @@ html,.body,#well{
             justify-content: flex-start;
             color: rgba(255, 255, 255, 1);
          
-
+             font: 400 24px/1.2em var(--f); 
 
 
             height: 51px;
@@ -2867,8 +2958,15 @@ html,.body,#well{
             margin: 0 auto;
 
             color: #fff;
-            font: 400 24px/1.2em var(--f);
+         
+         
+         
+          @include wid(400)      {     font: 400 22px/1.2em var(--f);  }
+          @include wid(350)      {     font: 400 22px/1.2em var(--f);  }
 
+         
+         
+         
          
            width: 100%;
          
@@ -2946,6 +3044,11 @@ html,.body,#well{
    }
    
    .images__slider{
+     
+     
+     @include wid(992) {
+       display: none;
+     }
         position: absolute;
         display: flex;
 
@@ -2980,37 +3083,58 @@ html,.body,#well{
        top:0;
        
            width: 100%;
+
        
-         opacity: 0;
+//        visibility:hidden; 
        
           position: absolute;
        
        img{
 //         position: absolute; 
          
-         width: 868px;
-         min-width: 868px;
-         max-width: 868px;
+         width: 600px;
+         min-width: 600px;
+         max-width: 600px;
          height: auto;
+
+           transition: all 1s ease ;
          
-         
-           transition: all .3s ease ;
-         
-            transform: scale(1) rotate(0deg) translateY(-30px) translateX(-30px);
+
+      animation-duration: 1s; 
+
+ 
+    animation-timing-function: ease;    
+      opacity: 0;
+                
+
          
        }
        &.open{
          
-         
-         opacity: 1;
+              
+//        visibility: visible; 
          
          
             img{
-         
+            
  
-            transition: all .3s ease;
-         
-            transform: scale(1) rotate(0deg) translateY(0px) translateX(0px);
+//            transition:  1s all 1s ease;
+  
+                  animation-name: slideLeft;
+
+ 
+    animation-duration: 1s; 
+
+ 
+    animation-timing-function: ease;    
+
+ 
+      opacity: 1;
+                
+
+              
+              
+
               
          }
          
@@ -3020,9 +3144,25 @@ html,.body,#well{
      
    }
    
+
+       
    
 
    
+        @keyframes slideLeft {
+            0% {
+                  transform: scale(1) rotate(-40deg) translateY(0px) translateX(0px);
+         opacity: 0;
+            }
+          
+
+    
+            100% {
+                        transform: scale(1) rotate(0deg) translateY(0px) translateX(0px);
+    opacity: 1;
+            }
+        }
+
    
    
    
@@ -3034,6 +3174,8 @@ html,.body,#well{
 @include wid(992)      {  margin-top: auto; }
 @include wid(601-991)  {  margin-top:  0; }
 @include wid(600)      {  margin-top: 0;  }
+     
+      @include wid(350)      { display:  none; }
      
    }
 
@@ -3144,6 +3286,11 @@ html,.body,#well{
           margin-right: auto;
      }
 
+     
+        @include wid(400)      {  font: 100 44px/.9em var(--f); margin-bottom: auto; }
+        @include wid(350)      {  font: 100 40px/.9em var(--f); margin-bottom: 20px;  margin-top: 0;  padding-right: 15%; } 
+     
+
 
      }
    
@@ -3191,12 +3338,36 @@ html,.body,#well{
      
      gap: 30px 60px;
      
-     @include wid(600)      {    gap: 30px 30px; }
+     @include wid(600)      {    gap: 20px 30px; justify-content: flex-start; }
+     
+     @include wid(400)      { margin-top: 15px;    gap: 25px 30px;  }
+     @include wid(350)      { margin-top: 10px;   gap: 20px 30px;   }
      
      li{
             position: relative;
        
-       @include wid(600)      {     width: calc(50% - 15px);  }
+       @include wid(600)      {     width: calc(50% - 15px); 
+       
+
+         
+          img{
+            width: 130px;
+          }
+       }
+       
+       
+         
+        @include wid(400)      {  
+         
+          img{
+            width: 100px;
+          }}
+        @include wid(350)      {   
+         
+          img{
+            width: 100px;
+          }} 
+         
        
        img{
              width: 180px;
@@ -3206,6 +3377,8 @@ html,.body,#well{
          
           @include wid(601-991)  {  }
           @include wid(600)      {  width: inherit; }
+
+         
          
        }
        
@@ -3216,6 +3389,9 @@ html,.body,#well{
    
    .arrow__cont{
      margin-top: auto;
+     
+         @include wid(350)      { display:  none; }
+     
    }
 
   }     
@@ -3237,6 +3413,200 @@ html,.body,#well{
 //      @include wid(600)      { padding: 187px 0  160px 0; }
    
       z-index: 2;
+   
+   
+   
+   
+   @media screen and (max-height: 800px ){
+     
+
+//   
+//    video#video_4 {
+//        position: absolute;
+//        min-height: 100%;
+//        min-width: 100%;
+//        object-fit: cover;
+//        pointer-events: none;
+//        top: 0;
+//        left: 0;
+//        right: 0;
+//        bottom: 0;
+//        display: flex;
+//        justify-content: center;
+//        align-items: center;
+//
+//
+//
+//       @include wid(600){  
+//         display: none;
+//       }
+//
+//    }
+//   
+//   &>.container{
+//     max-width: 100%;
+//     width: 100%;
+//     
+//     
+//   }
+//
+//   
+//   #home__4_images_slider{
+//    position: absolute;
+//    z-index: 3;
+//     
+//     
+//     :not(.slick-active){
+//            .box__img_cont{
+//           width: 1200px;
+//       }
+//     }
+//     
+//     
+//     
+//     .slick-track{
+//       
+//       &>div.slick-active:nth-child(3){
+//          .box__img{
+//            margin-left: 0;
+//         }
+//       }
+//     }
+//     
+////     .slick-active:nth-child(3){
+////       .box__img{
+////          margin-left: 0;
+////       }
+////     }
+//     
+//     
+//     
+//     .slick-slide.slick-current{
+//       
+//     }
+//     
+//     .box__img_cont{
+//
+//       
+//       display: flex;
+//       padding: 100px 100px 0 100px;
+//       
+//       
+//       .box__img{
+//         
+//         max-width: 359px;
+//         margin: 20px 0 20px auto;
+//         height: 100%;
+//         
+//       }
+//     }
+//   }
+//
+//   
+//   #home__4_slider{
+//     
+//         position: relative;
+//    z-index: 1;
+//     
+//     width: 100%;
+//
+//     
+//     
+//     .box__content{
+//       display: flex;
+//        justify-content: center;
+//       
+//       padding: 0 100px;
+//
+//
+//       .next__content{
+//         
+//         margin-top: 135px;
+//         
+//         max-width: 400px;
+//         width: 100%;
+//         
+//         transition: all .7s ease; 
+//
+//         display: flex;
+//         flex-direction: column;
+//
+//         margin-right: 80px;
+//
+//         .dicription{
+//           color: #fff;
+//           opacity: .9;
+//           font: 100 16px/1.3em var(--nl); 
+//           margin-bottom: 10px;
+//         }
+//
+//         .name{
+//
+//           color: #f60400;
+//           margin-bottom: 15px;
+//
+//            background: url(../img/text-back-1.png);
+//            background-size: cover;
+//            -webkit-background-clip: text;
+//            -webkit-text-fill-color: transparent;
+//
+//
+//
+//          @include wid(992)      {  font: 100 64px/.9em var(--f); }
+//          @include wid(601-991)  {  font: 100 54px/.9em var(--f); }
+//          @include wid(600)      {  font: 100 44px/.9em var(--f); }
+//         }
+//
+//         .data{
+//
+//             @include wid(992)      {  font: 100 16px/1.3em var(--nm); }
+//           color: #F60400;
+//         }
+//
+//
+//       }
+//     }
+//     
+//
+//     
+//   
+//    
+//   }
+//     
+//     
+//  .slick-track{
+//     
+//     
+//     .slick-current{
+//       .box__img{
+//       
+//         
+//         max-width: 409px !important;
+//         margin: 0 100px 0 auto !important;
+//         height: 100%;
+//       }
+//     }
+//     
+//     .slick-center{
+//         .box__img{
+//               margin-left: auto;
+//         
+//           
+//       }
+//     }
+//    div.slick-current ~ div.slick-active{
+//      .box__img{
+//        margin-left: 0 !important;
+//      }
+//     }
+//   }
+//     
+     
+     
+     
+   }
+   
+   
 
    
    
@@ -3249,34 +3619,40 @@ html,.body,#well{
 //       @include wid(992){ padding: 120px 0  45px 0; }
      
      .col{
-       padding: 0;
-       
-       position: relative;
+        @include wid(992){
+           padding: 0;
+
+           position: relative;
+       }
      }
    }
+
    
-   &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
+   
+   &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
 
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: calc(100vh - 165px);
+//      min-height: calc(100vh - 165px);
       flex-direction: column;
        
    }
+    
    
-   
-    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
+   &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
         
 //      @include wid(992)      {  }
       
-  @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
-  @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-  @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
       @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(600)      {  }
+      @include wid(600)      { padding: 80px .8rem 30px; min-height: 100vh }
+      
    }
-
+   
+   
    
     video#video_4 {
         position: absolute;
@@ -3322,8 +3698,10 @@ html,.body,#well{
 
         @include wid(992)      {  font: 100 96px/.9em var(--f);   margin-bottom:15px; }
         @include wid(601-991)  {  font: 100 86px/.9em var(--f);  margin-bottom: 30px;  }
-        @include wid(600)      {  font: 100 44px/.9em var(--f); margin-bottom: 40px; }
-
+        @include wid(600)      {  font: 100 44px/.9em var(--f); margin-bottom: 15px; }
+     
+        @include wid(400)      {  font: 100 44px/.9em var(--f); margin-bottom: 15px; }
+        @include wid(350)      {  font: 100 40px/.9em var(--f); margin-bottom: 15px;  margin-top: 0; } 
 
      }
    
@@ -3337,6 +3715,10 @@ html,.body,#well{
           @include wid(992)      {  font: 100 18px/1.3em var(--nl); }
           @include wid(601-991)  {  font: 100 16px/1.3em var(--nl); }
           @include wid(600)      {  font: 100 16px/1.3em var(--nl); }
+     
+        @include wid(400)      {  font: 100 14px/1.3em var(--nl);  }
+        @include wid(350)      {  font: 100 13px/1.3em var(--nl);  } 
+     
 
      }
    
@@ -3346,6 +3728,9 @@ html,.body,#well{
      
      margin-right: 15px;
       margin-top: 135px;
+     
+     @include wid(991)  {  display: none; } 
+     
      
      
      svg{
@@ -3389,6 +3774,12 @@ html,.body,#well{
    #home__4_images_slider{
     position: absolute;
     z-index: 3;
+     
+      @include wid(991)  {
+        
+        display: none !important;
+        
+     }
      
      
      :not(.slick-active){
@@ -3437,13 +3828,7 @@ html,.body,#well{
   @include wid(600)       {   } 
        
        
-       .box__img{
-         
-         max-width: 359px;
-         margin: 20px 0 20px auto;
-         height: 100%;
-         
-       }
+
      }
    }
 
@@ -3481,8 +3866,8 @@ html,.body,#well{
   @include wid(1500)      { margin-top: 90px  } 
   @include wid(1200-1499) { margin-top: 40px  } 
   @include wid(992-1199)  { margin-top: 20px  } 
-  @include wid(601-991)   {   } 
-  @include wid(600)       {   } 
+  @include wid(601-991)   {   max-width: 100%;  z-index: 2; margin-right: 0; text-align: center;  } 
+  @include wid(600)       {   max-width: 100%;   z-index: 2; margin-right: 0; text-align: center;    } 
     
          
          
@@ -3501,11 +3886,39 @@ html,.body,#well{
            opacity: .9;
            font: 100 16px/1.3em var(--nl); 
            margin-bottom: 10px;
+
+          @include wid(601-991)  {   color: #AEAEAE; }
+          @include wid(600)      {   color: #AEAEAE;  }
+         }
+         
+         .block__img{
+           @include wid(992)   {  display: none }
+           
+           
+            @include wid(601-991)  { max-width: 350px;   margin: 0 auto 70px; 
+              
+              box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.29), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.208468), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.172871), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.145), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.117129), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0815322); }
+           
+           
+           
+            @include wid(600)  { max-width: 250px;  margin: 0 auto 30px; 
+              
+              box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.29), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.208468), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.172871), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.145), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.117129), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0815322); }
+           
+            
+                @include wid(400)  { max-width: 170px;  margin: 0 auto 20px; 
+              
+              box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.29), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.208468), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.172871), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.145), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.117129), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0815322); }  
+                @include wid(350)  { max-width: 130px;  margin: 0 auto 20px; 
+              
+              box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.29), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.208468), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.172871), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.145), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.117129), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0815322); }
+           
+           
          }
 
          .name{
 
-           color: #f60400;
+          
            margin-bottom: 15px;
 
             background: url(../img/text-back-1.png);
@@ -3515,21 +3928,50 @@ html,.body,#well{
 
 
 
-          @include wid(992)      {  font: 100 50px/.9em var(--f); }
-          @include wid(601-991)  {  font: 100 46px/.9em var(--f); }
-          @include wid(600)      {  font: 100 44px/.9em var(--f); }
+          @include wid(992)      {  font: 100 50px/.9em var(--f);   }
+          @include wid(601-991)  {  font: 100 46px/.9em var(--f);  }
+          @include wid(600)      {  font: 100 44px/.9em var(--f);   }
+           
+             @include wid(400)  { font: 100 34px/.9em var(--f);   }
+               
+                 @include wid(350)  {   font: 100 25px/.9em var(--f);   }
          }
 
          .data{
 
              @include wid(992)      {  font: 100 16px/1.3em var(--nm); }
            color: #F60400;
+           margin-bottom: 0;
          }
+         
+         .img_icon{
+           margin: 0 auto;
+           @include wid(992) {
+              display: none; 
+           }
+         }
+         
+         p{
+           
+             @include wid(991)   { 
+            color: #AEAEAE; 
+               
+           }
+         }
+         
+  @include wid(601-991)   {   max-width:450px;  margin-left: auto; margin-right: auto;   } 
+  @include wid(600)       {     max-width:350px;    margin-left: auto; margin-right: auto;     } 
 
 
        }
        
        .box__img{
+         
+       
+         
+         z-index: 1;
+         
+         @include wid(991)   {  pointer-events:  none;   position: absolute; } 
          
 
          
@@ -3551,41 +3993,31 @@ html,.body,#well{
    }
 
    
-   .slick-track{
-     
-     
-     .slick-current{
-       .box__img{
-       
-         
-         max-width: 409px !important;
-         margin: 0 100px 0 auto !important;
-         height: 100%;
-       }
-     }
-     
-     .slick-center{
-         .box__img{
-               margin-left: auto;
-         
-           
-       }
-     }
-    div.slick-current ~ div.slick-active{
-      .box__img{
-        margin-left: 0 !important;
-      }
-     }
-   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
 
 
    
    .arrow__cont{
      margin-top: auto;
+     
+     @include wid(991)  { display: none; }
    }
 
   }     
+
+
 
  section.home__5{
     
@@ -3598,50 +4030,63 @@ html,.body,#well{
    
  
 
-      @include wid(992)      {       padding: 0; }
-      @include wid(601-991)  { padding: 100px 0 70px; }
-      @include wid(600)      { padding: 100px 0 50px; }
+//      @include wid(992)      {       padding: 0; }
+//      @include wid(601-991)  { padding: 100px 0 70px; }
+//      @include wid(600)      { padding: 100px 0 50px; }
    
       z-index: 2;
 
-   @include wid(992)  { 
+//   @include wid(992)  { 
+//   
+//       &>.container:nth-child(2)>.row:nth-child(1){
+//           display: flex;
+//           justify-content: space-between;
+//
+//         align-content: space-between;
+//           align-items: center;
+//           min-height: calc(100vh - 165px);
+//           flex-direction: column;
+//      
+//       }
+//
+//       &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
+//
+//           display: flex;
+//           justify-content: space-between;
+//           align-items: center;
+//       min-height: calc(100vh - 165px);
+//           flex-direction: column;
+//
+//       }
+//     
+//   }
+//   
    
-       &>.container:nth-child(2)>.row:nth-child(1){
-           display: flex;
-           justify-content: space-between;
+   
+   &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
 
-         align-content: space-between;
-           align-items: center;
-           min-height: calc(100vh - 165px);
-           flex-direction: column;
-      
-       }
-
-       &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
-
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-       min-height: calc(100vh - 165px);
-           flex-direction: column;
-
-       }
-     
+      display: flex;
+      justify-content: center;
+      align-items: center;
+//      min-height: calc(100vh - 165px);
+      flex-direction: column;
+       
    }
+    
    
-   
-   
-    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
+   &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
         
 //      @include wid(992)      {  }
       
-  @include wid(1500)      {   } 
-  @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-  @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(600)      {  }
+      @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(601-991)  { padding: 100px .8rem 30px; min-height: 100vh }
+      @include wid(600)      { padding: 80px .8rem 20px; min-height: 100vh }
+      
    }
-
+   
+   
    
    
     video#video_5 {
@@ -3679,15 +4124,17 @@ html,.body,#well{
 
         max-width:100%;
         width: 100%;
-     margin-bottom: auto !important;
+     margin-top: auto;
 
 
-        @include wid(1200)      {  font: 100 96px/.9em var(--f);  margin-bottom: 50px;        margin-top: 50px;}
-      @include wid(992-1199)   {  font: 100 96px/.9em var(--f); margin-bottom: 90px;         margin-top: 50px;}
-        @include wid(601-991)  {  font: 100 60px/.9em var(--f); margin-bottom: 90px;          margin-top: 50px;}
+        @include wid(1200)      {  font: 100 96px/.9em var(--f);  margin-bottom: 50px;  }
+      @include wid(992-1199)   {  font: 100 96px/.9em var(--f); margin-bottom: 50px;     }
+        @include wid(601-991)  {  font: 100 60px/.9em var(--f); margin-bottom: 45px;   }
         @include wid(600)      {  font: 100 44px/.9em var(--f);  margin-bottom: 35px;   }
 
-
+     
+        @include wid(400)      {  font: 100 44px/.9em var(--f); margin-bottom: 15px; margin-top: 0; }
+        @include wid(350)      {  font: 100 40px/.9em var(--f); margin-bottom: 15px;  margin-top: 0; } 
      }
    
    p{
@@ -3712,7 +4159,7 @@ html,.body,#well{
 
             @include wid(992)      {  font: 100 20px/1.5em var(--nl); }
             @include wid(601-991)  {  font: 100 20px/1.5em var(--nl); }
-            @include wid(600)      {  font: 100 18px/1.5em var(--nl); }
+            @include wid(600)      {  font: 100 18px/1.5em var(--nl);  }
 
          }
      }
@@ -3862,7 +4309,7 @@ html,.body,#well{
          transition:  all .4s linear;
           
  
-            transform: scale(1) translate3d(80px,780px,0) rotate(-80deg);
+            transform: scale(1) translate3d(80px,1080px,0) rotate(-80deg);
 
        }
        
@@ -3879,7 +4326,7 @@ html,.body,#well{
           .images__animation{
 //                       transform: scale(1) rotate(0deg) translateY(-130px) translateX(80px);    
             
-              transform: scale(1) translate3d(60px,-120px,50px) rotate(0deg);
+              transform: scale(1) translate3d(60px,-90px,50px) rotate(0deg);
                     
            }
            
@@ -3980,7 +4427,7 @@ html,.body,#well{
    
    #slider__home__5{
      width: 100%;
-     margin-top: auto;
+//     margin-top: auto;
    }
    
    
@@ -3998,6 +4445,27 @@ html,.body,#well{
      .slider__content{
          max-width:  100%;
          width: 100%;
+       
+       
+       .slid__img{
+         @include wid(992)  {   display: none }
+         
+         img{
+            @include wid(601-991)  {  margin: 0 auto 20px; max-width: 230px; }
+            @include wid(600)      {  margin: 0 auto 15px; max-width: 150px; }
+         }
+         
+         .red{
+           
+          @include wid(400)      {  width: clamp(220px,100vw,220px); height: 35px;     font: 400 16px/1.2em var(--nr); margin: 0 auto 15px; }
+          @include wid(350)      {  width: clamp(200px,100vw,200px);  height:  30px;     font: 400 14px/1.2em var(--nr); margin: 0 auto 15px;  }
+           
+           
+         }
+         
+         
+         
+       }
 
          .title__h4{
 
@@ -4026,6 +4494,9 @@ html,.body,#well{
           @include wid(992-1199) {  font: 100 44px/.9em var(--f);  margin-bottom: 15px }
           @include wid(601-991)  {  font: 100 32px/.9em var(--f);  margin-bottom: 10px; }
           @include wid(600)      {  font: 100 32px/.9em var(--f);  margin-bottom: 10px;  text-align: center }
+           
+          @include wid(400)      {  font: 100 30px/.9em var(--f);  margin-bottom: 5px;  text-align: center }
+          @include wid(350)      {  font: 100 28px/.9em var(--f);  margin-bottom: 5px;  text-align: center }
 
 
          }
@@ -4037,6 +4508,13 @@ html,.body,#well{
        
           @include wid(601-991)  {      font: 100 16px/1.2em var(--nl); }
           @include wid(600)      {   text-align: center;  font: 100 16px/1.2em var(--nl); }
+           
+                
+        @include wid(400)      {  font: 100 14px/1.3em var(--nl); margin-bottom: 15px;     color: #fff;   opacity: .9;}
+        @include wid(350)      {  font: 100 12px/1.3em var(--nl); margin-bottom: 15px;     color: #fff;   opacity: .9; } 
+        
+           
+           
 
          }
 
@@ -4054,7 +4532,7 @@ html,.body,#well{
             margin-right: auto;
 
             .white{
-              width: clamp(300px,100vw,300px);
+//              width: clamp(300px,100vw,300px);
             }
 
          }
@@ -4540,6 +5018,9 @@ html,.body,#well{
 
      margin-top: auto;
      
+     
+     @include wid(1200){  max-width: 900px;  }  
+     
   @include wid(1500)      { font: 100 96px/.9em var(--f);  } 
   @include wid(1200-1499) { font: 100 96px/.9em var(--f); }
   @include wid(992-1199)  { font: 100 96px/.9em var(--f); }
@@ -4555,6 +5036,8 @@ html,.body,#well{
       color: #F9F5EE;
       letter-spacing: .02em;
       margin-bottom: 40px;
+     
+          @include wid(1200){  max-width: 900px;  }  
 
       @include wid(992)      {  font: 100 20px/1.3em var(--nl);   max-width: 850px; }
       @include wid(601-991)  {  font: 100 18px/1.3em var(--nl); }
@@ -4628,23 +5111,41 @@ html,.body,#well{
 
    
    
-    &>.container:nth-child(2){
+    &>.container:nth-child(2)>div.row:nth-child(1){
      
 
      
              
 
         display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+//        justify-content: center;
+//        flex-direction: column;
+      
+//      align-items: center;
+//      align-content: center;
+      flex-wrap: wrap;
       
 
       
   @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
   @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-  @include wid(992-1199)  { padding: 120px .8rem 50px; min-height: 100vh }
+  @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
       @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(600)      { padding: 100px .8rem 50px; min-height: 100vh }   
+      @include wid(600)      { padding: 100px .8rem 50px; min-height: 100vh;
+      
+        &>div:nth-child(3){
+          display: none;
+        }
+      
+      }   
+      
+      
+      
+      &>div:nth-child(3), &>div:nth-child(1), &>div:nth-child(2){
+        margin-top: auto;
+      }
+      
+
      
    }
 
@@ -4890,6 +5391,11 @@ html,.body,#well{
 
 
    }
+  
+  input{
+    padding-left: 0;
+  }
+
 
 }
      
@@ -4907,7 +5413,7 @@ html,.body,#well{
            width: clamp(200px,100vw,200px);
        
         @include wid(600)      { 
-          margin-top: 20px;
+          margin-top: auto;
             clip-path: polygon(0 0,97% 0,100% 100%,3% 100%);
            width: 100% !important; 
        }
@@ -4964,11 +5470,48 @@ html,.body,#well{
    }
    
    
-   &>.container:nth-child(2){
+//   &>.container:nth-child(2){
+//     
+////     padding-top: 100px;
+////     margin: auto;
+//   }
+//   
+   
+   
+   
+   
+   
+    
+    &>.container:nth-child(2)>div.row:nth-child(1){
      
-//     padding-top: 100px;
-     margin: auto;
-   }
+
+     
+             
+
+        display: flex;
+        justify-content: center;
+//        flex-direction: column;
+      
+      align-items: center;
+//      align-content: center;
+      flex-wrap: wrap;
+      
+
+      
+  @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
+  @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
+  @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(600)      { padding: 100px .8rem 50px; min-height: 100vh; }   
+
+      
+
+     
+   }  
+   
+   
+   
+   
 
 
     &>.container:nth-child(2)>.row:nth-child(1){
