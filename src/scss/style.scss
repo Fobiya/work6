@@ -987,10 +987,6 @@ img:not([src]),video:not([src]) {
 
 
 
- .home__6,.home__7,.home__8,.home__9{
-  display: none;
-}
-
 
 html,.body,#well{
   /*Убрать полосу прокрутки у элемента*/
@@ -1845,7 +1841,7 @@ html,.body,#well{
    
    &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
 @include wid(601-991)  {  padding: 100px .75rem 50px;  min-height: 100vh;     margin: 0 auto; }
-@include wid(600)      {  padding: 100px .75rem 50px;  min-height: 100vh;     margin: 0 auto; }
+@include wid(600)      {  padding: 85px .75rem 45px;  min-height: 100vh;     margin: 0 auto; }
      
    }
    
@@ -2022,12 +2018,18 @@ html,.body,#well{
 
      }
      
+  @media screen and (max-height: 600px) and (max-width: 600px){
+        margin-bottom: auto;
+     }
+     
        margin-top: 110px;
        
        display: flex;
      align-items: center;
        justify-content: center;
      margin-bottom: 35px;
+     
+
      
 @include wid(992)      {  gap: 0 64px; }
 @include wid(601-991)  {  gap: 30px 54px;    
@@ -2040,6 +2042,7 @@ html,.body,#well{
   
   display: grid;
   grid-template-columns: 1fr 1fr; 
+     margin-bottom: 0;
      
 }
      
@@ -2052,7 +2055,9 @@ html,.body,#well{
    
    .arrow__cont{
      
-     @include wid(400)      { display:  none; }
+     @media screen and (max-height: 600px) and (max-width: 600px){
+       display: none !important;
+     }
        
        margin-top: auto;
        
@@ -2090,31 +2095,7 @@ html,.body,#well{
    
        padding: 0;
 
-//      @include wid(992)      { padding: 120px 0  45px 0; }
-//      @include wid(601-991)  { padding: 187px 0  160px 0; }
-//      @include wid(600)      { padding: 187px 0  160px 0; }
-   
-   
-//@include wid(991)  {
-//  
-//  &>.container{
-//    max-width: 100%;
-//    width: 100%;
-//    
-//    &>div.row:nth-child(1){
-//      
-//      &>div:nth-child(1){
-//        padding-left: 0 !important;
-//        padding-right: 0 !important;
-//      }
-//    }
-//    
-//  }
-//  
-//
-//  
-//}
-//   
+
       z-index: 2;
    
 @include wid(601-991)  {  
@@ -2170,8 +2151,11 @@ html,.body,#well{
         
 //      @include wid(992)      {  }
       @include wid(601-991)  { padding: 100px 0rem 50px; min-height: 100vh }
-      @include wid(600)      { padding: 100px 0rem 50px; min-height: 100vh  }
+     @include wid(600)      {  padding: 85px 0rem 45px;  min-height: 100vh;     margin: 0 auto; }
+      
    }
+
+   
 
    
     video#video_2 {
@@ -3175,7 +3159,11 @@ html,.body,#well{
 @include wid(601-991)  {  margin-top:  0; }
 @include wid(600)      {  margin-top: 0;  }
      
-      @include wid(350)      { display:  none; }
+//      @include wid(350)      { display:  none; }
+     
+     @media screen and (max-height: 600px) and (max-width: 600px){
+       display: none !important;
+     }
      
    }
 
@@ -3231,7 +3219,8 @@ html,.body,#well{
       @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
       @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
       @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(600)      { padding: 100px .8rem 50px; min-height: 100vh }
+     
+      @include wid(600)      {  padding: 85px .75rem 45px;  min-height: 100vh;     margin: 0 auto; }
       
    }
    
@@ -3287,7 +3276,7 @@ html,.body,#well{
      }
 
      
-        @include wid(400)      {  font: 100 44px/.9em var(--f); margin-bottom: auto; }
+        @include wid(400)      {  font: 100 44px/.9em var(--f); margin-bottom: 35px; }
         @include wid(350)      {  font: 100 40px/.9em var(--f); margin-bottom: 20px;  margin-top: 0;  padding-right: 15%; } 
      
 
@@ -3376,7 +3365,7 @@ html,.body,#well{
   @include wid(992-1199)  {  width: 120px;  } 
          
           @include wid(601-991)  {  }
-          @include wid(600)      {  width: inherit; }
+          @include wid(600)      {  width: 135px; }
 
          
          
@@ -3390,7 +3379,9 @@ html,.body,#well{
    .arrow__cont{
      margin-top: auto;
      
-         @include wid(350)      { display:  none; }
+     @media screen and (max-height: 600px) and (max-width: 600px){
+       display: none !important;
+     }
      
    }
 
@@ -3413,9 +3404,7 @@ html,.body,#well{
 //      @include wid(600)      { padding: 187px 0  160px 0; }
    
       z-index: 2;
-   
-   
-   
+
    
    @media screen and (max-height: 800px ){
      
@@ -3606,10 +3595,7 @@ html,.body,#well{
      
    }
    
-   
 
-   
-   
    &>.container:nth-child(2)>.row:nth-child(1){
 //       display: flex;
 //       justify-content: space-between;
@@ -3627,8 +3613,6 @@ html,.body,#well{
      }
    }
 
-   
-   
    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
 
       display: flex;
@@ -3638,8 +3622,7 @@ html,.body,#well{
       flex-direction: column;
        
    }
-    
-   
+
    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
         
 //      @include wid(992)      {  }
@@ -3648,7 +3631,9 @@ html,.body,#well{
       @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
       @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
       @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(600)      { padding: 80px .8rem 30px; min-height: 100vh }
+//      @include wid(600)      { padding: 80px .8rem 30px; min-height: 100vh }
+     
+      @include wid(600)      {  padding: 80px .75rem 30px;  min-height: 100vh;     margin: 0 auto; }
       
    }
    
@@ -3834,15 +3819,12 @@ html,.body,#well{
 
    
    #home__4_slider{
-     
-         position: relative;
-    z-index: 1;
-     
-     width: 100%;
 
+      position: relative;
+      z-index: 1;
 
-     
-     
+      width: 100%;
+
      .box__content{
        display: flex;
         justify-content: center;
@@ -3985,26 +3967,9 @@ html,.body,#well{
        }
        
      }
-     
 
-     
-   
-    
    }
 
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
 
 
@@ -4016,8 +3981,6 @@ html,.body,#well{
    }
 
   }     
-
-
 
  section.home__5{
     
@@ -4036,31 +3999,6 @@ html,.body,#well{
    
       z-index: 2;
 
-//   @include wid(992)  { 
-//   
-//       &>.container:nth-child(2)>.row:nth-child(1){
-//           display: flex;
-//           justify-content: space-between;
-//
-//         align-content: space-between;
-//           align-items: center;
-//           min-height: calc(100vh - 165px);
-//           flex-direction: column;
-//      
-//       }
-//
-//       &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
-//
-//           display: flex;
-//           justify-content: space-between;
-//           align-items: center;
-//       min-height: calc(100vh - 165px);
-//           flex-direction: column;
-//
-//       }
-//     
-//   }
-//   
    
    
    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
@@ -4082,7 +4020,8 @@ html,.body,#well{
       @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
       @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
       @include wid(601-991)  { padding: 100px .8rem 30px; min-height: 100vh }
-      @include wid(600)      { padding: 80px .8rem 20px; min-height: 100vh }
+      @include wid(600)      { padding: 80px .8rem 20px; min-height: 100vh;   margin: 0 auto; }
+
       
    }
    
@@ -4130,11 +4069,11 @@ html,.body,#well{
         @include wid(1200)      {  font: 100 96px/.9em var(--f);  margin-bottom: 50px;  }
       @include wid(992-1199)   {  font: 100 96px/.9em var(--f); margin-bottom: 50px;     }
         @include wid(601-991)  {  font: 100 60px/.9em var(--f); margin-bottom: 45px;   }
-        @include wid(600)      {  font: 100 44px/.9em var(--f);  margin-bottom: 35px;   }
+        @include wid(600)      {  font: 100 44px/.9em var(--f);  margin-bottom: 35px; margin-top: auto   }
 
      
-        @include wid(400)      {  font: 100 44px/.9em var(--f); margin-bottom: 15px; margin-top: 0; }
-        @include wid(350)      {  font: 100 40px/.9em var(--f); margin-bottom: 15px;  margin-top: 0; } 
+        @include wid(400)      {  font: 100 40px/.9em var(--f); margin-bottom: 15px;  }
+        @include wid(350)      {  font: 100 35px/.9em var(--f); margin-bottom: 15px;   } 
      }
    
    p{
@@ -4428,6 +4367,11 @@ html,.body,#well{
    #slider__home__5{
      width: 100%;
 //     margin-top: auto;
+     
+          @media screen and (max-height: 600px) and (max-width: 600px){
+       margin-bottom: auto;
+     }
+     
    }
    
    
@@ -4452,7 +4396,10 @@ html,.body,#well{
          
          img{
             @include wid(601-991)  {  margin: 0 auto 20px; max-width: 230px; }
-            @include wid(600)      {  margin: 0 auto 15px; max-width: 150px; }
+            @include wid(600)      {  margin: 0 auto 20px; max-width: 200px; }
+           
+           
+                    @include wid(350)      {  margin: 0 auto 20px; max-width: 150px; }
          }
          
          .red{
@@ -4562,10 +4509,17 @@ html,.body,#well{
    .arrow__cont{
      margin-top: auto;
      
-          @include wid(600)  {  display: none; } 
+     @media screen and (max-height: 600px) and (max-width: 600px){
+       display: none !important;
+     }
+
    }
 
   }     
+
+
+
+
 
  section.home__6{
     
@@ -4640,47 +4594,101 @@ html,.body,#well{
    
    &>.container:nth-child(2){
      
-     padding-top: 100px;
+//     padding-top: 100px;
      margin: auto;
    }
-
+//
+//   
+//    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
+//        
+////      @include wid(992)      {  }
+//      
+//  @include wid(1500)      {  } 
+//  @include wid(1200-1499) {     width: 100%; }
+//  @include wid(992-1199)  {     width: 100%; }
+//      @include wid(601-991)  {  }
+//      @include wid(600)      {  }
+//      
+//      &>.partner{
+//        @include wid(992)      { display: none; }
+//        @include wid(601-991)  { display: none; }
+//        margin-bottom: 25px;
+//      }
+//      
+//   }
+//
+//
+//   
+//   @include wid(600){ 
+//     
+//       &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
+//         
+//          min-height:  calc(100vh - 100px); 
+//
+//          display: flex;
+//          justify-content: space-between;
+//          align-items: flex-start;
+//    //   min-height: calc(100vh - 165px);
+//          flex-direction: column;
+//
+//
+//       }
+//   
+// }
+//   
+//   
    
-    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
+      
+   &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+//      min-height: calc(100vh - 165px);
+      flex-direction: column;
+       
+   }
+    
+   
+   &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
         
 //      @include wid(992)      {  }
       
-  @include wid(1500)      {  } 
-  @include wid(1200-1499) {     width: 100%; }
-  @include wid(992-1199)  {     width: 100%; }
-      @include wid(601-991)  {  }
-      @include wid(600)      {  }
-      
-      &>.partner{
-        @include wid(992)      { display: none; }
-        @include wid(601-991)  { display: none; }
-        margin-bottom: 25px;
-      }
+      @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(601-991)  { padding: 100px .8rem 30px; min-height: 100vh }
+      @include wid(600)      { padding: 80px .8rem 0px; min-height: calc(100vh - 100px);   margin: 0 auto; }
+
       
    }
-
-
    
-   @include wid(600){ 
-     
-       &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
-         
-          min-height:  calc(100vh - 100px); 
-
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-    //   min-height: calc(100vh - 165px);
-          flex-direction: column;
-
-
-       }
    
- }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(2){
+        display: none;
+   }
+   
+   
+   
+   
+   
+   
+   
 
     video#video_6 {
         position: absolute;
@@ -4722,7 +4730,14 @@ html,.body,#well{
       @include wid(1200)      {  font: 100 96px/.9em var(--f); }
       @include wid(992-1199)      {  font: 100 86px/.9em var(--f); }
       @include wid(601-991)  {  font: 100 48px/.9em var(--f); }
-      @include wid(600)      {  font: 100 40px/.9em var(--f); }
+      @include wid(600)      {  font: 100 37px/.9em var(--f); margin-top: auto }
+     
+     
+
+     
+        @include wid(400)      {  font: 100 35px/.9em var(--f); margin-bottom: 15px;  }
+        @include wid(350)      {  font: 100 30px/.9em var(--f); margin-bottom: 15px;   } 
+     
 
      }
    
@@ -4745,7 +4760,8 @@ html,.body,#well{
   
       @include wid(992-1199)  {  font: 100 16px/1.3em var(--nl);   max-width: 850px;  margin-bottom: 20px; }
       @include wid(601-991)  {  font: 100 16px/1.3em var(--nl);  margin-bottom: 20px; }
-      @include wid(600)      {  font: 100 16px/1.3em var(--nl);  margin-bottom: 20px; }
+      @include wid(600)      {  font: 100 14px/1.3em var(--nl);  margin-bottom: 20px; }
+      @include wid(350)      {  font: 100 12px/1.3em var(--nl);  margin-bottom: 15px; }
 
          &.sub{
            
@@ -4779,8 +4795,14 @@ html,.body,#well{
             
      }
      
+     
+     
       @include wid(992-1199)  {     margin-top: 30px; }
       @include wid(991)  {     margin-top: 30px; }
+      @include wid(600)  {     margin-bottom: auto !important;   }
+     
+     
+     
      
      margin-bottom: auto;
      
@@ -4845,6 +4867,9 @@ html,.body,#well{
    
    .partner{
      max-width: 105px;
+     
+     @include wid(600)      { margin: 0 auto auto 0; } 
+             
    }
    
    
@@ -4853,7 +4878,9 @@ html,.body,#well{
      
      z-index: 33;
      
-          @include wid(600)  {  display: none; } 
+      @media screen and (max-height: 600px) and (max-width: 600px){
+       display: none !important;
+     }
    }
    
 }
@@ -4917,27 +4944,28 @@ html,.body,#well{
    }
    
    
-    &>.container:nth-child(3)>div.row:nth-child(1)>div:nth-child(1){
-      
-      @media screen and (min-width: 992px) and (max-height: 800px){
+   &>.container:nth-child(3)>div.row:nth-child(1)>div:nth-child(1){
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+//      min-height: calc(100vh - 165px);
+      flex-direction: column;
+       
+   }
+
+   &>.container:nth-child(3)>div.row:nth-child(1)>div:nth-child(1){
         
-        .col.xl8{
-          width: 100%;
-          max-width: 100%;
-        }
-      }
-
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+//      @include wid(992)      {  }
       
-
-      
-  @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
-  @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-  @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
       @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(600)      {  }
+//      @include wid(600)      { padding: 80px .8rem 30px; min-height: 100vh }
+     
+      @include wid(600)      {  padding: 80px .75rem 30px;  min-height: 100vh;     margin: 0 auto; }
+      
    }
 
    
@@ -5070,6 +5098,10 @@ html,.body,#well{
        opacity: 0;
      }
    }
+   
+   .white{
+     @include wid(600)      {  margin-top: auto; } 
+   }
 
    
    .arrow__cont{
@@ -5078,7 +5110,11 @@ html,.body,#well{
      
      z-index: 33;
      
-          @include wid(600)  {  display: none; } 
+     @include wid(600)      {  display: none }
+     
+          @media screen and (max-height: 600px) and (max-width: 600px){
+           display: none !important;
+         }
    }
    
 }
@@ -5111,67 +5147,42 @@ html,.body,#well{
 
    
    
-    &>.container:nth-child(2)>div.row:nth-child(1){
-     
-
-     
-             
-
-        display: flex;
-//        justify-content: center;
-//        flex-direction: column;
-      
-//      align-items: center;
-//      align-content: center;
-      flex-wrap: wrap;
-      
-
-      
-  @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
-  @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-  @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(600)      { padding: 100px .8rem 50px; min-height: 100vh;
-      
-        &>div:nth-child(3){
-          display: none;
-        }
-      
-      }   
-      
-      
-      
-      &>div:nth-child(3), &>div:nth-child(1), &>div:nth-child(2){
-        margin-top: auto;
-      }
-      
-
-     
-   }
-
-
     &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
       
 
       
    }
+   
+   
+      
+   &>.container:nth-child(2)>div.row:nth-child(1){
 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+//      min-height: calc(100vh - 165px);
+      flex-direction: column;
+       
+   }
+    
    
-   
-    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
+   &>.container:nth-child(2)>div.row:nth-child(1){
         
 //      @include wid(992)      {  }
       
-      @include wid(1500)      {  } 
-      @include wid(1200-1499) {     width: 100%; }
-      @include wid(992-1199)  {     width: 100%; }
-          @include wid(601-991)  {  }
-          @include wid(600)      {  }
+      @include wid(1500)      { padding: 100px  0rem 50px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px  0rem 50px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px  0rem 50px; min-height: 100vh }
+      @include wid(601-991)  { padding: 100px  0rem 30px; min-height: 100vh }
+      @include wid(600)      { padding: 80px  0rem 20px; min-height: 100vh;   margin: 0 auto; }
 
       
    }
-
-
+   
+   
+   
+   
+   
 
     video#video_8{
         position: absolute;
@@ -5209,12 +5220,15 @@ html,.body,#well{
       width: 100%;
       margin-bottom: 35px;
 
-      @include wid(1500)      {  font: 100 96px/.9em var(--f); } 
-      @include wid(1200-1499) {  font: 100 96px/.9em var(--f); }
-      @include wid(992-1199)  {  font: 100 90px/.9em var(--f); }
 
-      @include wid(601-991)  {  font: 100 48px/.9em var(--f); }
-      @include wid(600)      {  font: 100 60px/.9em var(--f); }
+        @include wid(1500)      {  font: 100 96px/.9em var(--f); }
+        @include wid(1200-1499) {  font: 100 96px/.9em var(--f); }
+        @include wid(992-1199)  {  font: 100 96px/.9em var(--f); }
+        @include wid(601-991)   {  font: 100 64px/.9em var(--f); }
+        @include wid(600)       {  font: 100 44px/.9em var(--f); }
+     
+        @include wid(400)      {  font: 100 35px/.9em var(--f); margin-bottom: 15px; }
+        @include wid(350)      {  font: 100 25px/.9em var(--f); margin-bottom: 12px; } 
 
      }
    
@@ -5227,6 +5241,11 @@ html,.body,#well{
       @include wid(992)      {  font: 100 20px/1.3em var(--nl);   max-width: 850px; }
       @include wid(601-991)  {  font: 100 18px/1.3em var(--nl); }
       @include wid(600)      {  font: 100 16px/1.3em var(--nl);  max-width: 350px; }
+     
+     
+           
+            @include wid(400)      {  font: 100 14px/1.5em var(--nl); margin-bottom: 20px; }
+            @include wid(350)      {  font: 100 13px/1.5em var(--nl); margin-bottom: 15px; }
 
          &.sub{
            
@@ -5243,6 +5262,8 @@ html,.body,#well{
             @include wid(992)      {  font: 100 20px/1.5em var(--nl); }
             @include wid(601-991)  {  font: 100 20px/1.5em var(--nl); }
             @include wid(600)      {  font: 100 18px/1.5em var(--nl);  }
+
+
 
          }
      }
@@ -5379,8 +5400,6 @@ html,.body,#well{
      
 }
      
- 
-     
 @include wid(600)      { 
 
 
@@ -5398,7 +5417,6 @@ html,.body,#well{
 
 
 }
-     
      
 
 
@@ -5419,8 +5437,15 @@ html,.body,#well{
        }
        
      }
-
      
+     
+
+
+          
+     .five{
+       @include wid(400)      {  margin-top: 35px; }
+       @include wid(350)      {  margin-top: 15px; }
+     }
      
      
    }
@@ -5479,36 +5504,40 @@ html,.body,#well{
    
    
    
+   @include wid(600)      {     
+     
+     &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(2){
+       margin: auto 0;
+     } 
+   
+   }
    
    
-    
-    &>.container:nth-child(2)>div.row:nth-child(1){
-     
-
-     
-             
-
-        display: flex;
-        justify-content: center;
-//        flex-direction: column;
+   
       
+   &>.container:nth-child(2)>div.row:nth-child(1){
+
+      display: flex;
+      justify-content: center;
       align-items: center;
-//      align-content: center;
-      flex-wrap: wrap;
-      
-
-      
-  @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
-  @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-  @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(600)      { padding: 100px .8rem 50px; min-height: 100vh; }   
-
-      
-
-     
-   }  
+//      min-height: calc(100vh - 165px);
+      flex-direction: column;
+       
+   }
+    
    
+   &>.container:nth-child(2)>div.row:nth-child(1){
+        
+//      @include wid(992)      {  }
+      
+      @include wid(1500)      { padding: 100px  0rem 50px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px  0rem 50px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px  0rem 50px; min-height: 100vh }
+      @include wid(601-991)  { padding: 100px  0rem 30px; min-height: 100vh }
+      @include wid(600)      { padding: 85px  0rem 30px; min-height: 100vh;   margin: 0 auto; }
+
+      
+   }
    
    
    
@@ -5571,12 +5600,29 @@ html,.body,#well{
            
            
            .footer_logo{
-             margin-bottom: 25px;
+       
              text-align: center;
+             
+             
+             @include wid(992)      {       margin-bottom: 25px; }
+              @include wid(601-991)  {       margin-bottom: 25px; }
+              @include wid(600)      {       margin-bottom: 15px; }
+             
+             @include wid(350)      {       img{ max-width: 135px; } }
            }
            
            .contents{
              text-align: center;
+             
+             p{
+               
+               margin-bottom: 20px;
+               
+                @media screen and (max-height: 600px) and (max-width: 600px){
+                     font: 100 14px/1.3em var(--nl); 
+                      
+               }
+             }
            }
            
            
@@ -5621,6 +5667,9 @@ html,.body,#well{
      }
          
    }
+   
+   
+   
 //   
 //   @include wid(600){ 
 //     
@@ -5740,6 +5789,13 @@ html,.body,#well{
        
        
      }
+     
+     @include wid(600)      { display: none !important;  }
+     
+      @media screen and (max-height: 600px) and (max-width: 600px){
+         display: none !important;
+      }
+     
    }
    
    .partner__footer{
@@ -5776,6 +5832,8 @@ html,.body,#well{
    
 
    
+
+   
    
    .box__ul{
      
@@ -5784,11 +5842,24 @@ html,.body,#well{
      .title__{
         color: #FFFFFF;
         font: 600 24px/1.2em var(--nl); 
-        margin-bottom: 20px;
+       
+       
+       
+                         @media screen and (max-height: 600px) and (max-width: 600px){
+                                       font: 600 20px/1.2em var(--nl); 
+                       margin-bottom: 10px;          
+             }
+       
      }
      
        &>ul{
-         padding-left: 15px;
+         
+         @media screen and (min-width: 601px){
+           padding-left: 15px;
+         }
+
+         
+         
          position: relative;
          &>li{
            position: relative;
@@ -5800,6 +5871,11 @@ html,.body,#well{
              font: 600 16px/1.2em var(--nl); 
              margin-bottom: 15px;
              
+                             @media screen and (max-height: 600px) and (max-width: 600px){
+                                font: 600 15px/1.2em var(--nl); 
+                       margin-bottom: 8px;             
+             }
+             
              &:hover{
                 color: #c81c1c;
              }
@@ -5807,7 +5883,12 @@ html,.body,#well{
            
            
             &>ul{
-               padding-left: 10px;
+         @media screen and (min-width: 601px){
+           padding-left: 10px;
+         }
+              
+              
+              
                position: relative;
                   margin-bottom: 20px;
 
@@ -5818,6 +5899,12 @@ html,.body,#well{
                  display: inline-flex;
                  color: #939393;
                  font: 100 16px/1.2em var(--nl); 
+                  
+                                 @media screen and (max-height: 600px) and (max-width: 600px){
+                                font: 600 15px/1.2em var(--nl); 
+                       
+             }  
+                  
                  margin-bottom: 2px;
                   
                  &:hover{

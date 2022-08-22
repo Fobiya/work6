@@ -770,7 +770,19 @@ function initlazyimg() {
             $('body').removeClass("open__menu");
         }
     });
+  
+  
+  
 
+
+
+    $('.right__menu .menu__>li>a[data-slide]').click(function() {
+      $('.right__menu .menu__>li>a').removeClass('active');
+      $(this).addClass('active');
+
+      $(".right__menu").removeClass("open");
+            $('body').removeClass("open__menu");
+    });
 
 
     $('.close').click(function() {
@@ -1454,7 +1466,11 @@ $full__tuch.slick({
   
   
   
-  
+          $('a[data-slide]').click(function(e) {
+            e.preventDefault();
+            var slideno = $(this).data('slide');
+            $('#full__tuch').slick('slickGoTo', slideno - 1);
+        });
   
   
   
