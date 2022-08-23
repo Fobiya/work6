@@ -41,31 +41,30 @@ html(lang='sv')
         li
           a.active(href='javascript:;' data-slide='1') Home
         li
-          a(href='javascript:;'  data-slide='2') About us
+          a(href='javascript:;'  data-slide='2') Services
         li
-          a(href='javascript:;' data-slide='3')  Services
+          a(href='javascript:;' data-slide='3') Clients
         li
-          a(href='javascript:;' data-slide='4')  Our process
+          a(href='javascript:;' data-slide='4') Recomendations
         li
-          a(href='javascript:;' data-slide='5') Resources
+          a(href='javascript:;' data-slide='5') Our work
         li
-          a(href='javascript:;' data-slide='6') Contact
+          a(href='javascript:;' data-slide='6') Startade vi Webshark
         li
-          a(href='javascript:;' data-slide='7') Vägen till lönsamma resultat
+          a(href='javascript:;' data-slide='7') Steg för steg
         li
-          a(href='javascript:;' data-slide='8') Vill ni öka er försäljning?
-        li
-          a(href='javascript:;' data-slide='9') Contact
+          a(href='javascript:;' data-slide='8') Kontakta oss
 
-    header.anim__logo
+
+    header
       .container
         .row
           .col.m12.s12.l12.xl12
             ul
               li
-                a(href='javascript:;') Home
+                a(href='javascript:;' data-slide='2') Home
               li
-                a(href='javascript:;') About us
+                a(href='javascript:;' data-slide='2') About us
               li
 
                 ul
@@ -75,7 +74,7 @@ html(lang='sv')
                     a(href='javascript:;') About us
                   li
                     a(href='javascript:;') Services
-                a(href='javascript:;') Services
+                a(href='javascript:;' data-slide='3') Services
 
             .logo__cont
               a(href='javascript:;')
@@ -83,25 +82,25 @@ html(lang='sv')
 
             ul
               li
-                a(href='javascript:;') Our process
+                a(href='javascript:;' data-slide='4') Our process
               li
-                a(href='javascript:;') Resources
+                a(href='javascript:;' data-slide='5') Resources
               li
-                a(href='javascript:;') Contact
+                a(href='javascript:;' data-slide='6') Contact
                 
             a.mobile__(href='javascript:;')
               img.menu__(data-src='img/menu.svg', alt='menu')
 
 
 
-    section#home0.home__0.none
-      video#video_0.none(poster='img/home__0_back.png', playsinline='', autoplay='', muted='', preload='none')
-        source(src='video/home__0.mp4', type='video/webm')
+    section#home0.home__0
+      video#video_0(poster='img/home__0_back.png', playsinline='', autoplay='', muted='', preload='none')
+        source(src='video/home__0.webm', type='video/webm')
         source(src='video/home__0.mp4', type='video/mp4')
         
-      video#video_0.none(poster='img/home__0_back.png', playsinline='', autoplay='', muted='', preload='none')
-        source(src='video/home__0_mobile.mp4', type='video/webm')
-        source(src='video/home__0_mobile.mp4', type='video/mp4')
+      video#video_0__mobile(poster='img/home__0_back.png', playsinline='', autoplay='', muted='', preload='none')
+        source(src='video/375x812.webm', type='video/webm')
+        source(src='video/375x812.mp4', type='video/mp4')
         
       
 
@@ -110,7 +109,7 @@ html(lang='sv')
     #full__tuch
 
       div
-        section#home1.home__1.not_
+        section#home1.home__1
 
           video#video_1(poster='img/home__1_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
             source(src='video/home.webm', type='video/webm')
@@ -158,22 +157,22 @@ html(lang='sv')
 
                 ul.list
                   li
-                    a(href='javascript:;'  data-slide='1')  Paid Social
+                    a(href='javascript:;'  data-slidertwo='1')  Paid Social
                     .preview
                       img(data-src='img/home__2_preview_1.png', alt='home__2_preview_1')
 
                   li
-                    a(href='javascript:;'  data-slide='2')  Paid Search
+                    a(href='javascript:;'  data-slidertwo='2')  Paid Search
                     .preview
                       img(data-src='img/home__2_preview_2.png', alt='home__2_preview_1')
 
 
                   li
-                    a(href='javascript:;'  data-slide='3')  Organic Search
+                    a(href='javascript:;'  data-slidertwo='3')  Organic Search
                   li
-                    a(href='javascript:;'  data-slide='4')  Data Analytics
+                    a(href='javascript:;'  data-slidertwo='4')  Data Analytics
                   li
-                    a(href='javascript:;'  data-slide='5')  Digital Strategy
+                    a(href='javascript:;'  data-slidertwo='5')  Digital Strategy
                     
                     
                 ul.images__slider
@@ -397,19 +396,19 @@ html(lang='sv')
                 ul.list
                   li
                     img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-slide='1') Röd baron
+                    a(href='javascript:;' data-home='1') Röd baron
                   li
                     img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-slide='2') Budapest 3.0
+                    a(href='javascript:;' data-home='2') Budapest 3.0
                   li
                     img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-slide='3') Park Avenue
+                    a(href='javascript:;' data-home='3') Park Avenue
                   li
                     img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-slide='4') Microsoft
+                    a(href='javascript:;' data-home='4') Microsoft
                   li
                     img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-slide='5') Apple
+                    a(href='javascript:;' data-home='5') Apple
                     
                     
                 #slider__home__5
@@ -500,14 +499,16 @@ html(lang='sv')
                   a.white(href='javascript:;') Kontakta oss
                   img.partner(data-src='img/partner.svg', alt='partner')
                   
+                .arrow__cont
+                  a.next__arrow(href='javascript:;')
+                    span
+
+                  
               .col.m12.s12.l2.xl3
                 .video__content
                   video.lazy#video_6(reload='' src='video/zk9da-23mue.webm' autoplay='' muted='' loop='')
 
                 
-          .arrow__cont
-            a.next__arrow(href='javascript:;')
-              span
 
           
           
@@ -524,7 +525,7 @@ html(lang='sv')
           .container
             .row
               .col.m12.s12.l12.xl12
-                h2.title Vägen till lönsamma resultat – steg för steg
+                h2.title Vägen till <br>lönsamma resultat – <br>steg för steg
                 
                 p Dina kunders resa online – från att lära känna ditt företag, till köp och vidare till kundrelationen – kallar vi den digitala kundresan. Och ditt team hos Webshark arbetar för att göra den resan så effektiv som möjligt
 

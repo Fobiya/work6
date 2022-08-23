@@ -190,11 +190,19 @@ img,.home__4{
 
   
     color: #fff;
-    font:  400 22px/1.2em var(--nr);
 
-    width: clamp(250px, 100vw, 250px);
-    height: 54px;
 
+
+   
+  
+  
+  @include wid(1500)      {     width: clamp(250px, 100vw, 250px);  height: 54px;     font:  400 22px/1.2em var(--nr); } 
+  @include wid(1200-1499) {     width: clamp(160px, 100vw, 160px);  height: 45px;     font:  400 18px/1.2em var(--nr); } 
+
+//  @include wid(601-991)   {   } 
+  
+  @include wid(992-1199)  {   width: clamp(250px, 100vw, 250px);  height: 54px;     font:  400 22px/1.2em var(--nr); } 
+  @include wid(991)  {   width: clamp(250px, 100vw, 250px);  height: 54px;     font:  400 22px/1.2em var(--nr); } 
   
     clip-path: polygon(0 0%,90% 0%,100% 100%,10% 100%);
   
@@ -225,11 +233,16 @@ img,.home__4{
   border-radius: 2px;
   
     color: #F60400;
-    font:  400 22px/1.2em var(--nr);
+ 
 
-    width: clamp(250px, 100vw, 250px);
-    height: 54px;
 
+  
+  
+  @include wid(1500)      {     width: clamp(250px, 100vw, 250px);  height: 54px;     font:  400 22px/1.2em var(--nr); } 
+  @include wid(1200-1499) {     width: clamp(160px, 100vw, 160px);  height: 45px;     font:  400 18px/1.2em var(--nr); } 
+  
+  @include wid(992-1199)  {   width: clamp(250px, 100vw, 250px);  height: 54px;     font:  400 22px/1.2em var(--nr); } 
+  @include wid(991)  {   width: clamp(250px, 100vw, 250px);  height: 54px;     font:  400 22px/1.2em var(--nr); } 
   
     clip-path: polygon(0 0%,90% 0%,100% 100%,10% 100%);
   
@@ -706,6 +719,8 @@ body.stai{
        @include wid(992)      { display: none; }
        @include wid(601-991)  { display: none; }
        
+        @include wid(600)  {  width: 24px;  }
+       
      }
      
 
@@ -720,8 +735,17 @@ body.stai{
 
         
         @include wid(992)      {  height: 100px; }
-        @include wid(601-991)  {  padding: 27px 20px; }
-        @include wid(600)      {  padding: 27px 20px; }
+        @include wid(601-991)  {  padding: 27px 5px; }
+        @include wid(600)      {  padding: 27px 20px; 
+        
+        
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+        
+        
+        }
         @include wid(400)      {  padding: 15px 20px; }
         
         ul{
@@ -849,8 +873,10 @@ body.stai{
           position: absolute;
           
           right: 20px;
-          top:20px;
+          top:27px;
           z-index: 35;
+          
+                  @include wid(600)  {  width: 24px;  }
 
         }
 
@@ -867,16 +893,19 @@ body.stai{
     flex-direction: column;
     z-index: 20;
     
+    padding: 0 25px;
+    
     li{
       position: relative;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       a{
         text-align: center;
         color: #fff;
-        font: 100 32px/1.2em var(--nr);
+        font: 100 32px/1.2em var(--nl);
         
         &:hover,&.active{
           color: #f60400;
+        font: 100 32px/1.2em var(--nl);
         }
       }
     }
@@ -1135,11 +1164,34 @@ html,.body,#well{
 
 
 
-       @include wid(600){  
-//         display: none;
+       @include wid(991){  
+         display: none;
        }
 
     }
+   
+   
+   video#video_0__mobile{
+     
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+     
+            @include wid(992){  
+         display: none;
+       }
+   }
+
    
    
    ul{
@@ -1818,13 +1870,8 @@ html,.body,#well{
        display: flex;
        justify-content: space-between;
        align-items: center;
-       min-height: calc(100vh - 165px);
        flex-direction: column;
-      @include wid(992){ padding: 100px 0  45px 0; }
-     
-     
-     
-     
+
      
    }
    &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
@@ -1832,21 +1879,22 @@ html,.body,#well{
        display: flex;
        justify-content: center;
        align-items: center;
-   min-height: calc(100vh - 165px);
+     
+     
+@include wid(992)  {   min-height: calc(100vh - 135px); }
+@include wid(601-991)  {   min-height: calc(100vh - 135px); }
+@include wid(600)      {   min-height: calc(100vh - 120px); }
+     
        flex-direction: column;
        
+       
+@include wid(992)  {  padding: 100px .75rem 35px;  min-height: 100vh;     margin: 0 auto; }
+@include wid(601-991)  {  padding: 100px .75rem 35px;  min-height: 100vh;     margin: 0 auto; }
+@include wid(600)      {  padding: 85px .75rem 35px;  min-height: 100vh;     margin: 0 auto; }
+       
      }
-   
-   
-   
-   &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
-@include wid(601-991)  {  padding: 100px .75rem 50px;  min-height: 100vh;     margin: 0 auto; }
-@include wid(600)      {  padding: 85px .75rem 45px;  min-height: 100vh;     margin: 0 auto; }
-     
-   }
-   
-   
-    video#video_1 {
+
+   video#video_1{
         position: absolute;
         min-height: 100%;
         min-width: 100%;
@@ -1862,14 +1910,12 @@ html,.body,#well{
 
 
 
-       @include wid(600){  
+       @include wid(991){  
          display: none;
        }
 
     }
-   
-   
-   
+
    
    &.not_{
      
@@ -1915,15 +1961,15 @@ html,.body,#well{
         letter-spacing: .025em;
         text-align: center;
 
-        max-width: 1100px;
+
         margin: auto;
      margin-bottom: 20px;
 
-        @include wid(1500)      {  font: 100 96px/.9em var(--f); }
-        @include wid(1200-1499) {  font: 100 96px/.9em var(--f); }
-        @include wid(992-1199)  {  font: 100 96px/.9em var(--f); }
+        @include wid(1500)      {  font: 100 96px/.9em var(--f); max-width: 700px; }
+        @include wid(1200-1499) {  font: 100 70px/.9em var(--f);  margin-bottom: 25px;   max-width: 500px; }
+        @include wid(992-1199)  {  font: 100 70px/.9em var(--f);  margin-bottom: 25px;   max-width: 500px; }
         @include wid(601-991)   {  font: 100 64px/.9em var(--f); }
-        @include wid(600)       {  font: 100 44px/.9em var(--f); }
+        @include wid(600)       {  font: 100 44px/.9em var(--f); max-width: 330px;  }
      
         @include wid(400)      {  font: 100 35px/.9em var(--f); margin-bottom: 15px; }
         @include wid(350)      {  font: 100 30px/.9em var(--f); margin-bottom: 12px; } 
@@ -1941,8 +1987,14 @@ html,.body,#well{
    p{
           color: #E9E9E9;
           letter-spacing: .02em;
+     
+     
+        @include wid(1500)      {  font: 100 20px/1.3em var(--nl); }
+        @include wid(1200-1499) {  font: 100 18px/1.3em var(--nl); }
+        @include wid(992-1199)  {  font: 100 18px/1.3em var(--nl); }
 
-          @include wid(992)      {  font: 100 20px/1.3em var(--nl); }
+     
+     
           @include wid(601-991)  {  font: 100 18px/1.3em var(--nl); }
           @include wid(600)      {  font: 100 16px/1.3em var(--nl); } 
           @include wid(400)      {  font: 100 14px/1.3em var(--nl); } 
@@ -1957,7 +2009,7 @@ html,.body,#well{
            
        
            
-            color: #E9E9E9;
+            color: #E5E5E5;
             letter-spacing: .02em;
 
             max-width: 820px;
@@ -1986,21 +2038,20 @@ html,.body,#well{
       transition: all 1.3s ease;
       transform:  translateY(684px);
      
-     @media screen and (max-height: 1000px ){
-   
-        margin-top: 30px;
-       margin-bottom: 20px;
 
-     }
      
-@include wid(992)      {    margin-top: 64px; }
+        @include wid(1500)      {  margin: 65px auto auto; }
+        @include wid(1200-1499) {  margin: auto 0; }
+        @include wid(992-1199)  {  margin: auto 0; }
+
+     
 @include wid(601-991)  {    margin-top: 44px; }
      
-     @include wid(600) { flex-direction: column;     gap: 16px 25px;  margin-top: 30px; }
+     @include wid(600) { flex-direction: column;     gap: 16px 25px; margin: 30px 0;  }
        
        a{
+         @include wid(1500)      {  width: clamp(188px,100vw,188px);  }
          
-         width: clamp(188px,100vw,188px);
          
          @include wid(600) {  width: calc(100vw - 1.5rem) !important;  max-width: 350px;     clip-path: polygon(0 0,95% 0,100% 100%,5% 100%); }
          
@@ -2010,44 +2061,51 @@ html,.body,#well{
      }
    
    .brand__cont{
-     
-     
-     @media screen and (max-height: 1000px ){
-   
-        margin-top: auto;
 
-     }
      
-  @media screen and (max-height: 600px) and (max-width: 600px){
+  @media screen and (max-height: 600px) and (max-width: 700px){
         margin-bottom: auto;
      }
      
-       margin-top: 110px;
+
        
        display: flex;
-     align-items: center;
+       align-items: center;
        justify-content: center;
-     margin-bottom: 35px;
-     
 
      
-@include wid(992)      {  gap: 0 64px; }
-@include wid(601-991)  {  gap: 30px 54px;    
-  
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-     
-}
-@include wid(600)      {  gap: 30px 40px;
-  
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-     margin-bottom: 0;
-     
-}
+        @include wid(1500)      {   gap: 0 64px;  }
+        @include wid(1200-1499) {   gap: 0 54px;  }
+        @include wid(992-1199)  {   gap: 0 44px;  }
+
+
+        @include wid(601-991)  {  gap: 30px 54px;    
+
+          display: grid;
+          grid-template-columns: 1fr 1fr; 
+
+        }
+        @include wid(600)      {  gap: 30px 40px;
+
+          display: grid;
+          grid-template-columns: 1fr 1fr; 
+             margin-bottom: 0;
+
+        }
      
      @include wid(400)      {   gap:  20px 25px;  }
      @include wid(350)      {   gap: 20px 25px;  }
+     
+     
+     a{
+       
+       img{
+        @include wid(1500)      {    }
+        @include wid(1200-1499) {   max-width: 100px; }
+        @include wid(992-1199)  {   max-width: 100px; }
+     
+       }
+     }
      
   
     
@@ -2055,7 +2113,7 @@ html,.body,#well{
    
    .arrow__cont{
      
-     @media screen and (max-height: 600px) and (max-width: 600px){
+     @media screen and (max-height: 600px) and (max-width: 700px){
        display: none !important;
      }
        
@@ -2131,9 +2189,8 @@ html,.body,#well{
        display: flex;
        justify-content: space-between;
        align-items: center;
-       min-height: calc(100vh - 165px);
        flex-direction: column;
-      @include wid(992){ padding: 100px 0  45px 0; }
+
    }
    
    &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
@@ -2141,7 +2198,11 @@ html,.body,#well{
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: calc(100vh - 165px);
+     
+@include wid(992)      {   min-height: calc(100vh - 135px); }
+@include wid(601-991)  {   min-height: calc(100vh - 135px); }
+@include wid(600)      {   min-height: calc(100vh - 120px); }
+
       flex-direction: column;
 
    }
@@ -2149,9 +2210,9 @@ html,.body,#well{
    
     &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
         
-//      @include wid(992)      {  }
-      @include wid(601-991)  { padding: 100px 0rem 50px; min-height: 100vh }
-     @include wid(600)      {  padding: 85px 0rem 45px;  min-height: 100vh;     margin: 0 auto; }
+      @include wid(992)     { padding: 100px 0rem 35px; min-height: 100vh }  
+      @include wid(601-991)  { padding: 100px 0rem 35px; min-height: 100vh }
+     @include wid(600)      {  padding: 85px 0rem 35px;  min-height: 100vh;     margin: 0 auto; }
       
    }
 
@@ -2183,19 +2244,13 @@ html,.body,#well{
    
 
    .title{
+     
         color: #f60400;
         letter-spacing: .025em;
         text-align: center;
-     z-index: 10;
-       
-       
-       
+        z-index: 10;
 
 //        margin: auto auto 100px;
-       
-       
-     margin-top: 40px;
-
 
           width: 100%;
 //          margin-left: -140px;
@@ -2208,11 +2263,11 @@ html,.body,#well{
      
      
      
-        @include wid(1500)      {  font: 100 96px/.9em var(--f); }
-        @include wid(1200-1499) {  font: 100 96px/.9em var(--f); }
-        @include wid(992-1199)  {  font: 100 96px/.9em var(--f); }
-        @include wid(601-991)   {  font: 100 64px/.9em var(--f); margin-bottom: auto;}
-        @include wid(600)       {  font: 100 44px/.9em var(--f); margin-bottom: auto; }
+        @include wid(1500)      {  font: 100 96px/.9em var(--f); margin-bottom: 100px;  margin-top: auto; }
+        @include wid(1200-1499) {  font: 100 96px/.9em var(--f); margin-bottom: 100px;  margin-top: auto; }
+        @include wid(992-1199)  {  font: 100 96px/.9em var(--f); margin-bottom: 80px;  margin-top: auto; }
+        @include wid(601-991)   {  font: 100 64px/.9em var(--f); margin-bottom: auto;  margin-top: auto; }
+        @include wid(600)       {  font: 100 44px/.9em var(--f); margin-bottom: auto;  margin-top: auto; }
      
         @include wid(400)      {  font: 100 44px/.9em var(--f); margin-bottom: auto; }
         @include wid(350)      {  font: 100 40px/.9em var(--f); margin-bottom: auto; } 
@@ -2256,14 +2311,14 @@ html,.body,#well{
 
         justify-content: center;
 
-      margin-top: 100px;
+      margin-top: 0;
       margin-bottom: 0px;
 
       width: 100%;
 
       transition: all 1.2s ease;
 
-      gap: 20px 1px;
+      gap: 25px 1px;
      flex-wrap: wrap;
      
      
@@ -2788,18 +2843,18 @@ html,.body,#well{
             @extend %button;
             color: rgba(255, 255, 255, 1);
          
-          
-          @include wid(1200)      { font: 400 36px/1.2em var(--f);  } 
-          @include wid(992-1199)  { font: 400 36px/1.2em var(--f);  } 
-          @include wid(992-1199)  { font: 400 30px/1.2em var(--f);  } 
-          @include wid(601-991)   { font: 400 20px/1.2em var(--f);  } 
+          @include wid(1500)      { font: 400 30px/1.2em var(--f);  padding: 7px 28px 0; } 
+          @include wid(1200-1499) { font: 400 30px/1.2em var(--f);  padding: 7px 28px 0; } 
+          @include wid(992-1199)  { font: 400 30px/1.2em var(--f);  padding: 7px 28px 0; } 
+          @include wid(992-1199)  { font: 400 30px/1.2em var(--f);  padding: 7px 28px 0; } 
+          @include wid(601-991)   { font: 400 20px/1.2em var(--f);  padding: 7px 28px 0; } 
 
          
 
             white-space: nowrap;
 
             height: 54px;
-            padding: 7px 35px 0;
+           
 
             padding-top: 7px;
             margin: 0 auto;
@@ -3161,7 +3216,7 @@ html,.body,#well{
      
 //      @include wid(350)      { display:  none; }
      
-     @media screen and (max-height: 600px) and (max-width: 600px){
+     @media screen and (max-height: 600px) and (max-width: 700px){
        display: none !important;
      }
      
@@ -3190,12 +3245,13 @@ html,.body,#well{
    
    
    &>.container:nth-child(2)>div.row:nth-child(1){
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//       min-height: calc(100vh - 165px);
-//       flex-direction: column;
-//      @include wid(992){ padding: 100px 0  45px 0; }
+
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       flex-direction: column;
+
+     
    }
    
 
@@ -3205,8 +3261,11 @@ html,.body,#well{
       display: flex;
       justify-content: center;
       align-items: center;
-//      min-height: calc(100vh - 165px);
-      flex-direction: column;
+     
+
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
        
    }
     
@@ -3215,12 +3274,12 @@ html,.body,#well{
         
 //      @include wid(992)      {  }
       
-      @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
-      @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(1500)      { padding: 100px .8rem 35px; min-height: calc(100vh - 135px); } 
+      @include wid(1200-1499) { padding: 100px .8rem 35px; min-height: calc(100vh - 135px); }
+      @include wid(992-1199)  { padding: 100px .8rem 35px; min-height: calc(100vh - 135px); }
+      @include wid(601-991)  { padding: 100px .8rem 35px; min-height: calc(100vh - 135px); }
      
-      @include wid(600)      {  padding: 85px .75rem 45px;  min-height: 100vh;     margin: 0 auto; }
+      @include wid(600)      {  padding: 85px .75rem 35px;  min-height: calc(100vh - 120px);     margin: 0 auto; }
       
    }
    
@@ -3262,10 +3321,15 @@ html,.body,#well{
         margin-top: auto;
         max-width: 885px;
         width: 100%;
-       
+     
+     
+     
+     
+        @include wid(1500)      {  font: 100 96px/.9em var(--f);}
+        @include wid(1200-1499) {  font: 100 76px/.9em var(--f);  margin-bottom: 25px;   max-width: 700px; }
+        @include wid(992-1199)  {  font: 100 76px/.9em var(--f);  margin-bottom: 25px;   max-width: 700px; }
 
-        @include wid(992)      {  font: 100 96px/.9em var(--f); }
-        @include wid(601-991)  {  font: 100 64px/.9em var(--f); }
+        @include wid(601-991)  {  font: 100 54px/.9em var(--f); }
         @include wid(600)      {  font: 100 44px/.9em var(--f);
      
           width: 100%;
@@ -3320,7 +3384,12 @@ html,.body,#well{
      flex-wrap: wrap;
      
  
-  @include wid(992-1199)  {      max-width: 710px; } 
+
+     
+     
+        @include wid(1500)      {   max-width: 1100px; }
+        @include wid(1200-1499) {   max-width: 800px; }
+        @include wid(992-1199)  {   max-width: 800px; }
      
      width: 100%;
      margin: 40px auto 0;
@@ -3340,7 +3409,12 @@ html,.body,#well{
 
          
           img{
-            width: 130px;
+            
+                   @include wid(1500)      {   width: 130px; }
+        @include wid(1200-1499) {   width: 140px; }
+        @include wid(992-1199)  {  width: 140px; } 
+            
+           
           }
        }
        
@@ -3359,12 +3433,14 @@ html,.body,#well{
          
        
        img{
-             width: 180px;
+            
          
-  @include wid(1200-1499) {   } 
+        @include wid(1500)      {    width: 180px; }
+        @include wid(1200-1499) {    width: 140px;}
+         
   @include wid(992-1199)  {  width: 120px;  } 
          
-          @include wid(601-991)  {  }
+          @include wid(601-991)  {  width: 120px;  }
           @include wid(600)      {  width: 135px; }
 
          
@@ -3379,7 +3455,7 @@ html,.body,#well{
    .arrow__cont{
      margin-top: auto;
      
-     @media screen and (max-height: 600px) and (max-width: 600px){
+     @media screen and (max-height: 600px) and (max-width: 700px){
        display: none !important;
      }
      
@@ -3391,8 +3467,8 @@ html,.body,#well{
     
 //      background: #f9e6da url(../img/home__4_back.png) no-repeat top/cover;
    
-     height: 100%;
-     min-height: 100vh;
+     height: 70%;
+     min-height: 70vh;
    
       overflow: hidden;
       position: relative;
@@ -3406,194 +3482,7 @@ html,.body,#well{
       z-index: 2;
 
    
-   @media screen and (max-height: 800px ){
-     
-
-//   
-//    video#video_4 {
-//        position: absolute;
-//        min-height: 100%;
-//        min-width: 100%;
-//        object-fit: cover;
-//        pointer-events: none;
-//        top: 0;
-//        left: 0;
-//        right: 0;
-//        bottom: 0;
-//        display: flex;
-//        justify-content: center;
-//        align-items: center;
-//
-//
-//
-//       @include wid(600){  
-//         display: none;
-//       }
-//
-//    }
-//   
-//   &>.container{
-//     max-width: 100%;
-//     width: 100%;
-//     
-//     
-//   }
-//
-//   
-//   #home__4_images_slider{
-//    position: absolute;
-//    z-index: 3;
-//     
-//     
-//     :not(.slick-active){
-//            .box__img_cont{
-//           width: 1200px;
-//       }
-//     }
-//     
-//     
-//     
-//     .slick-track{
-//       
-//       &>div.slick-active:nth-child(3){
-//          .box__img{
-//            margin-left: 0;
-//         }
-//       }
-//     }
-//     
-////     .slick-active:nth-child(3){
-////       .box__img{
-////          margin-left: 0;
-////       }
-////     }
-//     
-//     
-//     
-//     .slick-slide.slick-current{
-//       
-//     }
-//     
-//     .box__img_cont{
-//
-//       
-//       display: flex;
-//       padding: 100px 100px 0 100px;
-//       
-//       
-//       .box__img{
-//         
-//         max-width: 359px;
-//         margin: 20px 0 20px auto;
-//         height: 100%;
-//         
-//       }
-//     }
-//   }
-//
-//   
-//   #home__4_slider{
-//     
-//         position: relative;
-//    z-index: 1;
-//     
-//     width: 100%;
-//
-//     
-//     
-//     .box__content{
-//       display: flex;
-//        justify-content: center;
-//       
-//       padding: 0 100px;
-//
-//
-//       .next__content{
-//         
-//         margin-top: 135px;
-//         
-//         max-width: 400px;
-//         width: 100%;
-//         
-//         transition: all .7s ease; 
-//
-//         display: flex;
-//         flex-direction: column;
-//
-//         margin-right: 80px;
-//
-//         .dicription{
-//           color: #fff;
-//           opacity: .9;
-//           font: 100 16px/1.3em var(--nl); 
-//           margin-bottom: 10px;
-//         }
-//
-//         .name{
-//
-//           color: #f60400;
-//           margin-bottom: 15px;
-//
-//            background: url(../img/text-back-1.png);
-//            background-size: cover;
-//            -webkit-background-clip: text;
-//            -webkit-text-fill-color: transparent;
-//
-//
-//
-//          @include wid(992)      {  font: 100 64px/.9em var(--f); }
-//          @include wid(601-991)  {  font: 100 54px/.9em var(--f); }
-//          @include wid(600)      {  font: 100 44px/.9em var(--f); }
-//         }
-//
-//         .data{
-//
-//             @include wid(992)      {  font: 100 16px/1.3em var(--nm); }
-//           color: #F60400;
-//         }
-//
-//
-//       }
-//     }
-//     
-//
-//     
-//   
-//    
-//   }
-//     
-//     
-//  .slick-track{
-//     
-//     
-//     .slick-current{
-//       .box__img{
-//       
-//         
-//         max-width: 409px !important;
-//         margin: 0 100px 0 auto !important;
-//         height: 100%;
-//       }
-//     }
-//     
-//     .slick-center{
-//         .box__img{
-//               margin-left: auto;
-//         
-//           
-//       }
-//     }
-//    div.slick-current ~ div.slick-active{
-//      .box__img{
-//        margin-left: 0 !important;
-//      }
-//     }
-//   }
-//     
-     
-     
-     
-   }
+   @media screen and (max-height: 800px){  }
    
 
    &>.container:nth-child(2)>.row:nth-child(1){
@@ -3613,13 +3502,29 @@ html,.body,#well{
      }
    }
 
+   
+   &>.container:nth-child(2)>div.row:nth-child(1){
+
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       flex-direction: column;
+
+     
+   }
+   
+
+   
    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
 
       display: flex;
       justify-content: center;
       align-items: center;
-//      min-height: calc(100vh - 165px);
-      flex-direction: column;
+     
+
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
        
    }
 
@@ -3627,10 +3532,10 @@ html,.body,#well{
         
 //      @include wid(992)      {  }
       
-      @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
-      @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(1500)      { padding: 100px .8rem 35px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px .8rem 35px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px .8rem 35px; min-height: 100vh }
+      @include wid(601-991)  { padding: 80px .8rem 35px; min-height: 100vh }
 //      @include wid(600)      { padding: 80px .8rem 30px; min-height: 100vh }
      
       @include wid(600)      {  padding: 80px .75rem 30px;  min-height: 100vh;     margin: 0 auto; }
@@ -3664,8 +3569,6 @@ html,.body,#well{
    &>.container{
      max-width: 100%;
      width: 100%;
-     
-     
    }
    
    
@@ -3680,10 +3583,14 @@ html,.body,#well{
            width: 100%;
    
        
+     
+        @include wid(1500)      {    font: 100 96px/.9em var(--f);   margin: auto 0; }
+        @include wid(1200-1499) {    font: 100 76px/.9em var(--f);   margin: auto 0; }
+        @include wid(992-1199)  {   font: 100 76px/.9em var(--f);   margin: auto 0; }
+     
 
-        @include wid(992)      {  font: 100 96px/.9em var(--f);   margin-bottom:15px; }
-        @include wid(601-991)  {  font: 100 86px/.9em var(--f);  margin-bottom: 30px;  }
-        @include wid(600)      {  font: 100 44px/.9em var(--f); margin-bottom: 15px; }
+        @include wid(601-991)  {  font: 100 56px/.9em var(--f);  margin-bottom: 30px;  }
+        @include wid(600)      {  font: 100 54px/.9em var(--f); margin-bottom: 15px; }
      
         @include wid(400)      {  font: 100 44px/.9em var(--f); margin-bottom: 15px; }
         @include wid(350)      {  font: 100 40px/.9em var(--f); margin-bottom: 15px;  margin-top: 0; } 
@@ -3727,11 +3634,9 @@ html,.body,#well{
          }
          
        }
-     
-     
 
        
-       a{
+     a{
          
               &:hover{
          
@@ -3759,6 +3664,16 @@ html,.body,#well{
    #home__4_images_slider{
     position: absolute;
     z-index: 3;
+     
+       @include wid(992)  {
+         
+          height: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 68px;
+         
+     }
      
       @include wid(991)  {
         
@@ -3803,10 +3718,19 @@ html,.body,#well{
        
        display: flex;
        
+       .box__img{
+         
+  @include wid(1500)      {  max-width: 500px; max-height: 500px;  margin-left: auto; margin-right: 0;  }
+  @include wid(1200-1499) {   max-width: 340px; max-height: 340px;  margin-left: auto; margin-right: 200px;  } 
+  @include wid(992-1199)  {   max-width: 340px; max-height: 340px;  margin-left: auto; margin-right: 100px;  } 
+         
+
+       }
+       
        
      
        
-  @include wid(1500)      {    padding: 50px 50px 0;  } 
+  @include wid(1500)      {    padding: 0 50px 0;  } 
   @include wid(1200-1499) {    padding: 0px 50px 0;  } 
   @include wid(992-1199)  {    padding: 0px 50px 0;  } 
   @include wid(601-991)   {   } 
@@ -3817,13 +3741,16 @@ html,.body,#well{
      }
    }
 
-   
+    
    #home__4_slider{
 
       position: relative;
       z-index: 1;
 
       width: 100%;
+     
+     
+     @include wid(992)      {  margin: auto 0; }
 
      .box__content{
        display: flex;
@@ -3845,9 +3772,9 @@ html,.body,#well{
 
        .next__content{
          
-  @include wid(1500)      { margin-top: 90px  } 
-  @include wid(1200-1499) { margin-top: 40px  } 
-  @include wid(992-1199)  { margin-top: 20px  } 
+  @include wid(1500)      {  display: flex; flex-direction: column; justify-content: center; align-items: flex-start; } 
+  @include wid(1200-1499) {  display: flex; flex-direction: column; justify-content: center; align-items: flex-start; } 
+  @include wid(992-1199)  {  display: flex; flex-direction: column; justify-content: center; align-items: flex-start; } 
   @include wid(601-991)   {   max-width: 100%;  z-index: 2; margin-right: 0; text-align: center;  } 
   @include wid(600)       {   max-width: 100%;   z-index: 2; margin-right: 0; text-align: center;    } 
     
@@ -3877,7 +3804,7 @@ html,.body,#well{
            @include wid(992)   {  display: none }
            
            
-            @include wid(601-991)  { max-width: 350px;   margin: 0 auto 70px; 
+            @include wid(601-991)  { max-width: 290px; max-height: 260px;   margin: 0 auto 70px; 
               
               box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.29), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.208468), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.172871), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.145), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.117129), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0815322); }
            
@@ -3960,6 +3887,10 @@ html,.body,#well{
          
          img{
            
+  @include wid(1500)      {   width: 730px; height: 604px;  } 
+
+           
+           
              @include wid(1200-1499) {  max-width: 385px;  } 
   @include wid(992-1199)  { max-width: 385px;  } 
            
@@ -4000,6 +3931,15 @@ html,.body,#well{
       z-index: 2;
 
    
+   &>.container:nth-child(2)>.row:nth-child(1){
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       flex-direction: column;
+
+     
+   }
+   
    
    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
 
@@ -4007,6 +3947,16 @@ html,.body,#well{
       justify-content: center;
       align-items: center;
 //      min-height: calc(100vh - 165px);
+     
+
+     
+      @include wid(1500)      {  min-height: calc(100vh - 135px); } 
+      @include wid(1200-1499) {  min-height: calc(100vh - 135px); }
+      @include wid(992-1199)  {  min-height: calc(100vh - 135px); }
+      @include wid(601-991)  { min-height: calc(100vh - 130px); }
+      @include wid(600)      {  min-height: calc(100vh - 100px); }
+     
+     
       flex-direction: column;
        
    }
@@ -4016,9 +3966,9 @@ html,.body,#well{
         
 //      @include wid(992)      {  }
       
-      @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
-      @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(1500)      { padding: 100px .8rem 35px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 80px .8rem 35px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px .8rem 35px; min-height: 100vh }
       @include wid(601-991)  { padding: 100px .8rem 30px; min-height: 100vh }
       @include wid(600)      { padding: 80px .8rem 20px; min-height: 100vh;   margin: 0 auto; }
 
@@ -4068,8 +4018,8 @@ html,.body,#well{
 
         @include wid(1200)      {  font: 100 96px/.9em var(--f);  margin-bottom: 50px;  }
       @include wid(992-1199)   {  font: 100 96px/.9em var(--f); margin-bottom: 50px;     }
-        @include wid(601-991)  {  font: 100 60px/.9em var(--f); margin-bottom: 45px;   }
-        @include wid(600)      {  font: 100 44px/.9em var(--f);  margin-bottom: 35px; margin-top: auto   }
+        @include wid(601-991)  {  font: 100 54px/.9em var(--f); margin-bottom: 45px;   }
+        @include wid(600)      {  font: 100 44px/.9em var(--f);  margin-bottom: 25px; margin-top: auto   }
 
      
         @include wid(400)      {  font: 100 40px/.9em var(--f); margin-bottom: 15px;  }
@@ -4081,8 +4031,8 @@ html,.body,#well{
           letter-spacing: .02em;
 
           @include wid(992)      {  font: 100 20px/1.3em var(--nl); }
-          @include wid(601-991)  {  font: 100 20px/1.3em var(--nl); }
-          @include wid(600)      {  font: 100 18px/1.3em var(--nl); }
+          @include wid(601-991)  {  font: 100 20px/1.3em var(--nl);  text-align: center  }
+          @include wid(600)      {  font: 100 18px/1.3em var(--nl);  text-align: center  }
 
          &.sub{
            
@@ -4097,8 +4047,8 @@ html,.body,#well{
             text-align: center;
 
             @include wid(992)      {  font: 100 20px/1.5em var(--nl); }
-            @include wid(601-991)  {  font: 100 20px/1.5em var(--nl); }
-            @include wid(600)      {  font: 100 18px/1.5em var(--nl);  }
+            @include wid(601-991)  {  font: 100 20px/1.5em var(--nl);  text-align: center  }
+            @include wid(600)      {  font: 100 18px/1.5em var(--nl);   text-align: center  }
 
          }
      }
@@ -4111,10 +4061,12 @@ html,.body,#well{
         justify-content: center;
 
       margin-top: auto;
-      margin-bottom: 0px;
+     
+      @include wid(992) { margin-bottom: auto;  }
+      
 
       width: 100%;
-
+ 
       transition: all 1.2s ease;
 
       gap: 0 1px;
@@ -4123,17 +4075,20 @@ html,.body,#well{
      
      &.select1{
        
+       li:nth-child(1){
+              transform: translateX(-25px);
+       }
+       
        li:nth-child(2){
-              transform: translateX(115px);
+              transform: translateX(100px);
        }
        
        li:nth-child(3){
-              transform: translateX(110px);
+              transform: translateX(80px);
        }
 
-       
        li:nth-child(4){
-              transform: translateX(80px);
+              transform: translateX(60px);
        }
        
        li:nth-child(5){
@@ -4149,11 +4104,11 @@ html,.body,#well{
        }
        
        li:nth-child(3){
-              transform: translateX(145px);
+              transform: translateX(85px);
        }
        
        li:nth-child(4){
-              transform: translateX(110px);
+              transform: translateX(65px);
        }
        
        li:nth-child(5){
@@ -4169,11 +4124,11 @@ html,.body,#well{
        }
        
        li:nth-child(2){
-              transform: translateX(-95px);
+              transform: translateX(-65px);
        }
        
        li:nth-child(4){
-              transform: translateX(95px);
+              transform: translateX(65px);
        }
        
        li:nth-child(5){
@@ -4189,11 +4144,11 @@ html,.body,#well{
        }
        
        li:nth-child(2){
-              transform: translateX(-75px);
+              transform: translateX(-65px);
        }
        
        li:nth-child(3){
-              transform: translateX(-95px);
+              transform: translateX(-85px);
        }
        
        li:nth-child(5){
@@ -4209,15 +4164,15 @@ html,.body,#well{
        }
        
        li:nth-child(2){
-              transform: translateX(-75px);
+              transform: translateX(-65px);
        }
        
        li:nth-child(3){
-              transform: translateX(-95px);
+              transform: translateX(-85px);
        }
        
        li:nth-child(4){
-              transform: translateX(-110px);
+              transform: translateX(-105px);
        }
        
      }
@@ -4234,7 +4189,7 @@ html,.body,#well{
        justify-content: center;
        align-items: center;
        
-       transition: all 1.2s ease;
+       transition: all 1.5s ease-out;
 
        z-index: 1;
        
@@ -4242,13 +4197,19 @@ html,.body,#well{
          position: absolute;
          
          width: 460px;
-         min-width: 460px;
+         max-width: 460px;
          height: 391px;
          
-         transition:  all .4s linear;
+         transition:  all .5s  ease-in;
           
  
             transform: scale(1) translate3d(80px,1080px,0) rotate(-80deg);
+         
+         
+         @include wid(1500)      {   }
+         @include wid(1200-1499) {  max-width: 335px; width: 335px; height:  284px;    }
+         @include wid(992-1199)  {  max-width: 300px; width: 300px; height:  254px;  }
+         
 
        }
        
@@ -4265,7 +4226,7 @@ html,.body,#well{
           .images__animation{
 //                       transform: scale(1) rotate(0deg) translateY(-130px) translateX(80px);    
             
-              transform: scale(1) translate3d(60px,-90px,50px) rotate(0deg);
+              transform: scale(1) translate3d(50px,-55px,50px) rotate(0deg)
                     
            }
            
@@ -4368,9 +4329,11 @@ html,.body,#well{
      width: 100%;
 //     margin-top: auto;
      
-          @media screen and (max-height: 600px) and (max-width: 600px){
+          @media screen and (max-height: 600px) and (max-width: 700px){
        margin-bottom: auto;
      }
+     
+     @include wid(600)      {  margin-bottom: auto; }
      
    }
    
@@ -4380,7 +4343,7 @@ html,.body,#well{
      display: flex;
 
          gap: 0 80px;
-     @include wid(601-991)  {   gap: 0 60px; }
+     @include wid(601-991)  {   gap: 0 60px;  flex-direction: column;  }
 
      @include wid(600)  {  flex-direction: column;  gap: 0 30px;   } 
      
@@ -4395,15 +4358,16 @@ html,.body,#well{
          @include wid(992)  {   display: none }
          
          img{
-            @include wid(601-991)  {  margin: 0 auto 20px; max-width: 230px; }
-            @include wid(600)      {  margin: 0 auto 20px; max-width: 200px; }
+            @include wid(601-991)  {  margin: 0 auto 30px; max-width: 230px; }
+            @include wid(600)      {  margin: 0 auto 30px; max-width: 210px; }
            
            
                     @include wid(350)      {  margin: 0 auto 20px; max-width: 150px; }
          }
          
          .red{
-           
+             @include wid(601-991)  {   width: clamp(250px,100vw,250px); height: 55px;     font: 400 20px/1.2em var(--nr); margin: 0 auto 25px; }
+          @include wid(600)      {  width: clamp(250px,100vw,250px); height: 45px;     font: 400 16px/1.2em var(--nr); margin: 0 auto 25px; }
           @include wid(400)      {  width: clamp(220px,100vw,220px); height: 35px;     font: 400 16px/1.2em var(--nr); margin: 0 auto 15px; }
           @include wid(350)      {  width: clamp(200px,100vw,200px);  height:  30px;     font: 400 14px/1.2em var(--nr); margin: 0 auto 15px;  }
            
@@ -4439,7 +4403,7 @@ html,.body,#well{
           @include wid(1500)     {  font: 100 64px/.9em var(--f);  margin-bottom: 20px }
           @include wid(1200-1499){  font: 100 64px/.9em var(--f);  margin-bottom: 15px }
           @include wid(992-1199) {  font: 100 44px/.9em var(--f);  margin-bottom: 15px }
-          @include wid(601-991)  {  font: 100 32px/.9em var(--f);  margin-bottom: 10px; }
+          @include wid(601-991)  {  font: 100 32px/.9em var(--f);  margin-bottom: 10px; ;  text-align: center  }
           @include wid(600)      {  font: 100 32px/.9em var(--f);  margin-bottom: 10px;  text-align: center }
            
           @include wid(400)      {  font: 100 30px/.9em var(--f);  margin-bottom: 5px;  text-align: center }
@@ -4450,7 +4414,10 @@ html,.body,#well{
 
          p{
            color: #fff;
-               @include wid(1200)      { font: 100 20px/1.2em var(--nl); }
+           
+  @include wid(1500)      { font: 100 20px/1.2em var(--nl);    } 
+  @include wid(1200-1499) { font: 100 18px/1.2em var(--nl);   } 
+
                      @include wid(992-1199) {  font: 100 18px/1.2em var(--nl); }
        
           @include wid(601-991)  {      font: 100 16px/1.2em var(--nl); }
@@ -4472,8 +4439,10 @@ html,.body,#well{
       
 
           @include wid(992)      {   padding-top: 78px; }
-          @include wid(601-991)  {  padding-top: 45px;  }
+          @include wid(601-991)  {  padding-top: 25px;   margin-left: auto; margin-right: auto;  }
           @include wid(600)      {  
+            
+            margin-top: 30px;
 
             margin-left: auto;
             margin-right: auto;
@@ -4508,17 +4477,16 @@ html,.body,#well{
    
    .arrow__cont{
      margin-top: auto;
+ 
+     @include wid(600)      {  display: none }
      
-     @media screen and (max-height: 600px) and (max-width: 600px){
+     @media screen and (max-height: 600px) and (max-width: 700px){
        display: none !important;
      }
 
    }
 
   }     
-
-
-
 
 
  section.home__6{
@@ -4549,29 +4517,13 @@ html,.body,#well{
                 bottom: 0;
                 right: 0;
                 z-index: 22;
-                opacity: .95;
+                opacity: .75;
 
           }
 
      }
 
-   
 
-       @media screen and (min-width: 992px) and (max-height: 800px){
-        
-  
-            
-            .title{
-                  font: 100 80px/.9em var(--f);
-              margin-bottom: 20px;
-            }
-            p{
-             font: 100 14px/1.3em var(--nl) !important;
-         }
-         
-         
-      }
-   
    
 
         @include wid(992){  
@@ -4596,48 +4548,23 @@ html,.body,#well{
      
 //     padding-top: 100px;
      margin: auto;
+     
+     
+     
+     
+     &>div.row>div:nth-child(1){
+       
+      @include wid(992)  {
+
+        justify-content: center !important;
+        align-items: flex-start !important;
+        display: flex;
+        flex-direction: column;
+        
+       }
+     }
    }
-//
-//   
-//    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
-//        
-////      @include wid(992)      {  }
-//      
-//  @include wid(1500)      {  } 
-//  @include wid(1200-1499) {     width: 100%; }
-//  @include wid(992-1199)  {     width: 100%; }
-//      @include wid(601-991)  {  }
-//      @include wid(600)      {  }
-//      
-//      &>.partner{
-//        @include wid(992)      { display: none; }
-//        @include wid(601-991)  { display: none; }
-//        margin-bottom: 25px;
-//      }
-//      
-//   }
-//
-//
-//   
-//   @include wid(600){ 
-//     
-//       &>.container:nth-child(2)>.row:nth-child(1)>div:nth-child(1){
-//         
-//          min-height:  calc(100vh - 100px); 
-//
-//          display: flex;
-//          justify-content: space-between;
-//          align-items: flex-start;
-//    //   min-height: calc(100vh - 165px);
-//          flex-direction: column;
-//
-//
-//       }
-//   
-// }
-//   
-//   
-   
+
       
    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
 
@@ -4653,12 +4580,29 @@ html,.body,#well{
    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(1){
         
 //      @include wid(992)      {  }
+     
+     
+     
+          @include wid(992)  {  
+     
+         &>img.partner{
+           display: none;
+         }
+     
+     }
+     @include wid(601-991)  { 
+       
+         &>img.partner{
+           display: none;
+         }
+
+        }
       
-      @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
-      @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(601-991)  { padding: 100px .8rem 30px; min-height: 100vh }
-      @include wid(600)      { padding: 80px .8rem 0px; min-height: calc(100vh - 100px);   margin: 0 auto; }
+      @include wid(1500)      { padding: 100px .8rem 35px;  min-height: 100vh   } 
+      @include wid(1200-1499) { padding: 100px .8rem 35px;  min-height: 100vh  }
+      @include wid(992-1199)  { padding: 100px .8rem 35px;  min-height: 100vh   }
+      @include wid(601-991)  { padding: 100px .8rem 30px; min-height: 100vh   }
+      @include wid(600)      { padding: 80px .8rem 0px; min-height: 100vh ;   margin: 0 auto; }
 
       
    }
@@ -4666,21 +4610,12 @@ html,.body,#well{
    
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    &>.container:nth-child(2)>div.row:nth-child(1)>div:nth-child(2){
+     
+          @include wid(991)  { 
         display: none;
+            
+     }
    }
    
    
@@ -4724,19 +4659,21 @@ html,.body,#well{
       max-width:100%;
       width: 100%;
       margin-bottom: 35px;
+
      
-
-
-      @include wid(1200)      {  font: 100 96px/.9em var(--f); }
-      @include wid(992-1199)      {  font: 100 86px/.9em var(--f); }
-      @include wid(601-991)  {  font: 100 48px/.9em var(--f); }
-      @include wid(600)      {  font: 100 37px/.9em var(--f); margin-top: auto }
+     
+     
+        @include wid(1500)      {  font: 100 96px/.9em var(--f);  margin-top: auto; }
+        @include wid(1200-1499) {  font: 100 76px/.9em var(--f);  margin-top: auto; }
+        @include wid(992-1199)  {  font: 100 76px/.9em var(--f); margin-top: auto; }
+        @include wid(601-991)   {  font: 100 48px/.9em var(--f); margin-top: auto; }
+        @include wid(600)       {  font: 100 37px/.9em var(--f); margin-top: auto; }
      
      
 
      
         @include wid(400)      {  font: 100 35px/.9em var(--f); margin-bottom: 15px;  }
-        @include wid(350)      {  font: 100 30px/.9em var(--f); margin-bottom: 15px;   } 
+        @include wid(350)      {  font: 100 30px/.9em var(--f); margin-bottom: 15px;  } 
      
 
      }
@@ -4746,16 +4683,16 @@ html,.body,#well{
       color: #F9F5EE;
       letter-spacing: .02em;
    
-     
-     
-        @media screen and (min-width: 1351px)  {
-          
-               font: 100 18px/1.3em var(--nl);   max-width: 850px;     margin-bottom: 40px;
-     }
-               @media screen and (min-width: 992px) and (max-width: 1350px){
-            font: 100 16px/1.3em var(--nl);   max-width: 850px;     margin-bottom: 20px;
-            
-     }
+         font: 100 16px/1.3em var(--nl);   max-width: 850px;     margin-bottom: 20px;
+//     
+//        @media screen and (min-width: 1351px)  {
+//          
+//     
+//     }
+//               @media screen and (min-width: 992px) and (max-width: 1350px){
+//        
+//            
+//     }
 
   
       @include wid(992-1199)  {  font: 100 16px/1.3em var(--nl);   max-width: 850px;  margin-bottom: 20px; }
@@ -4784,21 +4721,9 @@ html,.body,#well{
    
    .bottum{
      width: 100%;
+     
+     margin-top: 15px;
 
-     
-     @media screen and (min-width: 1351px)  {
-          
-             margin-top: 60px;
-     }
-     @media screen and (min-width: 992px) and (max-width: 1350px){
-             margin-top: 35px;
-            
-     }
-     
-     
-     
-      @include wid(992-1199)  {     margin-top: 30px; }
-      @include wid(991)  {     margin-top: 30px; }
       @include wid(600)  {     margin-bottom: auto !important;   }
      
      
@@ -4867,6 +4792,10 @@ html,.body,#well{
    
    .partner{
      max-width: 105px;
+
+     @include wid(1200-1499) {       max-height: 45px;  }
+     @include wid(992-1199) {       max-height: 45px;  }
+     @include wid(991) {       max-height: 45px;  }
      
      @include wid(600)      { margin: 0 auto auto 0; } 
              
@@ -4875,10 +4804,10 @@ html,.body,#well{
    
    .arrow__cont{
      margin-top: auto;
-     
+         @include wid(992){ width: 125%;}
      z-index: 33;
      
-      @media screen and (max-height: 600px) and (max-width: 600px){
+      @media screen and (max-height: 600px) and (max-width: 700px){
        display: none !important;
      }
    }
@@ -4945,26 +4874,39 @@ html,.body,#well{
    
    
    &>.container:nth-child(3)>div.row:nth-child(1)>div:nth-child(1){
+     
+       @include wid(992)  {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+  //      min-height: calc(100vh - 165px);
+        flex-direction: column;
+     }
+     
+       @include wid(991)  {
+         
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-//      min-height: calc(100vh - 165px);
-      flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  //      min-height: calc(100vh - 165px);
+        flex-direction: column;
+     }
        
    }
 
    &>.container:nth-child(3)>div.row:nth-child(1)>div:nth-child(1){
-        
-//      @include wid(992)      {  }
+
       
-      @include wid(1500)      { padding: 100px .8rem 50px; min-height: 100vh  } 
-      @include wid(1200-1499) { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(992-1199)  { padding: 100px .8rem 50px; min-height: 100vh }
-      @include wid(601-991)  { padding: 100px .8rem 50px; min-height: 100vh }
+      @include wid(1500)      { padding: 100px .8rem 35px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px .8rem 35px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px .8rem 35px; min-height: 100vh }
+      @include wid(601-991)  { padding: 100px .8rem 35px; min-height: 100vh }
 //      @include wid(600)      { padding: 80px .8rem 30px; min-height: 100vh }
      
       @include wid(600)      {  padding: 80px .75rem 30px;  min-height: 100vh;     margin: 0 auto; }
+     
+       
       
    }
 
@@ -5000,6 +4942,12 @@ html,.body,#well{
         display: flex;
         justify-content: center;
         align-items: center;
+      
+      
+      
+      &.opacyte{
+        display: none !important;
+      }
 
 
 
@@ -5023,10 +4971,14 @@ html,.body,#well{
         justify-content: center;
         align-items: center;
 
+            
+      &.opacyte{
+        display: none !important;
+      }
 
 
        @include wid(600){  
-         display: none;
+//         display: none;
        }
 
     }
@@ -5050,8 +5002,8 @@ html,.body,#well{
      @include wid(1200){  max-width: 900px;  }  
      
   @include wid(1500)      { font: 100 96px/.9em var(--f);  } 
-  @include wid(1200-1499) { font: 100 96px/.9em var(--f); }
-  @include wid(992-1199)  { font: 100 96px/.9em var(--f); }
+  @include wid(1200-1499) { font: 100 76px/.9em var(--f); }
+  @include wid(992-1199)  { font: 100 76px/.9em var(--f); }
       @include wid(601-991)  {  font: 100 48px/.9em var(--f); }
       @include wid(600)      {  font: 100 40px/.9em var(--f); }
      
@@ -5065,9 +5017,12 @@ html,.body,#well{
       letter-spacing: .02em;
       margin-bottom: 40px;
      
-          @include wid(1200){  max-width: 900px;  }  
+    @include wid(1500) { max-width: 700px;  font: 100 20px/1.3em var(--nl);    }  
+    @include wid(1200-1499) { max-width: 540px;  font: 100 18px/1.3em var(--nl);   }  
+     
+     @include wid(992-1199)  { font: 100 18px/1.3em var(--nl);   max-width: 540px;  }
 
-      @include wid(992)      {  font: 100 20px/1.3em var(--nl);   max-width: 850px; }
+//      @include wid(992)      {   }
       @include wid(601-991)  {  font: 100 18px/1.3em var(--nl); }
       @include wid(600)      {  font: 100 16px/1.3em var(--nl); }
 
@@ -5100,19 +5055,20 @@ html,.body,#well{
    }
    
    .white{
+     
+         width: clamp(250px,100vw,250px);
      @include wid(600)      {  margin-top: auto; } 
    }
 
    
    .arrow__cont{
-     margin-top: auto;
-     margin-bottom: 0;
+     margin: auto auto 0;
      
      z-index: 33;
      
      @include wid(600)      {  display: none }
      
-          @media screen and (max-height: 600px) and (max-width: 600px){
+          @media screen and (max-height: 600px) and (max-width: 700px){
            display: none !important;
          }
    }
@@ -5157,11 +5113,33 @@ html,.body,#well{
       
    &>.container:nth-child(2)>div.row:nth-child(1){
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-//      min-height: calc(100vh - 165px);
-      flex-direction: column;
+     @include wid(992) { 
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+       
+       &>div:nth-child(1),&>div:nth-child(2){
+         margin-top: auto;
+       }
+       
+       &>div:nth-child(3){
+         margin-top: auto;
+         margin-bottom: 0;
+       }
+     
+     }
+     
+      @include wid(991)      { 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    //      min-height: calc(100vh - 165px);
+          flex-direction: column;
+
+     }
        
    }
     
@@ -5170,9 +5148,9 @@ html,.body,#well{
         
 //      @include wid(992)      {  }
       
-      @include wid(1500)      { padding: 100px  0rem 50px; min-height: 100vh  } 
-      @include wid(1200-1499) { padding: 100px  0rem 50px; min-height: 100vh }
-      @include wid(992-1199)  { padding: 100px  0rem 50px; min-height: 100vh }
+      @include wid(1500)      { padding: 100px  0rem 35px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px  0rem 35px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px  0rem 35px; min-height: 100vh }
       @include wid(601-991)  { padding: 100px  0rem 30px; min-height: 100vh }
       @include wid(600)      { padding: 80px  0rem 20px; min-height: 100vh;   margin: 0 auto; }
 
@@ -5222,8 +5200,8 @@ html,.body,#well{
 
 
         @include wid(1500)      {  font: 100 96px/.9em var(--f); }
-        @include wid(1200-1499) {  font: 100 96px/.9em var(--f); }
-        @include wid(992-1199)  {  font: 100 96px/.9em var(--f); }
+        @include wid(1200-1499) {  font: 100 86px/.9em var(--f); }
+        @include wid(992-1199)  {  font: 100 86px/.9em var(--f); }
         @include wid(601-991)   {  font: 100 64px/.9em var(--f); }
         @include wid(600)       {  font: 100 44px/.9em var(--f); }
      
@@ -5237,8 +5215,17 @@ html,.body,#well{
       color: #F9F5EE;
       letter-spacing: .02em;
       margin-bottom: 40px;
+     
+     
+     
+     
+    @include wid(1500)      { font: 100 20px/1.3em var(--nl);   max-width: 850px;  }  
+    @include wid(1200-1499) { font: 100 18px/1.3em var(--nl);   max-width: 850px;  }  
+     
+     @include wid(992-1199) { font: 100 18px/1.3em var(--nl);   max-width: 850px;  }
+     
 
-      @include wid(992)      {  font: 100 20px/1.3em var(--nl);   max-width: 850px; }
+
       @include wid(601-991)  {  font: 100 18px/1.3em var(--nl); }
       @include wid(600)      {  font: 100 16px/1.3em var(--nl);  max-width: 350px; }
      
@@ -5428,7 +5415,7 @@ html,.body,#well{
        }
        
        
-           width: clamp(200px,100vw,200px);
+           width: clamp(230px,100vw,230px);
        
         @include wid(600)      { 
           margin-top: auto;
@@ -5517,12 +5504,28 @@ html,.body,#well{
       
    &>.container:nth-child(2)>div.row:nth-child(1){
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-//      min-height: calc(100vh - 165px);
-      flex-direction: column;
+     @include wid(992) { 
        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+       
+       &>div{ margin: 0 auto; }
+
+       
+     }
+     
+      @include wid(991)      { 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    //      min-height: calc(100vh - 165px);
+          flex-direction: column;
+
+     }
+     
    }
     
    
@@ -5530,9 +5533,9 @@ html,.body,#well{
         
 //      @include wid(992)      {  }
       
-      @include wid(1500)      { padding: 100px  0rem 50px; min-height: 100vh  } 
-      @include wid(1200-1499) { padding: 100px  0rem 50px; min-height: 100vh }
-      @include wid(992-1199)  { padding: 100px  0rem 50px; min-height: 100vh }
+      @include wid(1500)      { padding: 100px  0rem 35px; min-height: 100vh  } 
+      @include wid(1200-1499) { padding: 100px  0rem 35px; min-height: 100vh }
+      @include wid(992-1199)  { padding: 100px  0rem 35px; min-height: 100vh }
       @include wid(601-991)  { padding: 100px  0rem 30px; min-height: 100vh }
       @include wid(600)      { padding: 85px  0rem 30px; min-height: 100vh;   margin: 0 auto; }
 
@@ -5618,7 +5621,7 @@ html,.body,#well{
                
                margin-bottom: 20px;
                
-                @media screen and (max-height: 600px) and (max-width: 600px){
+                @media screen and (max-height: 600px) and (max-width: 700px){
                      font: 100 14px/1.3em var(--nl); 
                       
                }
@@ -5726,7 +5729,7 @@ html,.body,#well{
       margin-bottom: 35px;
 
       @include wid(992)      {  font: 100 96px/.9em var(--f); }
-      @include wid(601-991)  {  font: 100 48px/.9em var(--f); }
+      @include wid(601-991)  {  font: 100 56px/.9em var(--f); }
       @include wid(600)      {  font: 100 60px/.9em var(--f); }
 
      }
@@ -5790,9 +5793,14 @@ html,.body,#well{
        
      }
      
-     @include wid(600)      { display: none !important;  }
+           @media screen and (max-height: 800px) and (max-width: 400px){
+             
+          display: none !important;   
+     }
      
-      @media screen and (max-height: 600px) and (max-width: 600px){
+//     @include wid(600)      { display: none !important;  }
+     
+      @media screen and (max-height: 600px) and (max-width: 700px){
          display: none !important;
       }
      
@@ -5845,7 +5853,7 @@ html,.body,#well{
        
        
        
-                         @media screen and (max-height: 600px) and (max-width: 600px){
+                         @media screen and (max-height: 600px) and (max-width: 700px){
                                        font: 600 20px/1.2em var(--nl); 
                        margin-bottom: 10px;          
              }
@@ -5871,7 +5879,7 @@ html,.body,#well{
              font: 600 16px/1.2em var(--nl); 
              margin-bottom: 15px;
              
-                             @media screen and (max-height: 600px) and (max-width: 600px){
+                             @media screen and (max-height: 600px) and (max-width: 700px){
                                 font: 600 15px/1.2em var(--nl); 
                        margin-bottom: 8px;             
              }
@@ -5900,7 +5908,7 @@ html,.body,#well{
                  color: #939393;
                  font: 100 16px/1.2em var(--nl); 
                   
-                                 @media screen and (max-height: 600px) and (max-width: 600px){
+                                 @media screen and (max-height: 600px) and (max-width: 700px){
                                 font: 600 15px/1.2em var(--nl); 
                        
              }  
@@ -6481,6 +6489,16 @@ clip-path: polygon(0 0, 30% 0, 100% 100%, 0% 100%);
 
 
 
+
+.arrow__cont{
+  
+    @media screen and (max-height: 400px) and (max-width: 700px){
+      
+      display: none !important;
+      
+  }
+
+}
 
 
 
