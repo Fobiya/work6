@@ -2,6 +2,7 @@
   position: relative;
   display: none;
   width: 100%;
+  opacity: 0;
 }
 
 .slick-list {
@@ -23,7 +24,7 @@
 
 .slick-slider {
   .slick-track,
-  .slick-list {
+  .slick-list { 
   }
 }
 
