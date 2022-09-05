@@ -133,6 +133,50 @@ define(["jquery"], function($) {
   
   
   
+    
+  
+  
+  
+    $('.page__2 .list li a').click(function(){
+    
+
+    
+     var slidertwo = $(this).data('slidertwo');
+    
+    $('.page__2 .list li ').removeClass('select');
+    
+    
+    $('.page__2 .list').removeClass('select1 select2 select3 select4 select5 select6');
+    
+    $(this).parent().addClass('select'); 
+    $(this).parent().parent().addClass('select'+ slidertwo); 
+     
+  });               
+            
+  $('.page__2 .list li a').hover(function(e){
+    
+    e.preventDefault();
+    
+     var slidertwo = $(this).data('slidertwo');
+    
+    $('.page__2 .list li ').removeClass('select');
+    
+    
+    $('.page__2 .list').removeClass('select1 select2 select3 select4 select5 select6');
+    
+    $(this).parent().addClass('select'); 
+    $(this).parent().parent().addClass('select'+ slidertwo); 
+     
+  });
+  
+  
+  $('.lang__ a[data-toggle]').click(function(){
+    $(this).parent().toggleClass('select');
+  });
+  
+  
+  
+  
 //  
 //  
 //  $(document).mouseover(function(e) { // web document click event

@@ -213,20 +213,27 @@ module.exports = {
       hash: false,
       template: `${PATHS.src}/home.pug`,
       filename: './home.html'
-    }),  
+    }),
        
 
     new HtmlWebpackPlugin({
       hash: false,
       template: `${PATHS.src}/paid.pug`,
       filename: './paid.html'
-    }),  
+    }),
 
     new HtmlWebpackPlugin({
       hash: false,
       template: `${PATHS.src}/stai.pug`,
       filename: './stai.html'
-    }),  
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/page.pug`,
+      filename: './page.html'
+    }),
+    
     
 //    new HtmlWebpackPlugin({
 //      hash: false,
