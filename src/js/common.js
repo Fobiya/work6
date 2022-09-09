@@ -22,6 +22,56 @@ define(["jquery"], function($) {
 
 
     }
+    
+    
+    $('.right__menu ul>li>a[data-slide]').click(function() {
+      $('.right__menu .menu__>li>a').removeClass('active');
+      $(this).addClass('active');
+
+      $(".right__menu").removeClass("open");
+            $('body').removeClass("open__menu");
+    });
+  
+      $('.right__menu ul>li.menu-item-has-children>a').click(function(e){
+  
+      e.preventDefault();
+      
+      $(this).parent().toggleClass('open');
+
+    });    
+
+    
+//    console.log(window.location.href.indexOf('#'));
+  
+//      // Change this variable to your gallery div
+//    var gallery = $('.gallery');
+//
+//    // First, make sure there's a hash in the URL
+//    if ( window.location.href.indexOf('#') > -1 ) {
+//    // Create an array from the URL by taking a substring of the URL after the #, then splitting at each comma, then adding a period at the start
+//        var url_sort_array = window.location.href.substring(window.location.href.indexOf('#')+1).split(',').map(function(v,i,a) {return '.' + v})
+//        $(gallery).slick('slickFilter', url_sort_array.toString());
+//    }
+//    
+//      console.log( window.location.href.indexOf("slick") );
+//    
+//    
+////    if () {
+////    console.log( text.indexOf("slick"));
+////}
+//    
+//   if (window.location.href.indexOf("slick")> -1) {
+//     
+//   
+//   
+//
+////    var slideno = window.location.href.indexOf("slick");
+////    $('#full__tuch').slick('slickGoTo', slideno - 1);
+////    $('#full__tuch').slick('slickGoTo', slideno - 1);
+//
+//     
+//   }
+
             
     
     
@@ -1592,13 +1642,51 @@ $full__tuch.slick({
   
   
   
+  
+     if (window.location.search.indexOf("slick") > -1) {
+
+          var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+       
+       var tech = getUrlParameter('slick');
+
+       $('#full__tuch').slick('slickGoTo', tech);
+
+       
+     }
+  
+  
+  
+  
 //    $('#full__tuch').on('init reInit afterChange', function (event, slick, currentSlide, 
   
 
   $('a[data-slide]').click(function(e) {
-    e.preventDefault();
+  
     var slideno = $(this).data('slide');
-    $('#full__tuch').slick('slickGoTo', slideno - 1);
+    
+//    console.log(slideno);
+    
+      if(slideno){
+          e.preventDefault();
+        $('#full__tuch').slick('slickGoTo', slideno - 1);
+      }else{
+        window.location.href = $(this).href();
+      }
+
+
   });
 
   
@@ -1637,21 +1725,18 @@ $('.next__arrow').click(function() {
   
 
   
-    var next__page = $('#next__page');
+var next__page = $('#next__page');
   
   
 next__page.slick({
+  
   arrows: false,
   dots: false,
   infinite: false,
-  
-  
 
   verticalSwiping: false,
   swipe: false,
    variableWidth: false,
-
-  
 
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -1662,22 +1747,15 @@ next__page.slick({
   speed: 1300,
   
 //   fade: true,
-//  cssEase: 'linear',
-  
-  
+//   cssEase: 'linear',
+
 //    cssEase: 'ease-in-out',
 //    touchThreshold: 100,
   
-  
     fade: true,
   
-//    swipeToSlide: true,
-
-  
-//     lazyLoad: 'progressive',
-  
-  
-  
+//   swipeToSlide: true,
+//   lazyLoad: 'progressive',
   
         responsive: [
           
@@ -1768,10 +1846,10 @@ next__page.slick({
                 }
             }
         ]
-  
-  
+
   
 });
+  
 //    $(".slick-active").prev().removeClass('prevdiv');
 //    $(".slick-active").removeClass('prevdiv'); 
 //    $(".slick-active").next().addClass('prevdiv');
@@ -2026,9 +2104,21 @@ $('#home__4_images_slider').on('click',  function(e ,slick){
       var slideno = $(this).data('home');
       $('#slider__home__5').slick('slickGoTo', slideno - 1);
   });
+
+  $('a[data-home]').hover(function(e) {
+      e.preventDefault();
+      var slideno = $(this).data('home');
+      $('#slider__home__5').slick('slickGoTo', slideno - 1);
+  });
   
     
   
+  
+  $('#slider__home__5 .list li a').hover(function(e) {
+      e.preventDefault();
+      var slideno = $(this).data('home');
+      $('#slider__home__5').slick('slickGoTo', slideno - 1);
+  });
   
   
   
