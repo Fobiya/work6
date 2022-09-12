@@ -1195,7 +1195,7 @@ body.stai{
 // END SECTION style
 // ===========================================================
 
-  body{
+body{
     
     background: #171717;
 //
@@ -3621,8 +3621,8 @@ html,.body,#well{
        img{
             
          
-        @include wid(1500)      {    width: 180px;   height: 45px;}
-        @include wid(1200-1499) {    width: 150px;  height: 45px; }
+        @include wid(1500)      {    width: inherit;   max-height: 80px; }
+        @include wid(1200-1499) {    width: inherit;   max-height: 80px; }
          
   @include wid(992-1199)  {  width: 120px;   height: 45px; } 
          
