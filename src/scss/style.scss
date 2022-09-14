@@ -989,6 +989,11 @@ body.stai{
        }
        
      }
+     
+     .selected__{
+       color: #f60400 !important;
+       text-shadow:  0 0 5px rgba(246, 4, 0, 0.32);
+     }
       
       
  
@@ -4418,7 +4423,9 @@ html,.body,#well{
        
        
        
-       &.select,&:hover{
+       &.select{
+         
+         z-index: 7;
          
          
          

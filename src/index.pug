@@ -25,7 +25,7 @@ html(lang='sv')
     meta(name='description', conten= '' + description + '' )
     meta(name='keywords'  conten= '' + keywords + '' )
 
-  body.oveflow-hidden.info(data-img='img/232110.png')
+  body.oveflow-hidden.info.page-template-tpl-home-php(data-img='img/232110.png')
 
     .bar-long.none
     
@@ -62,7 +62,7 @@ html(lang='sv')
           .col.m12.s12.l12.xl12
             ul
               li
-                a(href='/home.html' data-slide='') Home
+                a.selected__(href='/home.html' data-slide='1') Home
               li
                 a(href='javascript:;' data-slide='2') About us
               li
@@ -100,7 +100,7 @@ html(lang='sv')
               img.menu__(data-src='img/menu.svg', alt='menu')
 
 
-    section#home0.home__0
+    section#home0.home__0.none
       video#video_0( playsinline='', autoplay='', muted='', preload='none')
         source(src='video/home__0.webm', type='video/webm')
         source(src='video/home__0.mp4', type='video/mp4')
@@ -118,7 +118,7 @@ html(lang='sv')
       div
         section#home1.home__1
 
-          video#video_1(poster='img/home__1_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+          video#video_1.none(poster='img/home__1_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
             source(src='video/home.webm', type='video/webm')
             source(src='video/home.mp4', type='video/mp4')
 
@@ -153,7 +153,7 @@ html(lang='sv')
     
       div
         section#home2.home__2
-          video#video_2(poster='img/home__2_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+          video#video_2.none(poster='img/home__2_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
             source(src='video/home__2.webm', type='video/webm')
             source(src='video/home__2.mp4', type='video/mp4')
 
@@ -247,7 +247,7 @@ html(lang='sv')
           
       div
         section#home3.home__3
-          video#video_3(poster='img/home__3_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+          video#video_3.none(poster='img/home__3_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
             source(src='video/home__3.webm', type='video/webm')
             source(src='video/home__3.mp4', type='video/mp4')
 
@@ -288,7 +288,7 @@ html(lang='sv')
           
       div
         section#home4.home__4
-          video#video_4(poster='img/home__4_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+          video#video_4.none(poster='img/home__4_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
             source(src='video/home__2.webm', type='video/webm')
             source(src='video/home__2.mp4', type='video/mp4')
 
@@ -407,108 +407,143 @@ html(lang='sv')
                     span
 
           
-   
+
       div
         section#home5.home__5
-          video#video_5(poster='img/home__5_back1.png', playsinline='', autoplay='', muted='', loop='', preload='none')
-            source(src='video/home__3.webm', type='video/webm')
-            source(src='video/home__3.mp4', type='video/mp4')
-
+          // poster="img/home__5_back1.png"
+          video#video_5.none(playsinline='', autoplay='', muted='', loop='', preload='none')
+            source(src='http://2306530.bthost2.web.hosting-test.net/wp-content/themes/th-002/video/home__3.webm', type='video/webm')
+            source(src='http://2306530.bthost2.web.hosting-test.net/wp-content/themes/th-002/video/home__3.mp4', type='video/mp4')
           .container
             .row
               .col.m12.s12.l12.xl12
-                h2.title Du kan se våra fall här
-
-                
+                // if under__the
+                h2.title Du kan se v&aring;ra fall h&auml;r
                 ul.list
                   li
-                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-home='1') Röd baron
+                    img.images__animation(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1269.png', alt='')
+                    a(data-home='1', href='#', target='_self') Distriktstandv&aring;rden
                   li
-                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-home='2') Budapest 3.0
+                    img.images__animation(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1266.png', alt='')
+                    a(data-home='2', href='#', target='_self') Sigma
                   li
-                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-home='3') Park Avenue
+                    img.images__animation(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1271.png', alt='')
+                    a(data-home='3', href='#', target='_self') ICA
                   li
-                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-home='4') Microsoft
+                    img.images__animation(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1270.png', alt='')
+                    a(data-home='4', href='#', target='_self') Golvimporten
                   li
-                    img.images__animation(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                    a(href='javascript:;' data-home='5') Apple
-                    
-                    
+                    img.images__animation(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1265.png', alt='')
+                    a(data-home='5', href='#', target='_self') Jensen Education 
+                  li
+                    img.images__animation(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1272.png', alt='')
+                    a(data-home='6', href='#', target='_self') Ess Group
                 #slider__home__5
                   div
                     .content__
                       .slider__content
                         .slid__img
-                          img(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                          a.red(href='javascript:;') Röd baron
-                          
-                          
-                        h3.title__h4  Röd baron
-                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
+                          // if under__the
+                          img(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1269.png', alt='')
+                          // if under__the
+                          a.red(href='javascript:;') Distriktstandv&aring;rden
+                        // if under__the
+                        h3.title__h4  Distriktstandv&aring;rden
+                        // if under__the
+                        p
+                          | We work as a part of the marketing team and help on an ongoing basis with digital marketing and SEO. We strategize and optimize SEO &amp; PPC campaigns with a focus on the Distriktstandv&aring;rden&apos;s clinics around Stockholm. We also help with launch campaigns of clinics in other parts of Sweden such as e.g. Gothenburg.
                       .block__
-                        a.white(href='javascript:;') Beställ från
+                        // if under__the
+                        a.white(data-slide='8', href='#', target='_self') Best&auml;ll fr&aring;n
                   div
                     .content__
                       .slider__content
                         .slid__img
-                          img(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                          a.red(href='javascript:;') Budapest 3.0
-                      
-                        h3.title__h4 Budapest 3.0
-                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
+                          // if under__the
+                          img(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1266.png', alt='')
+                          // if under__the
+                          a.red(href='javascript:;') Sigma
+                        // if under__the
+                        h3.title__h4  Sigma
+                        // if under__the
+                        p
+                          | We help with SEO and create reports based on the results that SEO contributes to new recruitment of new candidates and mediation of Sigma&apos;s IT services.
                       .block__
-                        a.white(href='javascript:;') Beställ från
+                        // if under__the
+                        a.white(data-slide='8', href='#', target='_self') Best&auml;ll fr&aring;n
                   div
                     .content__
                       .slider__content
                         .slid__img
-                          img(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                          a.red(href='javascript:;') Park Avenue
-                      
-                        h3.title__h4 Park Avenue
-                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
+                          // if under__the
+                          img(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1271.png', alt='')
+                          // if under__the
+                          a.red(href='javascript:;') ICA
+                        // if under__the
+                        h3.title__h4  ICA
+                        // if under__the
+                        p
+                          | We are a support to ICA Reklam&apos;s marketing team. We help and work with putting out campaigns and creating reports for all ICA traders who buy advertising within Facebook and Google. We optimize, among other things, text ads and display campaigns, mainly with a focus on campaigns and SALE offers.
                       .block__
-                        a.white(href='javascript:;') Beställ från
+                        // if under__the
+                        a.white(data-slide='8', href='#', target='_self') Best&auml;ll fr&aring;n
                   div
                     .content__
                       .slider__content
                         .slid__img
-                          img(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                          a.red(href='javascript:;') Microsoft
-                      
-                        h3.title__h4 Microsoft
-                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
+                          // if under__the
+                          img(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1270.png', alt='')
+                          // if under__the
+                          a.red(href='javascript:;') Golvimporten
+                        // if under__the
+                        h3.title__h4  Golvimporten
+                        // if under__the
+                        p
+                          | One of Sweden&apos;s largest flooring importers based in Bor&aring;s. We help continuously with SEO, both on-page and off-page. The result we have created has resulted in an organic increase of over 100% in organic traffic.
                       .block__
-                        a.white(href='javascript:;') Beställ från
+                        // if under__the
+                        a.white(data-slide='8', href='#', target='_self') Best&auml;ll fr&aring;n
                   div
                     .content__
                       .slider__content
                         .slid__img
-                          img(data-src='img/home__5_img.png', alt='home__3_brand_1')
-                          a.red(href='javascript:;') Apple
-                      
-                        h3.title__h4 Apple
-                        p Imperdiet velit ex. Sed orci, in pellentesque in quam, vestibulum adipiscing nec adipiscing imperdiet augue pellentesque interdum sit in velit elit. Cras libero, in dictumst. Et. Est. Pellentesque quis, nulla ornare pellentesque dapibus libero, orci, in orci, mattis lectus arcu in pulvinar id nulla et amet nun.
+                          // if under__the
+                          img(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1265.png', alt='')
+                          // if under__the
+                          a.red(href='javascript:;') Jensen Education 
+                        // if under__the
+                        h3.title__h4  Jensen Education 
+                        // if under__the
+                        p
+                          | We continuously optimize Google Ads with the aim of finding more potential students for Jensen&apos;s various schools around the country. We create reports directly via Google data studio.
                       .block__
-                        a.white(href='javascript:;') Beställ från
-                    
-                    
-                    
-                    
-
-
+                        // if under__the
+                        a.white(data-slide='8', href='#', target='_self') Best&auml;ll fr&aring;n
+                  div
+                    .content__
+                      .slider__content
+                        .slid__img
+                          // if under__the
+                          img(data-src='http://2306530.bthost2.web.hosting-test.net/wp-content/uploads/2022/09/Group-1272.png', alt='')
+                          // if under__the
+                          a.red(href='javascript:;') Ess Group
+                        // if under__the
+                        h3.title__h4  Ess Group
+                        // if under__the
+                        p
+                          | We have been involved in Ess Group&apos;s new project called Home of Ess where we have been involved in laying out strategies for their new e-commerce.
+                      .block__
+                        // if under__the
+                        a.white(data-slide='8', href='#', target='_self') Best&auml;ll fr&aring;n
                 .arrow__cont
                   a.next__arrow(href='javascript:;')
                     span
+
           
           
       div
         section#home6.home__6
-          video#video_6(poster='img/home__6_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
+          video#video_6.none(poster='img/home__6_back.png', playsinline='', autoplay='', muted='', loop='', preload='none')
             source(src='video/home__2.webm', type='video/webm')
             source(src='video/home__2.mp4', type='video/mp4')
 
@@ -541,7 +576,7 @@ html(lang='sv')
           
       div
         section#home7.home__7
-          video#video_7( playsinline='', autoplay='', muted='', loop='', preload='none')
+          video#video_7.none( playsinline='', autoplay='', muted='', loop='', preload='none')
             source(src='video/home__7.webm', type='video/webm')
             source(src='video/home__7.mp4', type='video/mp4')
           
@@ -568,7 +603,7 @@ html(lang='sv')
           
       div
         section#home8.home__8
-          video#video_8( playsinline='', autoplay='', muted='', loop='', preload='none')
+          video#video_8.none( playsinline='', autoplay='', muted='', loop='', preload='none')
             source(src='video/home__8.webm', type='video/webm')
             source(src='video/home__8.mp4', type='video/mp4')
 
@@ -623,7 +658,7 @@ html(lang='sv')
           
       div
         section#home9.home__9
-          video#video_9( playsinline='', autoplay='', muted='', loop='', preload='none')
+          video#video_9.none( playsinline='', autoplay='', muted='', loop='', preload='none')
             source(src='video/home__8.webm', type='video/webm')
             source(src='video/home__8.mp4', type='video/mp4')
 
